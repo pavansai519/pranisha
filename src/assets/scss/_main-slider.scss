@@ -1,0 +1,118 @@
+/*** 
+
+====================================================================
+  Main Slider
+====================================================================
+
+***/
+
+.main-slider {
+  position: relative;
+}
+
+.main-slider {
+  .slide-item {
+    .bg-image{
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+  .title {
+    color: #ffffff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .01em;
+    line-height: 30px;
+    margin-bottom: 15px;
+    padding: 7px 30px;
+    padding-left: 80px;
+    position: relative;
+    text-transform: uppercase;
+    background-color: rgba(255,255,255,.10);
+    &:before{
+      position: absolute;
+      left: 30px;
+      top: 50%;
+      margin-top: -1px;
+      height: 2px;
+      width: 40px;
+      background-color: var(--bg-theme-color2);
+      content: "";
+    }
+  }
+  h1{
+    color: #ffffff;
+    display: block;
+    font-size: 90px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    line-height: 1.1em;
+    position: relative;
+    text-transform: capitalize;
+  }
+  .text{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 18px;
+    line-height: 36px;
+  }
+  .btn-box {
+    position: relative;
+  }
+  .theme-btn {
+    display: inline-block;
+    min-width: 200px !important;
+    white-space: nowrap;
+  }
+}
+
+
+.main-slider .tp-dottedoverlay {
+  &:after {
+    background-color: rgba(34, 36, 41, 0.8);
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    content: '';
+    @include overlay;
+    top: auto;
+  }
+}
+
+.main-slider .swiper-button-next:after
+{
+  content: "\f105";
+  font-family: "Font Awesome 6 Pro";
+  font-size: 16px;
+}
+.main-slider .swiper-button-prev:after
+{
+  content: "\f104";
+  font-family: "Font Awesome 6 Pro";
+  font-size: 16px;
+}
+
+.main-slider .swiper-button-next,
+.main-slider .swiper-button-prev
+{
+  background-color: var(--theme-color-dark);
+  color: var(--theme-color-light);
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+  opacity: 0.5;
+  text-align: center;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  width: 40px;
+  &:hover{
+    opacity: 1;
+  }
+}

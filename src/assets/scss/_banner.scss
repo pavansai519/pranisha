@@ -1,0 +1,422 @@
+/*** 
+
+====================================================================
+    Banner Section
+====================================================================
+
+***/
+
+.banner-section {
+  position: relative;
+  overflow: hidden;
+  .slide-item {
+    position: relative;
+    min-height: 740px;
+    .bg-image {
+      @include overlay;
+      @include background;
+      &:before {
+        @include overlay;
+        background-color: var(--bg-theme-color2);
+        opacity: .60;
+        content: "";
+      }
+    }
+  }
+  .content-box {
+    position: relative;
+    padding: 205px 0;
+    text-align: center;
+    .sub-title{
+      position: relative;
+      display: inline-block;
+      line-height: 30px;
+      padding: 7px 40px;
+      font-size: 14px;
+      color: #ffffff;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      background-color: rgba(255, 255, 255, .10);
+      margin-bottom: 20px;
+    }
+    .title{
+      color: #ffffff;
+      margin-bottom: 30px;
+    }
+    .btn-box{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .play-btn{
+      font-size: 13px;
+      text-transform: uppercase;
+      color: #ffffff;
+      font-weight: 600;
+      margin-left: 20px;
+      @include flex-center;
+      .icon{
+        height: 54px;
+        width:54px;
+        border-radius: 50%;
+        background-color: var(--bg-theme-color1);
+        @include flex-center;
+        margin-right: 10px;
+        transition: all 300ms ease;
+      }
+      &:hover{
+        .icon{
+          background-color: #ffffff;
+          color: var(--theme-color1);
+        }
+      }
+    }
+  }
+}
+
+/* Animate 1 */
+.owl-carousel{
+  .animate-7,
+  .animate-6,
+  .animate-5,
+  .animate-4,
+  .animate-3,
+  .animate-2,
+  .animate-1{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 500ms ease;
+  }
+  .animate-x {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 500ms ease;
+  }
+
+  .active{
+    .animate-7,
+    .animate-6,
+    .animate-5,
+    .animate-4,
+    .animate-3,
+    .animate-2,
+    .animate-1 {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .animate-2 {
+      transition-delay: 300ms;
+    }
+    .animate-3 {
+      transition-delay: 600ms;
+    }
+    .animate-4 {
+      transition-delay: 900ms;
+    }
+    .animate-5 {
+      transition-delay: 1200ms;
+    }
+    .animate-6 {
+      transition-delay: 1500ms;
+    }
+    .animate-7 {
+      transition-delay: 1800ms;
+    }
+  }
+  .swiper-slide-active{
+      .animate-7,
+      .animate-6,
+      .animate-5,
+      .animate-4,
+      .animate-3,
+      .animate-2,
+      .animate-1 {
+          opacity: 1;
+          transform: translateY(0);
+      }
+      .animate-2 {
+          transition-delay: 300ms;
+      }
+      .animate-3 {
+          transition-delay: 600ms;
+      }
+      .animate-4 {
+          transition-delay: 900ms;
+      }
+      .animate-5 {
+          transition-delay: 1200ms;
+      }
+      .animate-6 {
+          transition-delay: 1500ms;
+      }
+      .animate-7 {
+          transition-delay: 1800ms;
+      }
+  }
+}
+
+
+/*** 
+
+====================================================================
+    Banner Section Two
+====================================================================
+
+***/
+
+.banner-section-two{
+  position: relative;
+  overflow: hidden;
+  .slide-item {
+    position: relative;
+    .bg-image {
+      @include overlay;
+      @include background;
+      &:before{
+        background-color: rgba(0, 0, 0, .7);
+        bottom: 0;
+        content: "";
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+  .content-box {
+    position: relative;
+    z-index: 2;
+    padding: 320px 0 180px;
+    max-width: 700px;
+    .sub-title {
+      position: relative;
+      display: block;
+      font-size: 14px;
+      color: #808287;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      margin-bottom: 10px;
+    }
+    .title {
+      color: var(--theme-color3);
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+/*** 
+
+====================================================================
+    Banner Section Three
+====================================================================
+
+***/
+
+.banner-section-three{
+  position: relative;
+  overflow: hidden;
+  &:before {
+    @include overlay;
+    @include background;
+    content: "";
+    z-index: 8;
+    pointer-events: none;
+  }
+  .slide-item {
+    position: relative;
+    &:before{
+      @include overlay;
+      background-color: var(--bg-theme-color2);
+      opacity: .60;
+      content: "";
+      z-index: 1;
+    }
+    .bg-image {
+      @include overlay;
+      @include background;
+    }
+  }
+  .content-box {
+    position: relative;
+    z-index: 2;
+    padding: 350px 0 230px;
+    text-align: center;
+    .title {
+      font-size: 120px;
+      color: #ffffff;
+      font-weight: 700;
+      line-height: 1em;
+      text-transform: uppercase;
+      letter-spacing: .02em;
+      margin-bottom: 0;
+    }
+    .sub-title {
+      font-size: 50px;
+      color: #ffffff;
+      font-weight: 400;
+      line-height: 1em;
+      text-transform: uppercase;
+      letter-spacing: .13em;
+      margin-bottom: 10px;
+      margin-top: 20px;
+    }
+    .btn-box{
+      margin-top: 50px;
+    }
+  }
+}
+
+/*** 
+
+====================================================================
+    Banner Section Four
+====================================================================
+
+***/
+
+.banner-section-four{
+  position: relative;
+  overflow: hidden;
+  .slide-item {
+    position: relative;
+    &:before {
+      background-color: var(--bg-theme-color2);
+      content: "";
+      @include overlay;
+      opacity: .70;
+      z-index: 1;
+    }
+    .bg-image {
+      @include overlay;
+      @include background;
+    }
+  }
+  .content-box {
+    position: relative;
+    z-index: 2;
+    padding: 210px 0 220px;
+    text-align: center;
+    .title {
+      color: #ffffff;
+      font-weight: 700;
+      line-height: 1em;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    .text{
+      font-size: 18px;
+      color: #ffffff;
+      line-height: 2em;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+    .btn-box {
+      position: relative;
+    }
+  }
+}
+
+.banner-section .swiper-button-next:after,
+.banner-section-four .swiper-button-next:after,
+.banner-section-two .swiper-button-next:after,
+.banner-section-three .swiper-button-next:after
+{
+  color: #fff;
+  content: "\f30b";
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 900;
+  font-size: 22px;
+}
+.banner-section .swiper-button-prev:after,
+.banner-section-four .swiper-button-prev:after,
+.banner-section-two .swiper-button-prev:after,
+.banner-section-three .swiper-button-prev:after
+{
+  color: #fff;
+  content: "\f30a";
+  font-family: "Font Awesome 6 Pro";
+  font-size: 22px;
+  font-weight: 900;
+}
+.banner-section .swiper-button-next,
+.banner-section .swiper-button-prev,
+.banner-section-two .swiper-button-next,
+.banner-section-two .swiper-button-prev,
+.banner-section-three .swiper-button-next,
+.banner-section-three .swiper-button-prev,
+.banner-section-four .swiper-button-next,
+.banner-section-four .swiper-button-prev{
+  display: block;
+  margin: 10px 0;
+  height: 50px;
+  width: 50px;
+  color: #ffffff;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  font-size: 20px;
+  line-height: 48px;
+  text-align: center;
+  opacity: 0.2;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  &:hover{
+    opacity: 1;
+  }
+}
+.banner-section .swiper-button-next,
+.banner-section-two .swiper-button-next,
+.banner-section-four .swiper-button-next
+{
+  right: 300px;
+  @media (max-width: 1499.98px) {
+    right: 200px;
+  }
+  @media (max-width: 1199.98px) {
+    right: 30px;
+  }
+}
+.banner-section .swiper-button-prev,
+.banner-section-two .swiper-button-prev,
+.banner-section-four .swiper-button-prev
+{
+  left: 300px;
+  @media (max-width: 1499.98px) {
+    left: 200px;
+  }
+  @media (max-width: 1199.98px) {
+    left: 30px;
+  }
+}
+.banner-section-two .swiper-button-next,
+.banner-section-three .swiper-button-next{
+  margin: 60px 0 0;
+  right: 370px;
+  @media (max-width: 1499.98px) {
+    right: 200px;
+  }
+  @media (max-width: 1199.98px) {
+    right: 30px;
+  }
+  @media (max-width: 991.98px) {
+    display: none;
+  }
+}
+.banner-section-two .swiper-button-prev,
+.banner-section-three .swiper-button-prev{
+  left: auto;
+  margin: 0;
+  right: 370px;
+  @media (max-width: 1499.98px) {
+    right: 200px;
+  }
+  @media (max-width: 1199.98px) {
+    right: 30px;
+  }
+  @media (max-width: 991.98px) {
+    display: none;
+  }
+}
