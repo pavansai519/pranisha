@@ -1,83 +1,89 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-import TeamImg1 from '../../assets/images/resource/team-1.jpg';
-import TeamImg2 from '../../assets/images/resource/team-2.jpg';
-import TeamImg3 from '../../assets/images/resource/team-3.jpg';
-
-
-function Team1({ className }) {
-    return (
-        <>
-          <section className={`team-section ${className || ''}`}>
-            <div className="anim-icons">
-                <span className="icon icon-lines bounce-x"></span>
-                <span className="icon icon-dots bounce-y"></span>
-            </div>
-            <div className="auto-container">
-                <div className="sec-title text-center">
-                    <span className="sub-title">Our feedbakcs</span>
-                    <h2>EXPERTS READY TO SURVE</h2>
-                </div>
-                <div className="row">
-                  {[
-                    {
-                      img: TeamImg1,
-                      name: "Kevin Hardson",
-                      designation: "designer",
-                      socialLinks: [
-                        { platform: "facebook", icon: "fab fa-facebook-f" },
-                        { platform: "twitter", icon: "fab fa-twitter" },
-                        { platform: "pinterest", icon: "fab fa-pinterest-p" },
-                        { platform: "instagram", icon: "fab fa-instagram" }
-                      ]
-                    },
-                    {
-                      img: TeamImg2,
-                      name: "Jessica Brown",
-                      designation: "developer",
-                      socialLinks: [
-                        { platform: "facebook", icon: "fab fa-facebook-f" },
-                        { platform: "twitter", icon: "fab fa-twitter" },
-                        { platform: "pinterest", icon: "fab fa-pinterest-p" },
-                        { platform: "instagram", icon: "fab fa-instagram" }
-                      ]
-                    },
-                    {
-                      img: TeamImg3,
-                      name: "Michale Smith",
-                      designation: "co founder",
-                      socialLinks: [
-                        { platform: "facebook", icon: "fab fa-facebook-f" },
-                        { platform: "twitter", icon: "fab fa-twitter" },
-                        { platform: "pinterest", icon: "fab fa-pinterest-p" },
-                        { platform: "instagram", icon: "fab fa-instagram" }
-                      ]
-                    }
-                  ].map((teamMember, index) => (
-                    <div className="team-block col-lg-4 col-md-6 wow fadeInUp" key={index} data-wow-delay={`${index * 300}ms`}>
-                      <div className="inner-box">
-                        <div className="image-box">
-                          <figure className="image"><Link to="/team-details"><img src={teamMember.img} alt=""/></Link></figure>
-                        </div>
-                        <div className="info-box">
-                          <h5 className="name"><Link to="/team-details">{teamMember.name}</Link></h5>
-                          <span className="designation">{teamMember.designation}</span>
-                          <div className="social-links">
-                            {teamMember.socialLinks.map((social, idx) => (
-                              <Link to="#" key={idx}><i className={social.icon}></i></Link>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
+import React, { useState } from "react";
+ 
+const teamMembers = [
+  { name: "Monica", role: "UI/UX Designer", img: "https://pixy-project.vercel.app/api/media/file/team-1.jpg", socials: [{ href: "https://instagram.com/", title: "Instagram", iconClass: "fab fa-instagram" }] },
+  { name: "Avinash", role: "Developer", img:"https://pixy-project.vercel.app/api/media/file/team-1.jpg", socials: [{ href: "https://instagram.com/", title: "Instagram", iconClass: "fab fa-instagram" }] },
+  { name: "James", role: "Web Developer", img: "https://pixy-project.vercel.app/api/media/file/team-3.jpg", socials: [{ href: "https://instagram.com/", title: "Instagram", iconClass: "fab fa-instagram" }] },
+  { name: "Spunky", role: "Paw giver", img: "https://pixy-project.vercel.app/api/media/file/team-8.jpg", socials: [{ href: "https://instagram.com/", title: "Instagram", iconClass: "fab fa-instagram" }] },
+  { name: "Avinash", role: "Developer", img:"https://pixy-project.vercel.app/api/media/file/team-1.jpg", socials: [{ href: "https://instagram.com/", title: "Instagram", iconClass: "fab fa-instagram" }] },
+  { name: "Avinash", role: "Developer", img: "https://pixy-project.vercel.app/api/media/file/team-1.jpg", socials: [{ href: "https://instagram.com/", title: "Instagram", iconClass: "fab fa-instagram" }] },
+ 
+  ];
+ 
+const chunkArray = (arr, size) => {
+  const result = [];
+  for (let i = 0; i < arr.length; i += size) {
+    result.push(arr.slice(i, i + size));
+  }
+  return result;
+};
+ 
+export default function TeamSection() {
+  // Each "slide" contains 8 members (2 rows × 4 per row)
+  const slides = chunkArray(teamMembers, 8);
+  const [currentSlide, setCurrentSlide] = useState(0);
+ 
+  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
+  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+ 
+  return (
+    <section className="team-section">
+      <div className="container">
+        <h2 className="mil-head1 mil-mb60 mil-up">
+          Meet Our <span className="mil-a1">Team</span>
+        </h2>
+ 
+        <div className="team-carousel">
+          <div className="team-grid">
+            {slides[currentSlide].map((m, idx) => (
+              <div className="mil-team-card-wrapper" key={idx}>
+                <div className="mil-team-card mil-mb30 mil-768-mb-15 mil-up">
+                  <div className="mil-hover-frame">
+                    <div className="img-wrap">
+                      <img alt={m.name} src={m.img} loading="lazy" className="mil-scale-img" />
                     </div>
-                  ))}
+                  </div>
+                  <div className="mil-hover-overlay">
+                    <div className="mil-descr">
+                      <h4 className="mil-head4 mil-m4 mil-mb20">{m.name}</h4>
+                      <ul className="mil-social mil-mb20">
+                        {m.socials.map((s, i) => (
+                          <li key={i}>
+                            <a href={s.href} target="_blank" rel="noopener noreferrer" title={s.title}>
+                              <i className={s.iconClass} aria-hidden />
+                              <span className="sr-only">{s.title}</span>
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                      <p className="mil-stylized mil-m2">{m.role}</p>
+                    </div>
+                  </div>
                 </div>
-
-            </div>
-        </section>
-        </>
-    );
+              </div>
+            ))}
+          </div>
+ 
+          {/* Navigation Dots */}
+          <div className="carousel-dots">
+            {slides.map((_, idx) => (
+              <button
+                key={idx}
+                className={`dot ${idx === currentSlide ? "active" : ""}`}
+                onClick={() => setCurrentSlide(idx)}
+              />
+            ))}
+          </div>
+ 
+          {/* Optional Arrows */}
+          <button className="prev-arrow" onClick={prevSlide}>‹</button>
+          <button className="next-arrow" onClick={nextSlide}>›</button>
+        </div>
+      </div>
+ 
+     
+    </section>
+  );
 }
-
-export default Team1;
+ 
+ 

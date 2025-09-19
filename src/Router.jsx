@@ -1,29 +1,29 @@
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import HomeOne from "./components/HomeOne/index.jsx";
-import HomeTwo from "./components/HomeTwo/index.jsx";
-import HomeThree from "./components/HomeThree/index.jsx";
-import HomeFour from "./components/HomeFour/index.jsx";
-import HomeFive from "./components/HomeFive/index.jsx";
 import AboutUs from "./components/AboutUs/index.jsx";
-import News from "./components/NewsPages/index.jsx";
-import NewsDetails from "./components/NewsPages/NewsDetails.jsx";
-import Projects from "./components/ProjectsPages/index.jsx";
-import ProjectsDetails from "./components/ProjectsPages/ProjectsDetails.jsx";
 import Services from "./components/ServicesPages/index.jsx";
-import ServiceDetails from "./components/ServicesPages/ServiceDetails.jsx";
-import Team from "./components/TeamPages/index.jsx";
-import TeamDetails from "./components/TeamPages/TeamDetails.jsx";
+import LogoDesign from './components/ServicesPages/Logodesign.jsx';
+import Packaging from './components/ServicesPages/Packaging.jsx';
+import Hoarding from './components/ServicesPages/Hoarding.jsx';
+import DigitalMarketingTraning from './components/AboutUs/DigitalMarketingTraning.jsx';
+import Blog from './components/AboutUs/Blog.jsx';
+import Seo from './components/DigitalMarketing/Seo.jsx';
+import Smm from './components/DigitalMarketing/Smm.jsx';
+import Lead from './components/DigitalMarketing/Lead.jsx';
+import Influencer from './components/DigitalMarketing/Influencer.jsx';
+import Wordpress from './components/WebDevelopment/Wordpress.jsx';
+import App from './components/WebDevelopment/App.jsx';
+import Reactjs from './components/WebDevelopment/Reactjs.jsx';
+import Shopify from './components/E-commerce/Shopify.jsx';
+import Magento from './components/E-commerce/Magento.jsx';
+import Woocommerce from './components/E-commerce/Woocommerce.jsx';
+import Ai from './components/Ai/Ai.jsx';
+import PrMedia from './components/Prmedia/Pr&Media.jsx';
+import Cloud from './components/Cloud/Cloud.jsx';
+
 import Contact from "./components/ContactPages/Contact.jsx";
-import Testimonial from "./components/TestimonialPages/Testimonial.jsx";
-import Pricing from "./components/PricingPages/Pricing.jsx";
 import Layout from "./components/Helper/Layout.jsx";
-import Faq from "./components/FaqPages/Faq.jsx";
 import Error from "./components/ErrorPages/Error.jsx";
-import Products from "./components/ShopPages/Products.jsx";
-import ProductsSidebar from "./components/ShopPages/ProductsSidebar.jsx";
-import ProductsDetails from "./components/ShopPages/ProductsDetails.jsx";
-import Cart from "./components/ShopPages/Cart.jsx";
-import Checkout from "./components/ShopPages/Checkout.jsx";
 
 const router = createBrowserRouter([
   {
@@ -34,22 +34,10 @@ const router = createBrowserRouter([
         index:true,
         element: <HomeOne />
       },     
-      {
-        path: "/home-two",
-        element: <HomeTwo />
-      },
-      {
-        path: "/home-three",
-        element: <HomeThree />
-      },
-      {
-        path: "/home-four",
-        element: <HomeFour />
-      },
-      {
-        path: "/home-five",
-        element: <HomeFive />
-      },
+      
+      
+      
+      
       {
         path: "/about",
         element: <AboutUs />
@@ -58,70 +46,89 @@ const router = createBrowserRouter([
         path: "/services",
         element: <Services />
       },
+     
       {
-        path: "/projects",
-        element: <Projects />
+        path:"/branding/logodesign",
+        element:<LogoDesign/>
       },
       {
-        path: "/products",
-        element: <Products />
+        path:"/branding/packaging",
+        element:<Packaging/>
       },
       {
-        path: "/cart",
-        element: <Cart />
+        path:"/branding/hoarding",
+        element:<Hoarding/>
       },
-      {
-        path: "/checkout",
-        element: <Checkout />
-      },
-      {
-        path: "/products-sidebar",
-        element: <ProductsSidebar />
-      },
-      {
-        path: "/products-details",
-        element: <ProductsDetails />
-      },
-      {
-        path: "/news",
-        element: <News />
-      },
-      {
-        path: "/news-details",
-        element: <NewsDetails />
-      },
+     {
+      path:"/aboutus",
+      element:<AboutUs/>
+     },
+     {
+      path:"/digitalmarketingtraning",
+      element:<DigitalMarketingTraning/>
+     },
+     {
+      path:"/digitalmarketing/seo",
+      element:<Seo/>
+     },
+     {
+      path:"/digitalmarketing/smm",
+      element:<Smm/>
+     },
+     {
+      path:"/digitalmarketing/lead-gen",
+      element:<Lead/>
+     },
+     {
+      path:"/digitalmarketing/influencer",
+      element:<Influencer/>
+     },
+     {
+      path:"/webdevelopment/wordpress",
+      element:<Wordpress/>
+     },
+     {
+      path:"/webdevelopment/app",
+      element:<App/>
+     },
+     {
+      path:"/webdevelopment/reactjs",
+      element:<Reactjs/>
+     },
+     {
+      path:"/e-commerce/shopify",
+      element:<Shopify/>
+     },
+     {
+      path:"e-commerce/magento",
+      element:<Magento/>
+     },
+     {
+      path:"/e-commerce/woocommerce",
+      element:<Woocommerce/>
+     },
+     {
+      path:"/blog",
+      element:<Blog/>
+     },
+      
       {
         path: "/contact",
         element: <Contact />
       },
       {
-        path: "/team",
-        element: <Team />
+        path:"/ai",
+        element:<Ai/>
       },
-      {
-        path: "/team-details",
-        element: <TeamDetails />
-      },
-      {
-        path: "/testimonial",
-        element: <Testimonial />
-      },
-      {
-        path: "/project-details",
-        element: <ProjectsDetails />
-      },
-      {
-        path: "/Faq",
-        element: <Faq />
-      },
-      {
-        path: "/service-details",
-        element: <ServiceDetails />
-      },
-      {
-        path: "/pricing",
-        element: <Pricing />
-      },
+      
+     {
+      path:"/Pr&media",
+      element:<PrMedia/>
+     },
+     {
+      path:"/cloud",
+      element:<Cloud/>
+     },
      
       {
         path: "*",

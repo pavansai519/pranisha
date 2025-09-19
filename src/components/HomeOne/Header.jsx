@@ -1,149 +1,132 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { Link } from 'react-router-dom';
-import useScrollPosition from "../../lib/useScrollPosition";
-import logo1 from '../../assets/images/logo.png';
-import logo2 from '../../assets/images/logo-2.png';
-import pranisha from '../../assets/images/pranisha.png'
-import Navigation from '../Navigation.jsx';
-import MobileMenu from '../MobileMenu.jsx';
+import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+// import "./Header.css";
 
-function Header({ className = '', scroll = false}) {
-    const [menuState, setMenuState] = useState({
-        isMobileMenuOpen: false,
-        isSearchPopupOpen: false,
-    });
-    const isSticky = useScrollPosition(100);
+function Header() {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const headerRef = useRef(null);
 
-    const toggleMenu = useCallback((menuType) => {
-        setMenuState((prev) => ({
-          ...prev,
-          [menuType]: !prev[menuType],
-        }));
-    }, []);
+  // Add sticky class on scroll
+  useEffect(() => {
+    const header = headerRef.current;
+    if (!header) return;
 
-    const closeMenu = useCallback((menuType) => {
-        setMenuState((prev) => ({
-          ...prev,
-          [menuType]: false,
-        }));
-    }, []);
+    const onScroll = () => {
+      const offset = window.scrollY || window.pageYOffset;
+      // toggle class when scrolled past 50px (tweak as you like)
+      if (offset > 50) header.classList.add("is-sticky");
+      else header.classList.remove("is-sticky");
+    };
 
-    return (
-        <header className={`main-header header-style-two-new ${className || ''}`}>
-            <div className="main-box">
-                <div className="logo-box">
-                    <div className="logo"><Link to="/"><img src={pranisha} alt="Logo" title="echo"/></Link></div>
-                    <button className="ui-btn ui-btn search-btn" onClick={() => toggleMenu('isSearchPopupOpen')}>
-                        <span className="icon lnr lnr-icon-search"></span>
-                    </button>
-                </div>
-                <div className="nav-outer">
-                    <nav className="nav main-menu">
-                        <Navigation />
-                    </nav>
-                </div>
-                {/* <div className="outer-box">
-                    <a href="tel:+91 9963326393" className="info-btn-two">
-                        <i className="icon fa fa-phone"></i>
-                        <small>Call Anytime</small><br/> (+91)-9963326393
-                    </a>
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll(); // set initial state
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
-                    <Link className="theme-btn btn-style-two" to="/contact"><span className="btn-title">get a qoute</span></Link>
+  // Prevent content jump: set top padding on main app root equal to header height
+  useEffect(() => {
+    const header = headerRef.current;
+    if (!header) return;
 
-                    <div className="mobile-nav-toggler" onClick={() => toggleMenu('isMobileMenuOpen')}><span className="icon lnr-icon-bars"></span></div>
-                </div> */}
+    function setRootPadding() {
+      // measure header's full height (including padding)
+      const height = header.getBoundingClientRect().height;
+      // attempt to find common app root containers
+      const rootSelectors = ["#root", "#__next", "#app", ".app-root", "main", "body > #root"];
+      let rootEl = null;
+      for (const sel of rootSelectors) {
+        const el = document.querySelector(sel);
+        if (el) { rootEl = el; break; }
+      }
+      // fallback: first element child of body that is not the header
+      if (!rootEl) {
+        rootEl = Array.from(document.body.children).find((ch) => ch !== header && ch.nodeType === 1);
+      }
+      if (rootEl) {
+        // only set padding if not already set inline (safe)
+        if (!rootEl.dataset.__headerPaddingSet) {
+          const prev = rootEl.style.paddingTop || "";
+          rootEl.dataset.__prevPaddingTop = prev;
+          rootEl.style.paddingTop = `${height}px`;
+          rootEl.dataset.__headerPaddingSet = "1";
+        } else {
+          // update padding if header height changes (responsive)
+          rootEl.style.paddingTop = `${height}px`;
+        }
+      }
+    }
+
+    // initial
+    setRootPadding();
+    // update on resize (header height can change on responsive)
+    window.addEventListener("resize", setRootPadding);
+    return () => {
+      window.removeEventListener("resize", setRootPadding);
+      // restore previous padding if we set it
+      const root = document.querySelector("#root, #__next, #app, .app-root, main") || Array.from(document.body.children).find(ch => ch !== header);
+      if (root && root.dataset && root.dataset.__prevPaddingTop !== undefined) {
+        root.style.paddingTop = root.dataset.__prevPaddingTop || "";
+        delete root.dataset.__prevPaddingTop;
+        delete root.dataset.__headerPaddingSet;
+      }
+    };
+  }, []);
+
+  return (
+    <>
+      <header ref={headerRef} className="custom-header">
+        <div className="header-left">
+          <Link to="/" className="logo">
+            <img src="/Pranisha.png" alt="Logo" />
+            <span className="dot" />
+          </Link>
+        </div>
+
+        <div className="header-right">
+          <span className="phone-label">Phone:</span>
+          <a href="tel:+057951237851" className="phone-number">
+            +91 9963326393
+          </a>
+
+          <button
+            className={`hamburger ${isMenuOpen ? "open" : ""}`}
+            onClick={() => setMenuOpen((p) => !p)}
+            aria-label="Toggle menu"
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
+      </header>
+
+     <div className={`fullscreen-nav ${isMenuOpen ? "active" : ""}`}>
+        <button className="close-btn" onClick={() => setMenuOpen(false)}>✕</button>
+
+        <div className="nav-content">
+          {/* LEFT: Links */}
+          <nav className="nav-links">
+            <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+            <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
+            <Link to="/services" onClick={() => setMenuOpen(false)}>Services</Link>
+            <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
+          </nav>
+
+          {/* RIGHT: Small containers */}
+          <div className="info-boxes">
+            <div className="info-card">
+              <h4>Location</h4>
+              <p>1st Floor, Sri Sri Dwarkamai, Gokul plots Venkata Ramana Colony Kukatpally Hyderabad, Telangana 500085</p>
             </div>
-
-            {/* Header Search */}
-            <div className={`search-popup ${menuState.isSearchPopupOpen ? 'active' : ''}`}>
-                <span className="search-back-drop" onClick={() => closeMenu('isSearchPopupOpen')} />
-                <button className="close-search" onClick={() => closeMenu('isSearchPopupOpen')}>
-                    <span className="fa fa-times" />
-                </button>
-                <div className="search-inner">
-                    <form method="get" action="/">
-                        <div className="form-group">
-                            <input
-                                type="search"
-                                name="search-field"
-                                placeholder="Search..."
-                                required
-                            />
-                            <button type="submit">
-                                <i className="fa fa-search" />
-                            </button>
-                        </div>
-                    </form>
-                </div>
+            <div className="info-card">
+              <h4>Support</h4>
+              <p>info@pranisha.in</p>
             </div>
-            {/* End Header Search */}
-
-            {/* Mobile Menu */}
-            <div className={`mobile-menu ${menuState.isMobileMenuOpen ? 'open' : ''}`}>
-                <div className="menu-backdrop" onClick={() => closeMenu('isMobileMenuOpen')} />
-                <nav className="menu-box">
-                    <div className="upper-box">
-                        <div className="nav-logo">
-                            <Link to="/"><img src={pranisha} alt="Techo" title="Techo" /></Link>
-                        </div>
-                        <div className="close-btn" onClick={() => closeMenu('isMobileMenuOpen')}>
-                            <i className="icon fa fa-times" />
-                        </div>
-                    </div>
-                    <MobileMenu />
-                    <ul className="contact-list-one">
-                        <li>
-                            <div className="contact-info-box">
-                                <i className="icon lnr-icon-phone-handset" />
-                                <span className="title">Call Now</span>
-                                <a href="tel:+92880098670">+91 9963326393 </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="contact-info-box">
-                                <span className="icon lnr-icon-envelope1" />
-                                <span className="title">Send Email</span>
-                                <a href="mailto:info@pranisha.com">info@pranisha.com</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="contact-info-box">
-                                <span className="icon lnr-icon-clock" />
-                                <span className="title">Opening Hours</span>
-                                Mon - Sat 8:00 - 6:30, Sunday - CLOSED
-                            </div>
-                        </li>
-                    </ul>
-                    <ul className="social-links">
-                        <li><Link to="#"><i className="fab fa-twitter" /></Link></li>
-                        <li><Link to="#"><i className="fab fa-facebook-f" /></Link></li>
-                        <li><Link to="#"><i className="fab fa-pinterest" /></Link></li>
-                        <li><Link to="#"><i className="fab fa-instagram" /></Link></li>
-                    </ul>
-                </nav>
-            </div>
-            {/* Sticky Header */}
-            <div className={`sticky-header ${isSticky ? "fixed-header" : ""} animated slideInDown' : ''}`}>
-                <div className="auto-container">
-                    <div className="inner-container">
-                        <div className="logo">
-                            <Link to="/"><img src={pranisha} alt="Soliur" /></Link>
-                        </div>
-                        <div className="nav-outer">
-                            <nav className="main-menu">
-                                <div className="navbar-collapse show collapse clearfix">
-                                    <Navigation />
-                                </div>
-                            </nav>
-                            <div className="mobile-nav-toggler" onClick={() => toggleMenu('isMobileMenuOpen')}>
-                                <span className="icon lnr-icon-bars"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-    );
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default Header;

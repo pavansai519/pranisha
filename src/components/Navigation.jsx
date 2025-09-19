@@ -13,49 +13,54 @@ function Navigation() {
                         <li className="dropdown">
                             <Link to="#">Branding</Link>
                             <ul className="sub-menu">
-                                <li><Link to="/services/logo-design">Logo Design</Link></li>
-                                <li><Link to="/services/packaging">Packaging</Link></li>
-                                <li><Link to="/services/hoarding">Hoarding</Link></li>
+                                <li><Link to="/branding/logodesign">Logo Design</Link></li>
+                                <li><Link to="/branding/packaging">Packaging</Link></li>
+                                <li><Link to="/branding/hoarding">Hoarding</Link></li>
                             </ul>
                         </li>
 
                         <li className="dropdown">
                             <Link to="#">Digital Marketing</Link>
                             <ul className="sub-menu">
-                                <li><Link to="/digital/seo">Search Engine Optimization</Link></li>
-                                <li><Link to="/digital/social-media">Social Media Management</Link></li>
-                                <li><Link to="/digital/lead-gen">Lead Generation</Link></li>
-                                <li><Link to="/digital/ecommerce">E-commerce Marketing</Link></li>
-                                <li><Link to="/digital/influencers">Influencer Marketing</Link></li>
+                                <li><Link to="/digitalmarketing/seo">Search Engine Optimization</Link></li>
+                                <li><Link to="/digitalmarketing/smm">Social Media Marketing</Link></li>
+                                <li><Link to="/digitalmarketing/lead-gen">Lead Generation</Link></li>
+                                <li><Link to="/digitalmarketing/influencer">Influencer Marketing</Link></li>
                             </ul>
                         </li>
                         
                         <li className="dropdown">
-                            <Link to="#">Web Designing</Link>
+                            <Link to="#">Web Development</Link>
                             <ul className="sub-menu">
-                                <li><Link to="/web/responsive">Responsive Web Design</Link></li>
-                                <li><Link to="/web/wordpress">WordPress Website</Link></li>
-                                <li><Link to="/web/shopify">Shopify Website</Link></li>
-                                <li><Link to="/web/redesign">Redesign Services</Link></li>
-                                <li><Link to="/web/ui-ux">UI/UX Designing</Link></li>
+                                <li><Link to="/webdevelopment/wordpress">Wordpress Development</Link></li>
+                                <li><Link to="/webdevelopment/app">App Development</Link></li>
+                                <li><Link to="/webdevelopment/reactjs">ReactJs</Link></li>
+                            </ul>
+                        </li>
+                        <li className="dropdown">
+                            <Link to="#">e-commerce</Link>
+                            <ul className="sub-menu">
+                                <li><Link to="/e-commerce/shopify">Shopify</Link></li>
+                                <li><Link to="/e-commerce/magento">Magento</Link></li>
+                                <li><Link to="/e-commerce/woocommerce">Woocommerce</Link></li>
                             </ul>
                         </li>
 
-                        <li className="dropdown">
-                            <Link to="#">AI</Link>
-                            <ul className="sub-menu">
-                                <li><Link to="/ai/artificial-intelligence">Artificial Intelligence</Link></li>
-                            </ul>
-                        </li>
+                        <li><Link to="/ai">AI</Link></li>
+                        <li><Link to="/Pr&media">Pr&Media</Link></li>
+                        <li><Link to="/cloud">Cloud</Link></li>
+
                     </ul>
                 </li>
 
                
 
-                <li><Link to="/contact">About Us</Link></li>
+                <li><Link to="/aboutus">About Us</Link></li>
+
+                {/* <li><Link to="/digitalmarketingtraning">Digital Marketing Traning</Link></li> */}
+                <li><Link to="/blog">Blog</Link></li>
                 <li><Link to="/contact">Contact Us</Link></li>
-                <li><Link to="/contact">Digital Marketing Traning</Link></li>
-                <li><Link to="/contact">Blog</Link></li>
+
 
 
             </ul>

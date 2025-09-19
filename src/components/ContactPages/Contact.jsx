@@ -1,22 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import BackToTop from '../BackToTop.jsx';
-import Header from '../HomeTwo/Header.jsx';
+import Header from '../HomeOne/Header.jsx';
 import Footer from '../HomeOne/Footer.jsx';
-import PageTitle from '../PageTitle.jsx';
+import ParticleBanner from '../HomeOne/Pranisha.jsx';
 
 function Contact() {
     return (
         <>
         <Header />
-        <PageTitle
-        title="Contact Us"
-        breadcrumb={[
-            { link: '/', title: 'Home' },
-            { link: '/news-details', title: 'Contact' },
-        ]}
-        />
-        <section className="contact-details">
+         <ParticleBanner
+        particleText="Contact"
+        fontFamily = 'Poppins'
+
+        heading=" "
+        subheading="Get in Touch to Start Your Digital Journey"
+        description="We’re here to help! Reach out to discuss your goals, ask questions, or explore how our solutions can elevate your brand."
+        buttonText=""
+      background="/background.png"
+        color="#ffffff"
+        fontSize={140}
+/>
+       <section className="contact-details">
           <div className="container ">
             <div className="row">
               <div className="col-xl-7 col-lg-6">
@@ -66,7 +71,7 @@ function Contact() {
                   <div className="sec-title">
                     <span className="sub-title">Need any help?</span>
                     <h2>Get in touch with us</h2>
-                    <div className="text">Lorem ipsum is simply free text available dolor sit amet consectetur notted adipisicing elit sed do eiusmod tempor incididunt simply dolore magna.</div>
+                    <div className="text"> </div>
                   </div>
                   <ul className="list-unstyled contact-details__info">
                     <li className="d-block d-sm-flex align-items-sm-center ">
@@ -75,7 +80,7 @@ function Contact() {
                       </div>
                       <div className="text ml-xs--0 mt-xs-10">
                         <h6>Have any question?</h6>
-                        <a href="tel:980089850"><span>Free</span> +92 (020)-9850</a>
+                        <a href="tel:9963326393"><span>Free</span> (+91) 9963326393</a>
                       </div>
                     </li>
                     <li className="d-block d-sm-flex align-items-sm-center ">
@@ -84,7 +89,7 @@ function Contact() {
                       </div>
                       <div className="text ml-xs--0 mt-xs-10">
                         <h6>Write email</h6>
-                        <a href="mailto:needhelp@company.com">needhelp@company.com</a>
+                        <a href="mailto:info@pranisha.in">info@pranisha.in</a>
                       </div>
                     </li>
                     <li className="d-block d-sm-flex align-items-sm-center ">
@@ -93,7 +98,7 @@ function Contact() {
                       </div>
                       <div className="text ml-xs--0 mt-xs-10">
                         <h6>Visit anytime</h6>
-                        <span>66 broklyn golden street. New York</span>
+                        <span> Kukatpally, Hyderabad, Telangana 500085</span>
                       </div>
                     </li>
                   </ul>
@@ -104,11 +109,11 @@ function Contact() {
         </section>
       
         <section className="map-section">
-          <iframe  className="map w-100"  src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+          <iframe  className="map w-100"   src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2385.3570934235727!2d78.38010377336795!3d17.48397299460441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s1st%20Floor%2C%20Sri%20Sri%20Dwarkamai%2C%20Gokul%20plots%20Venkata%20Ramana%20Colony%20Kukatpally%2C%20Hyderabad%2C%20Telangana%20500085!5e1!3m2!1sen!2sin!4v1753252587946!5m2!1sen!2sin" width="800" height="600" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
         <Footer />
         <BackToTop />
-        </>
+        </>         
     );
 }
 

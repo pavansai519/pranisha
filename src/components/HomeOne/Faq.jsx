@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import FaqImg from '../../assets/images/resource/faq.jpg';
+import FaqImg from '../../assets/images/home/faq.png';
 
 const faqs = [
-  { id: 1, question: "Is my technology allowed on tech?", answer: "There are many variations of passages the majority have suffered alteration in some fo injected humour, or randomised words believable." },
-  { id: 2, question: "How to soft launch your business?", answer: "There are many variations of passages the majority have suffered alteration in some fo injected humour, or randomised words believable." },
-  { id: 3, question: "How to turn visitors into contributors?", answer: "There are many variations of passages the majority have suffered alteration in some fo injected humour, or randomised words believable." },
-  { id: 4, question: "How can I find my solutions?", answer: "With over four decades of experience providing solutions, Everything you need to start selling." }
+  { id: 1, question: "1. What digital marketing services does Pranishaa offer?", answer: "Pranishaa provides services like SEO, Google Ads (PPC), social media marketing, email campaigns, lead generation, and content marketing to help businesses grow online." },
+  { id: 2, question: "2. Can Pranishaa help improve my website’s Google ranking?", answer: "Yes, their SEO experts use advanced strategies to optimize your website and improve its visibility on search engines like Google." },
+  { id: 3, question: "3. Does Pranishaa handle social media accounts for businesses?", answer: "Absolutely. They manage and grow your brand’s presence on platforms like Instagram, Facebook, and LinkedIn through creative content and targeted advertising." },
+  { id: 4, question: "4. Can I get a custom digital strategy for my business?", answer: "Yes, Pranishaa offers tailored digital marketing plans based on your business goals, audience, and industry." }
 ];
 
 function FaqHomeOne({ className }) {

@@ -10,7 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@splidejs/react-splide": "^0.7.12",
+    "@splidejs/splide": "^4.1.4",
+    "animate.css": "^4.1.1",
     "bootstrap": "^5.3.3",
+    "framer-motion": "^12.23.9",
     "isotope-layout": "^3.0.6",
     "lodash.debounce": "^4.0.8",
     "rc-slider": "^11.1.7",

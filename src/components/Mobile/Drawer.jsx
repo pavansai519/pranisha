@@ -153,53 +153,7 @@ function Drawer({ drawer, action, lang }) {
                                         </li>
                                     </ul>
                                 </div>
-                                <div className="offcanvas-social">
-                                    <ul className="text-center">
-                                        <li>
-                                            <a href="$">
-                                                <i className="fab fa-facebook-f"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="$">
-                                                <i className="fab fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="$">
-                                                <i className="fab fa-instagram"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="$">
-                                                <i className="fab fa-dribbble"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="footer-widget-info">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <i className="fal fa-envelope"></i>{' '}
-                                                support@appie.com
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i className="fal fa-phone"></i> +(642) 342
-                                                762 44
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i className="fal fa-map-marker-alt"></i>{' '}
-                                                442 Belle Terre St Floor 7, San Francisco,
-                                                AV 4206
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>

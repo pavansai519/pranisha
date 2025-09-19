@@ -1,82 +1,88 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import './pranisha-okai.css'
+ 
+ 
 function ServiceHomeOne({ className }) {
-    return (
-        <>
-            <section className={`services-section-four ${className || ''}`}>
-                <div className="anim-icons">
-                    <span className="icon icon-lines-9-top bounce-x"></span>
-                    <span className="icon icon-dots-9-top bounce-y"></span>
-                </div>
-                <div className="auto-container">
-                    <div className="row">
-                        <div className="sec-title col-lg-3 col-md-6 wow fadeInUp">
-                            <span className="sub-title">Services we offer</span>
-                            <h2>We Provide Full Range Services</h2>
-                        </div>
-        
-                        <div className="service-block-six col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="400ms">
-                            <div className="inner-box ">
-                                <div className="icon-box">
-                                    <i className="icon flaticon-business-012-startup"></i>
-                                </div>
-                                <h5 className="title"><Link to="/service-details">Digital <br/>Marketing</Link></h5>
-                                <div className="text">Providing the solutions for tech business</div>
-                            </div>
-                        </div>
-        
-                        <div className="service-block-six col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="800ms">
-                            <div className="inner-box ">
-                                <div className="icon-box">
-                                    <i className="icon flaticon-business-046-like"></i>
-                                </div>
-                                <h5 className="title"><Link to="/service-details">Branding</Link></h5>
-                                <div className="text">Providing the solutions for tech business</div>
-                            </div>
-                        </div>
-        
-                        <div className="service-block-six col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="1200ms">
-                            <div className="inner-box ">
-                                <div className="icon-box">
-                                    <i className="icon flaticon-business-006-target"></i>
-                                </div>
-                                <h5 className="title"><Link to="/service-details">AI</Link></h5>
-                                <div className="text">Providing the solutions for tech business</div>
-                            </div>
-                        </div>
-        
-                        <div className="service-block-six col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="1200ms">
-                            <div className="inner-box ">
-                                <div className="icon-box">
-                                    <i className="icon flaticon-business-006-target"></i>
-                                </div>
-                                <h5 className="title"><Link to="/service-details">Cyber Security</Link></h5>
-                                <div className="text">Providing the solutions for tech business</div>
-                            </div>
-                        </div>
-        
-                        <div className="service-block-six col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="1200ms">
-                            <div className="inner-box ">
-                                <div className="icon-box">
-                                    <i className="icon flaticon-business-006-target"></i>
-                                </div>
-                                <h5 className="title"><Link to="/service-details">E-commerce</Link></h5>
-                                <div className="text">Providing the solutions for tech business</div>
-                            </div>
-                        </div>
-        
-                        <div className="short-banner-six col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="1200ms">
-                            <div className="banner-inner">
-                                <p>Get Your IT Technology Solutions</p>
-                                <h4>Don't Waste a Second! Call Us to Solve Your Any IT Solutions</h4>
-                                <Link to="/projects" className="theme-btn btn-style-two"><span className="btn-title">Find your solution</span></Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </>
-    );
+  return (
+    <section className={`services-section-four ${className || ""}`}>
+      <div className="auto-container">
+ 
+ 
+ 
+{/*  IT Services */}
+        <div className="service-item right-box">
+          <div className="content">
+            <h5 className="service-title">IT Services</h5>
+            <p>
+              Transform your business with IT solutions like chatbots,
+              automation, and data-driven decision-making tools.
+            </p>
+          </div>
+          <div className="float-box">
+            <span className="short">IT</span>
+          </div>
+        </div>
+ 
+       
+ 
+        {/* Branding */}
+        <div className="service-item left-box">
+          <div className="float-box">
+            <span className="short">BR</span>
+          </div>
+          <div className="content">
+            <h5 className="service-title">Branding</h5>
+            <p>
+              Build a strong, memorable identity with professional logo design,
+              visuals, and brand strategy tailored to your business.
+            </p>
+          </div>
+        </div>
+ 
+         {/*  Digital Marketing */}
+        <div className="service-item right-box">
+          <div className="content">
+            <h5 className="service-title">Digital Marketing</h5>
+            <p>
+              Drive growth with targeted digital marketing strategies including
+              SEO, social media, and paid advertising.
+            </p>
+          </div>
+          <div className="float-box">
+            <span className="short">DM</span>
+          </div>
+        </div>
+ 
+        {/*  Events */}
+        <div className="service-item left-box">
+          <div className="float-box">
+            <span className="short">EV</span>
+          </div>
+          <div className="content">
+            <h5 className="service-title">Events</h5>
+            <p>
+              Plan and execute successful events with our comprehensive event
+              management services.
+            </p>
+          </div>
+        </div>
+ 
+        {/* PR Media */}
+        <div className="service-item right-box">
+          <div className="content">
+            <h5 className="service-title">PR Media</h5>
+            <p>
+              Elevate your brand's visibility with our PR media services,
+              including press releases, media outreach, and reputation management.
+            </p>
+          </div>
+          <div className="float-box">
+            <span className="short">PR</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
-
+ 
 export default ServiceHomeOne;

@@ -1,77 +1,88 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/effect-fade';
+// Pranisha.jsx
+import React from "react";
+import "./pranisha-okai.css";
 
-import SliderImg1 from '../../assets/images/main-slider/1.jpg'; 
-import SliderImg2 from '../../assets/images/main-slider/2.jpg'; 
+/**
+ * Okai-style banner (canvas removed — use global particle canvas)
+ *
+ * Props:
+ *  - imagePath: hero image for the right side (string)
+ *  - logoPath: small logo used inside bottom card (string)
+ *  - fontFamily: font family name (string)
+ *  - eyebrow, heading, subheading, description (strings)
+ *  - primaryText (string)
+ *  - buttonText (string)
+ *  - background: optional background image path for the mid card (string)
+ *  - color: primary text color (string)
+ *
+ * Canvas/particle code removed because a global canvas is provided elsewhere.
+ */
+export default function ParticleBanner({
+  imagePath = "https://picsum.photos/seed/landscape1/800/600",
+  logoPath = "/logo1.png",
+  fontFamily = "Poppins, sans-serif",
+  eyebrow = "Creative Agency",
+  heading = "Innovative Solutions",
+  subheading = "to Elevate Your Projects",
+  description = "We implement proven digital strategies with precision and dedication.",
+  primaryText = "Innovative Solutions to Elevate Your Projects",
+  buttonText = "Get Free Consultation",
+  background = "https://picsum.photos/seed/square1/600/600",
+  color = "#ffffff",
+}) {
+  const bgStyleMid = {
+    backgroundImage: background ? `url(${background})` : "none",
+  };
 
-const swiperOptions = {
-  modules: [Navigation, Pagination, Autoplay, EffectFade],
-  loop: true,
-  autoplay: { delay: 5000, disableOnInteraction: false },
-  navigation: true,
-  pagination: { clickable: true },
-  effect: "fade"
-};
+  return (
+    <section className="okai-banner-root small-left" style={{ fontFamily }}>
+      {/* global particle canvas is used — local canvas removed */}
+      <div className="okai-banner-overlay" />
+      <div className="okai-inner okai-container">
+        {/* LEFT: small narrow text column */}
+        <div className="okai-left-col">
+          <div className="okai-left-eyebrow">{eyebrow}</div>
 
-const slides = [
-  {
-    id: 1,
-    image: SliderImg1,
-    title: "Solutions for your businesses",
-    heading: "Cost Effective Agency",
-    text: "There are many passages of lorem Ipsum, but the majority have suffered alteration in some form.",
-    link: "/contact"
-  },
-  {
-    id: 2,
-    image: SliderImg2,
-    title: "Solutions for your businesses",
-    heading: "IT Solutions & Services",
-    text: "There are many passages of lorem Ipsum, but the majority have suffered alteration in some form.",
-    link: "/contact"
-  }
-];
+          {/* Small / condensed text like Okai */}
+          <div className="okai-left-primary">{primaryText}</div>
 
+          {/* Optional small description */}
+          <p className="okai-left-desc">{description}</p>
 
-function ZeroHomeOne({ className }) {
-    return (
-        <>
-            <section className={`main-slider ${className || ''}`}>
-                <div className="outer-box">
-                    <Swiper {...swiperOptions} className="hero-slider">
-                      {slides.map((slide) => (
-                        <SwiperSlide key={slide.id} className="slide-item">
-                          <div className="bg-image" style={{ backgroundImage: `url(${slide.image})` }}></div>
-                          <div className="tp-dottedoverlay on"></div>
-                          <div className="auto-container content-box pt-80 pb-150">
-                            <div className="row">
-                              <div className="content-column col-lg-7 pt-100">
-                                <span className="title animate-1">{slide.title}</span>
-                                <h1 className="animate-2">{slide.heading}</h1>
-                                <p className="text animate-3">{slide.text}</p>
-                                <div className="btn-box mt-30">
-                                  <div className="btn-outer">
-                                    <Link to={slide.link} className="theme-btn btn-style-one animate-4">
-                                      <span className="btn-title">Get Started</span>
-                                    </Link>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </SwiperSlide>
-                      ))}
-                    </Swiper>
-                </div>
-            </section>
-        </>
-    );
+          <div className="okai-left-ctas">
+            <button className="okai-btn-primary small">{buttonText}</button>
+            <button className="okai-btn-ghost small">Our Work</button>
+          </div>
+
+          <div className="okai-left-meta">
+            <span>Selected work</span>
+            <span className="okai-meta-dot">•</span>
+            <span>2025</span>
+          </div>
+        </div>
+
+        {/* RIGHT: large image stack */}
+        <div className="okai-right-col">
+          <div className="okai-media-stack-right">
+            <div
+              className="okai-media-card okai-media-card-top"
+              style={{
+                backgroundImage: `url(${imagePath})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            />
+            <div
+              className="okai-media-card okai-media-card-mid"
+              style={{
+                ...bgStyleMid,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
-
-export default ZeroHomeOne;

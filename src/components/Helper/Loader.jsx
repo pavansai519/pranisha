@@ -2,7 +2,7 @@ import React from 'react';
 
 function Loader() {
     return (
-    <div className="preloader"></div>
+    <div className=" "></div>
     );
 }
 

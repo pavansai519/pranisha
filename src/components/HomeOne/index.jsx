@@ -5,18 +5,17 @@ import Footer from './Footer.jsx';
 import Banner from './Banner.jsx';
 import About from './About.jsx';
 import Service from './Service.jsx';
-import Funfact from './Funfact.jsx';
-import Project from './Project.jsx';
-import WCU from './WCU.jsx';
-import Team from './Team.jsx';
-import CTA from './CTA.jsx';
+import TeamSection from './Team.jsx';
+// import Faq from './Faq.jsx';
 import Testimonial from './Testimonial.jsx';
-import Blog from './Blog.jsx';
+// import Contact2 from './CTA2.jsx';
 import Contact from './Contact.jsx';
-import Clients from './Clients.jsx';
-import Faq from './Faq.jsx';
-import CTA2 from './CTA2.jsx';
+// import Blog from './Blog.jsx';
+// import Location from './Location.jsx';
 import Header from './Header.jsx';
+import ClientsHomeOne from './Clients.jsx';
+import PortfolioGrid from './PortfolioGrid.jsx';
+
 
 function HomeOne() {
     const [drawer, drawerAction] = useToggle(false);
@@ -26,18 +25,17 @@ function HomeOne() {
             <Header action={drawerAction.toggle} />
             <Banner />
             <About />
-            <Service />
-            <Project />
-            <Funfact />
-            <WCU />
-            <Team />
-            <CTA />
+            <Service/>
+            <PortfolioGrid/>
+            <ClientsHomeOne/>
+            <TeamSection/>
+            {/* <Faq/> */}
             <Testimonial />
-            <Clients />
-            <Faq />
-            <Blog />
-            <Contact />
-            <CTA2 />
+            {/* <Contact/> */}
+            {/* <Blog/> */}
+            {/* <Location/> */}
+            {/* <Contact2/> */}
+            
             <Footer /> 
             <BackToTop />
         </>
