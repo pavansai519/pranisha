@@ -64,7 +64,7 @@ License: copyright commercial
   --text-color-bg-theme-color1: #fff;
   --text-color-bg-theme-color2: #fff;
   --text-color-bg-theme-color3: #fff;
-  --text-color: #170c40;
+  --text-color: #fff;
   --headings-color: var(--theme-color2);
   --link-color: var(--theme-color1);
   --link-hover-color: var(--theme-color1);
@@ -82,6 +82,7 @@ License: copyright commercial
   --h4-font-size: 24px;
   --h5-font-size: 20px;
   --h6-font-size: 18px;
+
   --h1-font-weight: 700;
   --h2-font-weight: 700;
   --h3-font-weight: 700;
@@ -113,6 +114,67 @@ License: copyright commercial
 #root, #__next, .app-root, .site-wrapper, main {
   position: relative; /* create a stacking context that sits above z-index:0 canvas */
   z-index: 1;
+}
+/* Dropdown toggle */
+.submenu-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  width: 40%;
+  padding: 12px 0;
+  cursor: pointer;
+}
+.submenu-toggle:hover {
+  color: #ffa324;
+}
+.arrow {
+  display: inline-block;
+  margin-left: 6px;
+  transition: transform 0.3s ease;
+}
+.menu-icon {
+  padding-left: 18px;
+  font-size: 40px; /* optional size tweak */
+  vertical-align: middle; /* aligns nicely with text */
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+/* Arrow style */
+
+/* Submenu list */
+.submenu {
+  list-style: none;
+  margin: 0;
+  padding-left: 15px;
+  display: none;
+  flex-direction: column;
+}
+.submenu.active {
+  display: flex;
+}
+
+.submenu li {
+  margin: 6px 0;
+}
+.submenu li a {
+  color: #aaa;
+  font-size: 18px;
+  text-decoration: none;
+}
+.submenu li a:hover {
+  color: #fff;
+}
+@media (max-width: 576px) {
+  .submenu-toggle {
+    font-size: 22px;
+  }
 }
 
 /* If you use another root id/class, add it to the selector above */
@@ -4681,6 +4743,7 @@ Section Title
 }
 .about-block-two .text {
   margin-bottom: 0;
+  color: #fff;
 }
 
 .about-info-box {
@@ -6334,7 +6397,6 @@ hr{
 /* Clients Carousel */
 .work-process-section {
   padding: 60px 0;
-  background-color: #f8f9fa; /* Light gray background */
   text-align: center;
 }
 
@@ -6364,7 +6426,6 @@ hr{
 
 .work-process-section {
   padding: 80px 0;
-  background-color: #f8f9fa; /* Light gray background */
   text-align: center;
 }
 
@@ -6441,7 +6502,7 @@ hr{
 
 .step p {
   font-size: 16px; /* Increased from 14px */
-  color: #666;
+  color: #fff;
   max-width: 200px; /* Ensuring text remains readable */
   margin: 0 auto;
 }
@@ -6961,29 +7022,16 @@ hr{
 
 ***/
 .map-section {
-  position: relative;
-  z-index: 1;
+  text-align: center;
+  padding: 30px 20px;
 }
-.map-section .map {
-  display: block;
-  min-height: 650px;
-  position: relative;
-  width: 100%;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
+
+.map {
+  max-width: 100%;
+  border-radius: 8px;
 }
-.map-section .branches-outer {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  width: 100%;
-}
-.map-section.alternate .map {
-  min-height: 490px;
-}
-.map-section.alternate.pull-up {
-  margin-top: -45px;
-}
+
+
 
 .branch-block {
   position: relative;
@@ -8728,9 +8776,6 @@ hr{
   top: 75px;
   height: 590px;
   width: 640px;
-  background-image: url(../images/icons/shape-10.png);
-  background-repeat: no-repeat;
-  background-position: center left;
   content: "";
 }
 .work-section .sec-title {
@@ -8760,11 +8805,11 @@ hr{
   text-align: center;
   padding: 30px 30px;
   font-family: var(--title-font);
-  background-color: #f4f5f8;
+  background-color: #ffa324;
   cursor: pointer;
 }
 .work-tabs .tab-buttons .tab-btn.active-btn {
-  background-color: var(--bg-theme-color4);
+  background-color: #fff;
   color: var(--theme-color2);
 }
 .work-tabs .content-column {
@@ -17253,13 +17298,13 @@ Sidebar
 }
 .contact-details__info li .text a {
   font-size: 18px;
-  color: var(--notech-black);
+  color: #fff;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
 .contact-details__info li .text span {
   font-size: 20px;
-  color: var(--notech-black);
+  color: #fff;
 }
 .contact-details__info li + li {
   margin-top: 19px;
@@ -18157,4 +18202,47 @@ Sidebar
   }
 }
  
- 
+ /********************banner css**********************/
+
+ .page-banner {
+     /* same dark theme as your design */
+  color: #fff;
+  padding: 100px 0 80px;
+  text-align: center;
+  position: relative;
+}
+
+.page-banner .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.banner-title {
+  color: #fff;
+  text-align: left;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.breadcrumb a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.breadcrumb .divider {
+  margin: 0 8px;
+  color: #aaa;
+}
+
+.breadcrumb .current {
+  color: #aaa;
+}

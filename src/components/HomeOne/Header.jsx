@@ -1,75 +1,26 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-// import "./Header.css";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+
 
 function Header() {
-  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isMenuOpen, setMenuOpen] = useState({ main: false, services: false });
   const headerRef = useRef(null);
 
-  // Add sticky class on scroll
+  // Sticky header on scroll
   useEffect(() => {
     const header = headerRef.current;
     if (!header) return;
 
     const onScroll = () => {
       const offset = window.scrollY || window.pageYOffset;
-      // toggle class when scrolled past 50px (tweak as you like)
       if (offset > 50) header.classList.add("is-sticky");
       else header.classList.remove("is-sticky");
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll(); // set initial state
+    onScroll();
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  // Prevent content jump: set top padding on main app root equal to header height
-  useEffect(() => {
-    const header = headerRef.current;
-    if (!header) return;
-
-    function setRootPadding() {
-      // measure header's full height (including padding)
-      const height = header.getBoundingClientRect().height;
-      // attempt to find common app root containers
-      const rootSelectors = ["#root", "#__next", "#app", ".app-root", "main", "body > #root"];
-      let rootEl = null;
-      for (const sel of rootSelectors) {
-        const el = document.querySelector(sel);
-        if (el) { rootEl = el; break; }
-      }
-      // fallback: first element child of body that is not the header
-      if (!rootEl) {
-        rootEl = Array.from(document.body.children).find((ch) => ch !== header && ch.nodeType === 1);
-      }
-      if (rootEl) {
-        // only set padding if not already set inline (safe)
-        if (!rootEl.dataset.__headerPaddingSet) {
-          const prev = rootEl.style.paddingTop || "";
-          rootEl.dataset.__prevPaddingTop = prev;
-          rootEl.style.paddingTop = `${height}px`;
-          rootEl.dataset.__headerPaddingSet = "1";
-        } else {
-          // update padding if header height changes (responsive)
-          rootEl.style.paddingTop = `${height}px`;
-        }
-      }
-    }
-
-    // initial
-    setRootPadding();
-    // update on resize (header height can change on responsive)
-    window.addEventListener("resize", setRootPadding);
-    return () => {
-      window.removeEventListener("resize", setRootPadding);
-      // restore previous padding if we set it
-      const root = document.querySelector("#root, #__next, #app, .app-root, main") || Array.from(document.body.children).find(ch => ch !== header);
-      if (root && root.dataset && root.dataset.__prevPaddingTop !== undefined) {
-        root.style.paddingTop = root.dataset.__prevPaddingTop || "";
-        delete root.dataset.__prevPaddingTop;
-        delete root.dataset.__headerPaddingSet;
-      }
-    };
   }, []);
 
   return (
@@ -89,8 +40,10 @@ function Header() {
           </a>
 
           <button
-            className={`hamburger ${isMenuOpen ? "open" : ""}`}
-            onClick={() => setMenuOpen((p) => !p)}
+            className={`hamburger ${isMenuOpen.main ? "open" : ""}`}
+            onClick={() =>
+              setMenuOpen((prev) => ({ ...prev, main: !prev.main }))
+            }
             aria-label="Toggle menu"
           >
             <span />
@@ -100,23 +53,102 @@ function Header() {
         </div>
       </header>
 
-     <div className={`fullscreen-nav ${isMenuOpen ? "active" : ""}`}>
-        <button className="close-btn" onClick={() => setMenuOpen(false)}>✕</button>
+      <div className={`fullscreen-nav ${isMenuOpen.main ? "active" : ""}`}>
+        <button
+          className="close-btn"
+          onClick={() => setMenuOpen({ main: false, services: false })}
+        >
+          ✕
+        </button>
 
         <div className="nav-content">
           {/* LEFT: Links */}
           <nav className="nav-links">
-            <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-            <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
-            <Link to="/services" onClick={() => setMenuOpen(false)}>Services</Link>
-            <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
+            <Link to="/" onClick={() => setMenuOpen({ main: false })}>
+              Home
+            </Link>
+            <Link to="/about" onClick={() => setMenuOpen({ main: false })}>
+              About
+            </Link>
+
+            {/* Services Dropdown */}
+            <div className="nav-item has-submenu">
+                          <button
+                className="submenu-toggle"
+                onClick={() =>
+                  setMenuOpen((prev) => ({
+                    ...prev,
+                    services: !prev.services,
+                  }))
+                }
+              >
+                Services{" "}
+                {isMenuOpen.services ? (
+                  <FaChevronUp className="menu-icon" />
+                ) : (
+                  <FaChevronDown className="menu-icon" />
+                )}
+              </button>
+
+              <ul className={`submenu ${isMenuOpen.services ? "active" : ""}`}>
+                <li>
+                  <Link to="/branding" onClick={() => setMenuOpen({ main: false })}>
+                    Branding
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/digitalmarketing"
+                    onClick={() => setMenuOpen({ main: false })}
+                  >
+                    Digital Marketing
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/webdevelopment"
+                    onClick={() => setMenuOpen({ main: false })}
+                  >
+                    Web Development
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/ai" onClick={() => setMenuOpen({ main: false })}>
+                    AI
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/pr-media"
+                    onClick={() => setMenuOpen({ main: false })}
+                  >
+                    PR & Media
+                  </Link>
+                </li>
+                {/* <li>
+                  <Link
+                    to="/cloud"
+                    onClick={() => setMenuOpen({ main: false })}
+                  >
+                    Cloud
+                  </Link>
+                </li> */}
+              </ul>
+            </div>
+
+            <Link to="/contact" onClick={() => setMenuOpen({ main: false })}>
+              Contact Us
+            </Link>
           </nav>
 
-          {/* RIGHT: Small containers */}
+          {/* RIGHT: Info Boxes */}
           <div className="info-boxes">
             <div className="info-card">
               <h4>Location</h4>
-              <p>1st Floor, Sri Sri Dwarkamai, Gokul plots Venkata Ramana Colony Kukatpally Hyderabad, Telangana 500085</p>
+              <p>
+                1st Floor, Sri Sri Dwarkamai, Gokul plots Venkata Ramana Colony
+                Kukatpally Hyderabad, Telangana 500085
+              </p>
             </div>
             <div className="info-card">
               <h4>Support</h4>

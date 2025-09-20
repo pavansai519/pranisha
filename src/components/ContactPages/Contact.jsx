@@ -3,24 +3,14 @@ import { Link } from 'react-router-dom';
 import BackToTop from '../BackToTop.jsx';
 import Header from '../HomeOne/Header.jsx';
 import Footer from '../HomeOne/Footer.jsx';
-import ParticleBanner from '../HomeOne/Pranisha.jsx';
+import MapSection from './MapSection.jsx';
+import PageBanner from '../PageBanner.jsx';
 
 function Contact() {
     return (
         <>
         <Header />
-         <ParticleBanner
-        particleText="Contact"
-        fontFamily = 'Poppins'
-
-        heading=" "
-        subheading="Get in Touch to Start Your Digital Journey"
-        description="We’re here to help! Reach out to discuss your goals, ask questions, or explore how our solutions can elevate your brand."
-        buttonText=""
-      background="/background.png"
-        color="#ffffff"
-        fontSize={140}
-/>
+      <PageBanner title="Contact Us" breadcrumb="Contact" />
        <section className="contact-details">
           <div className="container ">
             <div className="row">
@@ -107,10 +97,7 @@ function Contact() {
             </div>
           </div>
         </section>
-      
-        <section className="map-section">
-          <iframe  className="map w-100"   src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2385.3570934235727!2d78.38010377336795!3d17.48397299460441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s1st%20Floor%2C%20Sri%20Sri%20Dwarkamai%2C%20Gokul%20plots%20Venkata%20Ramana%20Colony%20Kukatpally%2C%20Hyderabad%2C%20Telangana%20500085!5e1!3m2!1sen!2sin!4v1753252587946!5m2!1sen!2sin" width="800" height="600" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
+      <MapSection width="80%" height="450px" />
         <Footer />
         <BackToTop />
         </>         

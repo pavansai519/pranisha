@@ -14,7 +14,7 @@ function ServicesPages() {
                 title="Services"
                 breadcrumb={[
                     { link: '/', title: 'Home' },
-                    { link: '/services', title: 'Services' },
+                    // { link: '/services', title: 'Services' },
                 ]}
             />
             <Services />

@@ -10,7 +10,7 @@ function TabHome5({ className }) {
     };
     return (
         <>
-            <section className={`work-section ${className || ''}`} style={{ backgroundColor: "#f2f2f2"}}>
+            <section className={`work-section ${className || ''}`}>
                 <div className="auto-container">
                     <div className="sec-title text-center">
                         <span className="sub-title">Tech Management</span>

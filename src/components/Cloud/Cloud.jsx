@@ -11,14 +11,10 @@ function Seo() {
             <Header />
             <ParticleBanner
                 imagePath="/logo1.png"
-
-    
-
         heading=" "
         subheading="Scalable Cloud Solutions for Seamless Digital Transformation"
         description="We offer secure and efficient cloud services that streamline operations, enhance flexibility, and support your business’s growth in the digital era."
         buttonText="Get Free Consultation"
-      background="/background.png"
         color="#ffffff"
         fontSize={140}
 />
