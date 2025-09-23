@@ -20,7 +20,7 @@ import "./pranisha-okai.css";
  * Canvas/particle code removed because a global canvas is provided elsewhere.
  */
 export default function ParticleBanner({
-  imagePath = "https://picsum.photos/seed/landscape1/800/600",
+  imagePath = "/praneetha.png",
   logoPath = "/logo1.png",
   fontFamily = "Poppins, sans-serif",
   eyebrow = "Creative Agency",
@@ -85,14 +85,14 @@ export default function ParticleBanner({
                 backgroundPosition: "center",
               }}
             />
-            <div
+            {/* <div
               className="okai-media-card okai-media-card-mid"
               style={{
                 ...bgStyleMid,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
-            />
+            /> */}
           </div>
         </div>
       </div>

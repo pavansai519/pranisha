@@ -17789,19 +17789,13 @@ Sidebar
 .footer-section-six {
   position: relative;
   padding: 120px 0 70px;
-}
-.footer-section-six:before {
-  position: absolute;
-  right: 0;
-  top: 0px;
-  height: 100%;
-  width: 100%;
+  background-image: url(../images/image-footer.png);
   background-repeat: no-repeat;
-  background-position: center left;
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
-  content: "";
+  background-position: center center;
+  background-size: cover; /* fit the whole image inside footer */
 }
+
+
 .user-links .fa {
   color: #fff;
   padding: 1px 3px;

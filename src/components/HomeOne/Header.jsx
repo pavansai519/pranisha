@@ -67,8 +67,8 @@ function Header() {
             <Link to="/" onClick={() => setMenuOpen({ main: false })}>
               Home
             </Link>
-            <Link to="/about" onClick={() => setMenuOpen({ main: false })}>
-              About
+            <Link to="/portfolio" onClick={() => setMenuOpen({ main: false })}>
+              Portfolio
             </Link>
 
             {/* Services Dropdown */}

@@ -153,9 +153,9 @@
 
 /* sizes and transforms tuned for right emphasis */
 .okai-media-card-top {
-  width: 560px;
-  height: 320px;
-  transform: translateY(-22px) rotate(-2deg);
+  width: 500px;
+  height: 580px;
+  /* transform: translateY(-22px) rotate(-2deg); */
   border: 1px solid rgba(255,255,255,0.03);
 }
 .okai-media-card-mid {
@@ -595,24 +595,17 @@ body > *:not([data-global-particles]) {
   object-fit: cover;
   border-radius: 6px;
 }
-.aboutimage-box {
-  position: relative;
-  width: 900.95px;       /* full width inside column */
-  max-width: 900px;  /* keep a max width */
-  margin: 0 auto;
-  padding-left: 90px;   /* center horizontally */
-  border-radius: 6px;
-  overflow: hidden;
-  margin-left: -10%;  
-/* clip corners properly */
-}
+
  
 .aboutimage-box img {
-  width: 500px;
-  height: 400px;      
- /* ensures horizontal fit */
-  border-radius: 6px;
+  width: 100%;       /* make it scale to container */
+  max-width: 1600px; /* optional max size */
+  height: 500px;     /* keep fixed height or use auto */
+  float: left;       /* aligns image to left */
+  margin: 0;         /* remove right margin */
+  object-fit: cover; /* optional: crop nicely if needed */
 }
+
  
  
 .content-box {

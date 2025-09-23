@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import AboutMen from "../../assets/images/home/about.png"; // your image
+import AboutMen from "../../../public/about-us.png"; // your image
  
 function AboutHomeOne({ className }) {
   return (

@@ -12,7 +12,7 @@ import FooterBg from '../../assets/images/background/footer-bg52.png';
 function FooterHomeOne({ className }) {
     return (
         <>
-            <footer  className={`footer-section-six pt-50 pb-0  ${className || ''}`}>
+            <footer  className={`footer-section-six pt-170 pb-50  ${className || ''}`}>
                 <div className=""></div>
                 <div className="widgets-section pb-4">
                     <div className="auto-container">
