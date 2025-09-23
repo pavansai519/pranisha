@@ -843,4 +843,94 @@ digital-container {
   }
 }
  
- 
+ /***************************all projects****************************/
+
+ .all-projects-page {
+  padding: 1rem;
+   /* dark theme */
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Page heading */
+.page-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-align: center;
+  color: #ffa324;
+}
+
+.page-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 4rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Projects layout */
+.project-section {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 6rem;
+}
+
+.project-section.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Image */
+.project-image img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 14px;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.project-image img:hover {
+  transform: scale(1.08);
+}
+
+/* Content */
+.project-content {
+  flex: 1;
+}
+
+.project-content h3 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.project-content .tagline {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #ffa324;
+  font-weight: 600;
+}
+
+.project-content p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #ddd;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .project-section,
+  .project-section.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-image img {
+    max-width: 100%;
+  }
+}

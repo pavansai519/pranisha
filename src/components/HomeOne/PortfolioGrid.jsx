@@ -12,7 +12,7 @@ const projects = [
 
 function PortfolioGrid() {
     return (
-        <section className="portfolio-grid-section">
+        <section id="portfolio" className="portfolio-grid-section">
             <div className="container">
                 <div className="portfolio-grid-container">
                     {/* Left Column */}

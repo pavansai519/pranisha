@@ -8,6 +8,7 @@ import Ai from './components/Ai.jsx';
 import Brading from './components/Branding.jsx';
 import DigitalMarketing from './components/DigitalMarketing.jsx';
 import WebDevelopment from './components/WebDevelopment.jsx';
+import Portfolio from "./components/Portfolio.jsx";
 
 
 import Contact from "./components/ContactPages/Contact.jsx";
@@ -33,7 +34,10 @@ const router = createBrowserRouter([
       path:"/branding",
       element:<Brading/>
      },
-    
+    {
+      path:"/portfolio",
+      element:<Portfolio/>
+    },
      {
       path:"/digitalmarketing",
       element:<DigitalMarketing/>

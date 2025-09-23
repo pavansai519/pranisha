@@ -109,14 +109,18 @@
 }
 .okai-btn-ghost.small {
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.08);
-  color: var(--okai-muted);
+  border: 1px solid #fff ;
+  color: #fff;
   padding: 10px 12px;
   border-radius: 8px;
   font-size: 13px;
   cursor: pointer;
 }
-
+.okai-btn-ghost.small:hover{
+  background-color: #fff;
+  color: #000 ;
+  font-weight: 600;
+}
 .okai-left-meta { margin-top: 12px; color: var(--okai-muted); font-size: 12px; display:flex; gap:8px; align-items:center; }
 .okai-meta-dot { opacity: 0.6; }
 
@@ -869,7 +873,7 @@ body > *:not([data-global-particles]) {
 
 .view-all-button-wrapper {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: flex-end;
     flex-grow: 1; /* Pushes the button to the bottom */
     padding: 1rem;
@@ -886,7 +890,7 @@ body > *:not([data-global-particles]) {
 
 .view-all-btn:hover {
     background-color: var(--text-color);
-    color: var(--bg-color);
+    color: #000;
 }
 
  /***************************header css*******************/

@@ -1,5 +1,7 @@
 // Pranisha.jsx
 import React from "react";
+import { Link } from 'react-router-dom';
+
 import "./pranisha-okai.css";
 
 /**
@@ -50,8 +52,19 @@ export default function ParticleBanner({
           <p className="okai-left-desc">{description}</p>
 
           <div className="okai-left-ctas">
-            <button className="okai-btn-primary small">{buttonText}</button>
-            <button className="okai-btn-ghost small">Our Work</button>
+          <Link to="/contact" className="okai-btn-primary small" role="button">
+            {buttonText}
+          </Link>            <button
+              className="okai-btn-ghost small"
+              onClick={() => {
+                const section = document.getElementById("portfolio");
+                if (section) {
+                  section.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+              }}
+            >
+              Our Work
+            </button>
           </div>
 
           <div className="okai-left-meta">
