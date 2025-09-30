@@ -42,46 +42,42 @@ function AllProjects() {
     <>
     <Header />
     <PageBanner title="Portfolio" breadcrumb="Portfolio" />
-    <section className="all-projects-page">
-      <div className="container">
-        <h2 className="page-title" data-aos="fade-up">
-          Client Success Stories
-        </h2>
-        <p className="page-subtitle" data-aos="fade-up" data-aos-delay="200">
-          How we transform digital visions into measurable impact.
-        </p>
+   <section className="all-projects-page">
+  <div className="container">
+    <h2 className="page-title" data-aos="fade-up">
+      Client Success Stories
+    </h2>
 
-       {projects.map((project, index) => (
-  <div
-    key={index}
-    style={{ backgroundColor: project.bgColor }}
-    className="project-wrapper"
-  >
-    <div
-      className={`project-section ${index % 2 === 0 ? "normal" : "reverse"}`}
-    >
+    {projects.map((project, index) => (
       <div
-        className="project-image"
-        data-aos="zoom-in"
-        data-aos-delay="100"
+        key={index}
+        className={`project-row ${index % 2 !== 0 ? "reverse" : ""}`}
       >
-        <img src={project.image} alt={project.title} />
+        {/* Image */}
+        <div
+          className="project-image"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+        >
+          <img src={project.image} alt={project.title} />
+        </div>
+
+        {/* Content */}
+        <div
+          className="project-content"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <h3>{project.title}</h3>
+          <h4 className="tagline">{project.tagline}</h4>
+          <p>{project.description}</p>
+        </div>
       </div>
-      <div
-        className="project-content"
-        data-aos="fade-up"
-        data-aos-delay="200"
-      >
-        <h3>{project.title}</h3>
-        <h4 className="tagline">{project.tagline}</h4>
-        <p>{project.description}</p>
-      </div>
-    </div>
+    ))}
   </div>
-))}
+</section>
 
-      </div>
-    </section>
+
     <Footer />
     </>
   );

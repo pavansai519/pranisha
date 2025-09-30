@@ -4,7 +4,6 @@ import Header from '../HomeOne/Header.jsx';
 import Footer from '../HomeOne/Footer.jsx';
 import Tab from './Tab.jsx'
 import AboutMen from "../../assets/images/home/about.png"; 
-import TeamSection from '../HomeOne/Team.jsx';
 import PageBanner from '../PageBanner.jsx';
 
 
@@ -57,7 +56,6 @@ function AboutUs() {
 
             
             <Tab/>
-            <TeamSection/>
            
             <Footer />
             <BackToTop />

@@ -1,5 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
+import Header from "./HomeOne/Header.jsx";
+import Footer from "./HomeOne/Footer.jsx";
+
+
 
 const collaborators = [
   {
@@ -34,19 +38,14 @@ const collaborators = [
   },
 ];
 
-function TeamSection() {
-  const [page, setPage] = useState(0);
-  const itemsPerPage = 3;
-
-  const start = page * itemsPerPage;
-  const visibleMembers = collaborators.slice(start, start + itemsPerPage);
-  const totalPages = Math.ceil(collaborators.length / itemsPerPage);
-
+function Team() {
   return (
+    <>
+    <Header/>
     <section className="team-section">
-      <h2 className="section-title">Meet the Team</h2>
+      <h2 className="section-title">Our Full Team</h2>
       <div className="team-grid">
-        {visibleMembers.map((member, i) => (
+        {collaborators.map((member, i) => (
           <div className="team-card" key={i}>
             <img src={member.img} alt={member.name} className="team-img" />
             <h3 className="team-name">{member.name}</h3>
@@ -65,30 +64,10 @@ function TeamSection() {
           </div>
         ))}
       </div>
-
-      {/* Pagination */}
-      <div className="pagination">
-        <button disabled={page === 0} onClick={() => setPage((p) => p - 1)}>
-          Prev
-        </button>
-        {Array.from({ length: totalPages }).map((_, idx) => (
-          <button
-            key={idx}
-            className={page === idx ? "active" : ""}
-            onClick={() => setPage(idx)}
-          >
-            {idx + 1}
-          </button>
-        ))}
-        <button
-          disabled={page === totalPages - 1}
-          onClick={() => setPage((p) => p + 1)}
-        >
-          Next
-        </button>
-      </div>
     </section>
+    <Footer/>
+    </>
   );
 }
 
-export default TeamSection;
+export default Team;

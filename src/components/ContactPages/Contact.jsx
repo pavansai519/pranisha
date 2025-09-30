@@ -1,103 +1,93 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import BackToTop from '../BackToTop.jsx';
 import Header from '../HomeOne/Header.jsx';
 import Footer from '../HomeOne/Footer.jsx';
-import MapSection from './MapSection.jsx';
 import PageBanner from '../PageBanner.jsx';
- 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
- 
-function Contact() {
-    return (
-        <>
-            <Header />
-           
-            <section className="contact-page-section">
-                <div className="contact-container">
-                    <div className="contact-row">
-                        <div className="contact-left">
-                            <div className="section-header">
-                                <span className="header-subtitle">Send us a message</span>
-                                <h2 className="header-title">We’d love to hear from you</h2>
-                            </div>
- 
-                            {/* Contact Form */}
-                            <form className="contact-form" id="contact_form" name="contact_form" action="/" method="get">
-                                <div className="form-row">
-                                    <div className="form-col">
-                                        <input type="text" name="form_name" className="input-field" placeholder="Enter Name" />
-                                    </div>
-                                    <div className="form-col">
-                                        <input type="email" name="form_email" className="input-field" placeholder="Enter Email" />
-                                    </div>
-                                </div>
-                                <div className="form-row">
-                                    <div className="form-col">
-                                        <input type="text" name="form_subject" className="input-field" placeholder="Enter Subject" />
-                                    </div>
-                                    <div className="form-col">
-                                        <input type="text" name="form_phone" className="input-field" placeholder="Enter Phone" />
-                                    </div>
-                                </div>
-                                <div className="form-group">
-                                    <textarea name="form_message" className="textarea-field" rows="7" placeholder="Enter Message"></textarea>
-                                </div>
-                                <div className="form-actions">
-                                    <input type="hidden" name="form_botcheck" value="" />
-                                    <button type="submit" className="btn btn-primary"><span>Send Message</span></button>
-                                    <button type="reset" className="btn btn-secondary"><span>Reset</span></button>
-                                </div>
-                            </form>
-                        </div>
- 
-                        <div className="contact-right">
-                            <div className="section-header">
-                                <span className="header-subtitle">Need Assistance?</span>
-                                <h2 className="header-title">Get in Touch</h2>
-                            </div>
- 
-                            <ul className="contact-info-list">
-                                <li className="contact-item">
-                                    <div className="contact-icon">
-                                        <FontAwesomeIcon icon={faPhone} />
-                                    </div>
-                                    <div className="contact-text">
-                                        <h6>Call us</h6>
-                                        <a href="tel:9963326393">(+91) 9963326393</a>
-                                    </div>
-                                </li>
-                                <li className="contact-item">
-                                    <div className="contact-icon">
-                                        <FontAwesomeIcon icon={faEnvelope} />
-                                    </div>
-                                    <div className="contact-text">
-                                        <h6>Email us</h6>
-                                        <a href="mailto:info@pranisha.in">info@pranisha.in</a>
-                                    </div>
-                                </li>
-                                <li className="contact-item">
-                                    <div className="contact-icon">
-                                        <FontAwesomeIcon icon={faLocationDot} />
-                                    </div>
-                                    <div className="contact-text">
-                                        <h6>Visit Us</h6>
-                                        <span>Kukatpally, Hyderabad, Telangana 500085</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+import { faPhone, faEnvelope, faLocationDot, faUpload } from '@fortawesome/free-solid-svg-icons';
+
+function AboutWithContact() {
+  return (
+    <>
+      <Header />
+      {/* About Banner / Image */}
+      <PageBanner title="Contact" breadcrumb="Contact" />
+
+      
+
+      {/* Contact Section - same as screenshot */}
+      <section className="about-contact-section">
+        <div className="container">
+          <div className="contact-row">
+            {/* Join Us */}
+            <div className="contact-box">
+              <h3>Join Us</h3>
+              <form className="join-form">
+                <input type="text" placeholder="Name" required />
+                <div className="form-row">
+                  <input type="email" placeholder="Email" required />
+                  <input type="text" placeholder="Phone Number" required />
                 </div>
-            </section>
-           
- 
- 
-            <MapSection />
-            <Footer />
-        </>
-    );
+
+                <p className="form-label">What is it that you seek.. at Pranisha?</p>
+                <div className="form-options">
+                  <label><input type="radio" name="role" value="Copy Writer" /> Content Writer</label>
+                  <label><input type="radio" name="role" value="Graphic Designer" /> Graphic Designer</label>
+                  <label><input type="radio" name="role" value="Web Developer" /> Web Developer</label>
+                </div>
+
+                <div className="upload-box">
+                  <label htmlFor="resumeUpload" className="upload-btn">
+                    <FontAwesomeIcon icon={faUpload} /> Upload Your Resume (PDF, DOC, DOCX)
+                  </label>
+                  <input id="resumeUpload" type="file" accept=".pdf,.doc,.docx" hidden />
+                </div>
+
+                <textarea placeholder="Tell us a bit about yourself" required></textarea>
+                <button type="submit" className="btn-apply">Apply</button>
+              </form>
+            </div>
+
+            {/* Get in Touch */}
+            <div className="contact-box">
+              <h3>Get in Touch</h3>
+              <form className="touch-form">
+                <input type="text" placeholder="Name" required />
+                <input type="email" placeholder="Email" required />
+                <input type="text" placeholder="Phone" required />
+
+                <p className="form-label">Services</p>
+                <div className="form-options">
+                  <label><input type="checkbox" /> Branding</label>
+                  <label><input type="checkbox" /> Website</label>
+                  <label><input type="checkbox" /> UI/UX</label>
+                  <label><input type="checkbox" /> Others</label>
+                </div>
+
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit" className="btn-submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div className='contact-info'>
+          <h3>Hyderabad</h3>
+          <ul>
+            <li>
+              1st Floor, Sri Sri Dwarkamai, Gokul plots Venkata Ramana Colony Kukatpally,<br/> Hyderabad, Telangana 500085
+            </li>
+            <li>
+               info@pranisha.com
+            </li>
+            <li>
+               tel:+919963326393
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <Footer />
+    </>
+  );
 }
- 
-export default Contact;
+
+export default AboutWithContact;

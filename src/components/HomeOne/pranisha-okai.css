@@ -18,7 +18,6 @@
   color: #fff;
   background: linear-gradient(180deg,#070708,#0b0b0c);
   overflow: hidden;
-  font-family: 'Poppins', sans-serif;
 }
 
 /* particle canvas */
@@ -52,7 +51,6 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 80px;
-  padding-bottom: 80px;
 }
 
 /* inner wrapper with explicit columns */
@@ -66,8 +64,8 @@
 
 /* LEFT: narrow column (small text) */
 .okai-left-col {
-  width: 360px; /* narrow left column like Okai */
-  max-width: 42%;
+  width: 560px; /* narrow left column like Okai */
+  max-width: 72%;
   min-width: 260px;
   display: flex;
   flex-direction: column;
@@ -82,16 +80,15 @@
   letter-spacing: 1px;
 }
 .okai-left-primary {
-  font-size: 22px; /* intentionally small/condensed */
+  font-size: 42px; /* intentionally small/condensed */
   line-height: 1.12;
-  font-weight: 700;
+  font-weight: 600;
   color: #fff;
   letter-spacing: 0.2px;
 }
 .okai-left-desc {
   color: var(--okai-muted);
   font-size: 14px;
-  max-width: 34ch;
   margin-top: 4px;
 }
 
@@ -520,7 +517,7 @@ body.cursor-accent-active::before {
   z-index: 9998;
   background: rgba(7,7,8,0.98);
   color: #fff;
-  overflow: auto;
+  overflow: hidden;
 }
 .fullscreen-nav.active { display: block; }
 .fullscreen-nav .close-btn {
@@ -585,7 +582,7 @@ body > *:not([data-global-particles]) {
  
 .about-section-six {
  
-  padding: 80px 0;
+  padding: 20px 0;
   color: #fff;
 }
  
@@ -617,7 +614,6 @@ body > *:not([data-global-particles]) {
  
 .about-section-six .sub-title {
   color: #ffa324;
-  text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 2px;
   font-weight: 600;
@@ -661,100 +657,7 @@ body > *:not([data-global-particles]) {
   color: #000;
 }
  
-/*************************** teamsection ********************/
  
-.team-section {
-  text-align: center;
-  padding: 60px 40px;
-  
-  color: #fff;
-}
-
-.section-title {
-  color: #ffa324;
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 40px;
-}
-
-.team-grid {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.team-card {
-  
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 300px;
-  flex: 1;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-.team-card:hover {
-  transform: translateY(-6px);
-}
-
-.team-img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.team-name {
-  color: #fff;
-  margin-top: 14px;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.team-role {
-  font-size: 15px;
-  color: #aaa;
-  margin-bottom: 12px;
-}
-
-.socials {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-}
-.socials a {
-  font-size: 20px;
-  color: #fff;
-  transition: color 0.2s;
-}
-.socials a:hover {
-  color: #1da1f2;
-}
-
-/* Pagination */
-.pagination {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-}
-.pagination button {
-  background: #222;
-  border: none;
-  color: #fff;
-  padding: 8px 14px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.pagination button.active {
-  background: #fff;
-  color: #000;
-  font-weight: bold;
-}
-.pagination button:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
 
  
  /************************portfolio********************/
@@ -774,6 +677,14 @@ body > *:not([data-global-particles]) {
 
 .portfolio-card:hover::after {
     opacity: 1;
+}
+.portfolio-card {
+  transform: translateY(40px);
+  opacity: 0;
+}
+[data-aos].aos-animate {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 /* The text overlay container */
@@ -795,7 +706,13 @@ body > *:not([data-global-particles]) {
     transform: translateY(0);
     opacity: 1;
 }
-
+.page-title{
+  color: #ffa324;
+  text-align: center;
+}
+.page-subtitle{
+  text-align: center;
+}
 /* Text styling inside the overlay */
 .card-info h3 {
     font-size: 1.75rem;

@@ -9,7 +9,7 @@ const PageBanner = ({ title, breadcrumb }) => {
         <h1 className="banner-title">{title}</h1>
         <div className="breadcrumb">
           <Link to="/">Home</Link>
-          <span className="divider"> &gt;&gt; </span>
+          <span className="space"> &gt;&gt; </span>
           <span className="current">{breadcrumb}</span>
         </div>
       </div>

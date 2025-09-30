@@ -5,6 +5,7 @@ import Layout from "./components/Helper/Layout.jsx";
 import CustomCursor from "./components/HomeOne/CustomCursor.jsx";
 import GlobalParticles from "./components/GlobalParticles.jsx";
 import CustomCursor2 from "./components/HomeOne/CustomCursor2.jsx";
+import Socials from "./components/Socialicons.jsx";
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
                 <Router />
             </div>
             <CustomCursor2/>
+            <Socials/>
          <GlobalParticles particleCount={20} maxSpeed={0.45} />
             <CustomCursor
                 hideNative={true}

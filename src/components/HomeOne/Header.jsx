@@ -28,7 +28,7 @@ function Header() {
       <header ref={headerRef} className="custom-header">
         <div className="header-left">
           <Link to="/" className="logo">
-            <img src="/Pranisha.png" alt="Logo" />
+            <img src="/pranisha.png" alt="Logo" />
             <span className="dot" />
           </Link>
         </div>
@@ -135,7 +135,9 @@ function Header() {
                 </li> */}
               </ul>
             </div>
-
+            <Link to="/team" onClick={() => setMenuOpen({ main: false })}>
+              Team
+            </Link>
             <Link to="/contact" onClick={() => setMenuOpen({ main: false })}>
               Contact Us
             </Link>

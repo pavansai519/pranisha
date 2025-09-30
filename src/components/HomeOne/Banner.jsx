@@ -26,7 +26,7 @@ export default function ParticleBanner({
   eyebrow = "Creative Agency",
   heading = "Innovative Solutions",
   subheading = "to Elevate Your Projects",
-  description = "We implement proven digital strategies with precision and dedication.",
+  description = "Empowering brands with innovative digital solutions – from branding to web development and marketing, we drive your business success.",
   primaryText = "Innovative Solutions to Elevate Your Projects",
   buttonText = "Get Free Consultation",
   background = "https://picsum.photos/seed/square1/600/600",
@@ -67,11 +67,7 @@ export default function ParticleBanner({
             </button>
           </div>
 
-          <div className="okai-left-meta">
-            <span>Selected work</span>
-            <span className="okai-meta-dot">•</span>
-            <span>2025</span>
-          </div>
+         
         </div>
 
         {/* RIGHT: large image stack */}
