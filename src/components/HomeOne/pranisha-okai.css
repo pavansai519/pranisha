@@ -424,7 +424,7 @@ body.cursor-accent-active::before {
  
 .float-box:hover .short {
   color: #fff;
-  font-weight: 800;
+  font-weight: 700;
   text-shadow:
     0 0 10px rgba(255, 163, 36, 0.8),
     0 0 20px rgba(255, 163, 36, 0.6),

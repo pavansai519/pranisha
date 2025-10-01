@@ -32,7 +32,7 @@ function PortfolioGrid() {
   // Init AOS
   useEffect(() => {
     AOS.init({
-      duration: 1000, // animation duration
+      duration: 800, // animation duration
       offset: 120,    // how early the animation starts
       once: true,     // animate only once
       easing: 'ease-out-cubic',
@@ -59,8 +59,8 @@ function PortfolioGrid() {
 
             <div
               className="portfolio-card"
-              data-aos="zoom-in"
-              data-aos-delay="200"
+              data-aos="fade-up"
+              data-aos-delay="100"
             >
               <img src={projects[0].image} alt={projects[0].title} />
               <div className="card-info">
@@ -71,8 +71,8 @@ function PortfolioGrid() {
 
             <div
               className="portfolio-card"
-              data-aos="zoom-in"
-              data-aos-delay="400"
+              data-aos="fade-up"
+              data-aos-delay="200"
             >
               <img src={projects[2].image} alt={projects[2].title} />
               <div className="card-info">
@@ -86,7 +86,7 @@ function PortfolioGrid() {
           <div className="portfolio-column-right">
             <div
               className="portfolio-card"
-              data-aos="zoom-in"
+              data-aos="fade-up"
               data-aos-delay="300"
             >
               <img src={projects[1].image} alt={projects[1].title} />
@@ -98,7 +98,7 @@ function PortfolioGrid() {
 
             <div
               className="portfolio-card"
-              data-aos="zoom-in"
+              data-aos="fade-up"
               data-aos-delay="500"
             >
               <img src={projects[3].image} alt={projects[3].title} />

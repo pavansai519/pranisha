@@ -48,32 +48,33 @@ function AllProjects() {
       Client Success Stories
     </h2>
 
-    {projects.map((project, index) => (
-      <div
-        key={index}
-        className={`project-row ${index % 2 !== 0 ? "reverse" : ""}`}
-      >
-        {/* Image */}
-        <div
-          className="project-image"
-          data-aos="zoom-in"
-          data-aos-delay="100"
-        >
-          <img src={project.image} alt={project.title} />
-        </div>
+  {projects.map((project, index) => (
+  <div
+    key={index}
+    className={`project-row ${index % 2 !== 0 ? "reverse" : ""}`}
+  >
+    {/* Image */}
+    <div
+      className="project-image"
+      data-aos="zoom-in"
+      data-aos-delay="100"
+    >
+      <img src={project.image} alt={project.title} />
+    </div>
 
-        {/* Content */}
-        <div
-          className="project-content"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <h3>{project.title}</h3>
-          <h4 className="tagline">{project.tagline}</h4>
-          <p>{project.description}</p>
-        </div>
-      </div>
-    ))}
+    {/* Content with alternating alignment */}
+    <div
+      className={`project-content ${index % 2 !== 0 ? "align-right" : "align-left"}`}
+      data-aos="fade-up"
+      data-aos-delay="200"
+    >
+      <h3>{project.title}</h3>
+      <h4 className="tagline">{project.tagline}</h4>
+      <p>{project.description}</p>
+    </div>
+  </div>
+))}
+
   </div>
 </section>
 

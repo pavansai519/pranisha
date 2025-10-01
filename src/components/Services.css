@@ -446,6 +446,16 @@ body {
   color: #ccc;
   line-height: 1.6;
 }
+/* Default left */
+.project-content.align-left {
+  text-align: left;
+}
+
+/* Right alignment */
+.project-content.align-right {
+  text-align: right;
+}
+
 
 /* Responsive */
 @media (max-width: 992px) {
