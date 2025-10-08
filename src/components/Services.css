@@ -225,12 +225,11 @@ body {
 .item-icon {
   width: 60px;
   height: 60px;
-  background: rgba(245, 158, 11, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .item-icon i {
@@ -350,7 +349,7 @@ body {
 .content-item {
   border-radius: 12px;
   padding: 25px;
-  text-align: center;
+  text-align: left;
   box-shadow: 0 4px 15px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -403,7 +402,7 @@ body {
  
 .pf-section {
   background: var(--bg);
-  padding: 60px 20px;
+  padding: 220px 20px 60px 20px;
   color: var(--text);
 }
  
@@ -413,7 +412,7 @@ body {
 }
  
 .pf-eyebrow {
-  font-size: 1.2rem;
+  font-size: 34px;
   letter-spacing: 2px;
   color: var(--accent);
   text-transform: uppercase;
@@ -421,18 +420,18 @@ body {
  
 .pf-sub {
   font-size: 1rem;
-  color: var(--muted);
+  color: #fcfcfc;
 }
  
 .pf-grid {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 75px;
 }
  
 .pf-row {
   display: grid;
-  gap: 18px;
+  gap: 48px;
 }
  
 /* Row Layouts */
@@ -535,7 +534,7 @@ body {
   display: grid;
   grid-template-columns: 3fr 1fr;
   align-items: stretch;
-  gap: 18px;
+  gap: 48px;
 }
  
 .pf-tile.wide {
@@ -547,7 +546,7 @@ body {
 .pf-vertical-stack {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 42px;
 }
  
 .pf-vertical-stack .pf-tile.stacked {

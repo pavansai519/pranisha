@@ -1,7 +1,8 @@
 import React from "react";
 import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 import Header from "./HomeOne/Header.jsx";
-import Footer from "./HomeOne/Footer.jsx";
+import Footer from "./HomeOne/Footer1.jsx";
+import Circle from "./Circle.jsx";
 
 
 
@@ -65,6 +66,7 @@ function Team() {
         ))}
       </div>
     </section>
+    <Circle/>
     <Footer/>
     </>
   );

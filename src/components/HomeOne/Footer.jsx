@@ -75,7 +75,7 @@ function FooterHomeOne({ className }) {
                     </div>
                 </div>
 
-                                <div className="footer-copyright p-3">
+                 <div className="footer-copyright p-3">
                     <div className="auto-container">
                         <div className="inner-container footer-bottom-row">
                         <div className="copyright-text">
@@ -84,7 +84,7 @@ function FooterHomeOne({ className }) {
                         <BacktoTop />
                         </div>
                     </div>
-                    </div>
+                 </div>
 
             </footer>
         </>

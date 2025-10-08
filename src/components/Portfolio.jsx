@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import "./Services.css";
 import Header from "./HomeOne/Header.jsx";
 import Footer from "./HomeOne/Footer1.jsx";
-import PageBanner from "./PageBanner.jsx";
+import Circle from "./Circle.jsx";
 import { Link } from "react-router-dom";
 
 const projects = [
@@ -53,12 +53,12 @@ export default function PortfolioShowcase() {
   return (
     <>
       <Header />
-      <PageBanner title="Our Portfolio" subtitle="Showcasing Excellence" />
 
       <section className="pf-section">
         <div className="pf-inner container">
           <header className="pf-header" data-aos="fade-up">
             <h3 className="pf-eyebrow">Our Portfolio</h3>
+            <p className="pf-sub">A curated selection of our most impactful projects, showcasing our expertise and creativity across various industries.</p>
           </header>
 
           <div className="pf-grid">
@@ -150,7 +150,7 @@ export default function PortfolioShowcase() {
           </div>
         </div>
       </section>
-
+         <Circle/>
       <Footer />
     </>
   );

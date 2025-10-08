@@ -125,7 +125,6 @@ License: copyright commercial
   display: flex;
   align-items: center;
   width: 40%;
-  padding: 12px 0;
   cursor: pointer;
 }
 .submenu-toggle:hover {
@@ -18822,23 +18821,25 @@ select {
   padding: 10px;
   border-radius: 10px;
   text-align: center;
-  transition: transform 0.3s ease;
-}
-.team-card:hover {
-  transform: translateY(-6px);
+  overflow: hidden; 
 }
 
 .team-img {
   width: 100%;
   height: 360px;
   object-fit: cover;
-  border-radius: 4px;
-  filter: grayscale(100%); /* B&W default */
-  transition: filter 0.3s ease;
+  border-radius: 0px;
+  filter: grayscale(100%);
+  transition: transform 2s ease, filter 4s ease;
 }
+
+/* Image smoothly zooms and colorizes */
 .team-card:hover .team-img {
-  filter: grayscale(0); /* Reveal color on hover */
+  transform: scale(1.01);
+  filter: grayscale(0);
 }
+
+
 
 .team-name {
   color: #fff;
@@ -18902,32 +18903,29 @@ select {
 /* Text Styling */
 .cracking-footer h3 {
   color: #ffa324;
-  font-size: 1.2rem;
+  font-size: 26px;
   letter-spacing: 1px;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 10px;
 }
 
 .cracking-footer p {
-  font-size: 0.95rem;
-  color: #ccc;
-  margin: 2px 0;
+  font-size: 22px;
+;
+  color: #fcfcfc;
 }
 
 .cracking-footer a {
   color: #ccc;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  
 }
 
-.cracking-footer a:hover {
-  color: #ffa324;
-}
 
-.footer-copy {
-  color: #777;
-  padding-top: 20px;
-  font-size: 0.45rem;
+
+.cracking-footer .footer-copy {
+  color: #fcfcfc;
+  padding-top: 15px;
+  font-size: 14px;
 }
 
 /* Circle Button (Bottom Left) */
