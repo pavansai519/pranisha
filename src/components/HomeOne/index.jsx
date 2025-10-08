@@ -3,10 +3,8 @@ import useToggle from '../../Hooks/useToggle.js';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import BackToTop from '../BackToTop.jsx';
 import Footer from './Footer.jsx';
-import Banner from './Banner.jsx';
-import About from './About.jsx';
+import Banner from './Homebanner.jsx';
 import Service from './Service.jsx';
 import Testimonial from './Testimonial.jsx';
 import Header from './Header.jsx';
@@ -31,13 +29,11 @@ function HomeOne() {
             <Header action={drawerAction.toggle} />
 
             <Banner />
-            <About />
             <Service />
             <PortfolioGrid />
             <ClientsHomeOne />
             <Testimonial />
             <Footer /> 
-            <BackToTop />
         </>
     );
 }

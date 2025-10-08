@@ -1,0 +1,141 @@
+:root {
+  --bg: #000;
+  --accent: #ffa324;
+  --text: #fff;
+  --muted: #aaa;
+  --radius: 12px;
+}
+ 
+.ps-section {
+  background: var(--bg);
+  padding: 20px 20px;
+  color: var(--text);
+}
+.pf-section{
+  background: var(--bg);
+  padding: 0px 20px;
+  color: var(--text);
+}
+ 
+.ps-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+ 
+.ps-eyebrow {
+  font-size: 34px;
+  letter-spacing: 2px;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+ 
+.ps-sub {
+  font-size: 1rem;
+  color: var(--muted);
+}
+ 
+.ps-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 85px;
+}
+ 
+.ps-row {
+  display: grid;
+  gap: 58px;
+}
+ 
+/* Row Layouts */
+.row1 {
+  grid-template-columns: 1fr 2fr;
+}
+ 
+.row2 {
+  grid-template-columns: 2fr 1fr;
+}
+ 
+.row3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+ 
+/* All Tiles Same Height */
+.ps-tile {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  height: 400px;
+  /* border-radius: var(--radius); optional */
+}
+ 
+.ps-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+ 
+.ps-tile:hover img {
+  transform: scale(1.05);
+}
+ 
+/* Meta Overlay */
+.ps-tile-meta {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+}
+ 
+.ps-tile-meta h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fcfcfc;
+}
+ 
+.ps-tile-meta span {
+  display: block;
+  font-size: 0.85rem;
+  color: #ffa324
+}
+ 
+/* Load Button */
+.ps-load {
+  text-align: center;
+  margin-top: 90px;
+}
+ 
+.ps-btn {
+  border: 1px solid #ffa324;
+  padding: 12px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+    color: #fcfcfc;
+
+  transition: background 0.3s;
+}
+ 
+.ps-btn:hover {
+  color: #ffa324;
+}
+ 
+.ps-btn a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+}
+ 
+/* Responsive */
+@media (max-width: 992px) {
+  .row1,
+  .row2,
+  .row3 {
+    grid-template-columns: 1fr;
+  }
+ 
+  .ps-tile {
+    height: 220px; /* smaller height on mobile */
+  }
+}

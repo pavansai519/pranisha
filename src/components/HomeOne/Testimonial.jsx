@@ -18,9 +18,9 @@ const swiperOptions = {
       disableOnInteraction: false,
   },
   loop: true,
-  pagination:{
-    dynamicBullets: true,
-  },
+  // pagination:{
+  //   dynamicBullets: true,
+  // },
 
   breakpoints:{
       320: {
@@ -119,9 +119,9 @@ function TestimonialHome4({ className }) {
                                   <div className="text">{testimonial.text}</div>
                                 </div>
                                 <div className="info-box">
-                                  <div className="thumb">
+                                  {/* <div className="thumb">
                                     <img src={testimonial.image} alt=""/>
-                                  </div>
+                                  </div> */}
                                   <h6 className="name">{testimonial.name}</h6>
                                   <span className="designation">{testimonial.designation}</span>
                                 </div>

@@ -34,18 +34,18 @@ function TabHome5({ className }) {
 
                                             <div className="content-box">
                                                 <div className="about-block-two">
-                                                    <h5 className="title"><i className="icon fa fa-angle-right"></i>To Deliver Optimum Insights</h5>
-                                                    <p className="text">Strategies, and conversions by churning out fresh marketing ideas.</p>
+                                                    <h5 className="title"><i className="icon fa fa-angle-right"></i>Digital Excellence</h5>
+                                                    <p className="text">Creating seamless, high-impact digital experiences that inspire, engage, and transform brands globally.</p>
                                                 </div>
 
                                                 <div className="about-block-two">
-                                                    <h5 className="title"><i className="icon fa fa-angle-right"></i> To not only innovate</h5>
-                                                    <p className="text">but also outperform competitors in every way possible.</p>
+                                                    <h5 className="title"><i className="icon fa fa-angle-right"></i>Client Empowerment</h5>
+                                                    <p className="text">Empowering clients through strategy, creativity, and technology to achieve measurable, meaningful business growth.</p>
                                                 </div>
 
                                                 <div className="about-block-two">
-                                                    <h5 className="title"><i className="icon fa fa-angle-right"></i> To bring commercial</h5>
-                                                    <p className="text">success for our valuable customers.</p>
+                                                    <h5 className="title"><i className="icon fa fa-angle-right"></i> Innovation & Integrity</h5>
+                                                    <p className="text">Innovating with purpose, delivering reliable, ethical, and future-ready digital solutions for modern brands.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -53,7 +53,7 @@ function TabHome5({ className }) {
 
                                     {/* {/ Image Column /} */}
                                     <div className="image-column col-xl-5 col-lg-6">
-                                        <figure className="image overlay-anim"><img src={WorkImg} alt=""/></figure>
+                                        <img className="tab-image overlay-anim" src={WorkImg} alt=""/>
                                     </div>
                                 </div>
                             </div>
@@ -69,18 +69,18 @@ function TabHome5({ className }) {
 
                                             <div className="content-box">
                                                 <div className="about-block-two">
-                                                    <h5 className="title"><i className="icon fa fa-angle-right"></i> To work with strategies </h5>
-                                                    <p className="text">that drive your brand through the roof.</p>
+                                                    <h5 className="title"><i className="icon fa fa-angle-right"></i> Creative Innovation </h5>
+                                                    <p className="text">Deliver groundbreaking digital solutions blending design, technology, and strategy to redefine modern brand experiences.</p>
                                                 </div>
 
                                                 <div className="about-block-two">
-                                                    <h5 className="title"><i className="icon fa fa-angle-right"></i> To contribute to your </h5>
-                                                    <p className="text">business growth with our digital marketing expertise.</p>
+                                                    <h5 className="title"><i className="icon fa fa-angle-right"></i> Client Success </h5>
+                                                    <p className="text">Collaborate closely with clients to transform their vision into impactful, results-driven digital realities.</p>
                                                 </div>
 
                                                 <div className="about-block-two">
-                                                    <h5 className="title"><i className="icon fa fa-angle-right"></i> To acquire the </h5>
-                                                    <p className="text">WOW factor through our services.</p>
+                                                    <h5 className="title"><i className="icon fa fa-angle-right"></i> Mission: Quality & Trust</h5>
+                                                    <p className="text">Maintain excellence, transparency, and reliability in every project to build lasting partnerships and credibility.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -88,7 +88,7 @@ function TabHome5({ className }) {
 
                                     {/* {/ Image Column /} */}
                                     <div className="image-column col-xl-5 col-lg-6">
-                                        <figure className="image overlay-anim"><img src={WorkImg} alt=""/></figure>
+                                        <img className="tab-image overlay-anim" src={WorkImg} alt=""/>
                                     </div>
                                 </div>
                             </div>

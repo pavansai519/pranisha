@@ -1,11 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import BacktoTop from '../BackToTop'
 
  
 function FooterHomeOne({ className }) {
     return (
         <>
-            <footer  className={`footer-section-six pt-170 pb-50  ${className || ''}`}>
+            <footer  className={`footer-section-six pt-90 pb-10  ${className || ''}`}>
                 <div className=""></div>
                 <div className="widgets-section pb-4">
                     <div className="auto-container">
@@ -13,7 +14,7 @@ function FooterHomeOne({ className }) {
                            <div className={`footer-logo footer-column col-xl-3 ${className || ''}`}>
                                  <div className="footer-widget about-widget">
                                     <div className="logo"><Link to="/"><img src="/pranisha.png" alt=""/></Link></div>
-                                    <div className="logo-text">We execute industry level digital marketing concepts everyday and we enjoy being this thorough and precise.</div>
+                                    <div className="logo-text">Pranisha Technologies delivers creative branding, web development, and digital marketing solutions that build strong brand identities and drive business growth.</div>
                                    <ul className="social-icon-two">
                                         <li><Link to="https://in.linkedin.com/company/pranishatechnologies" target="_blank" rel="noopener noreferrer"> <i className="fab fa-linkedin"></i></Link></li>
                                         <li><Link to="https://www.facebook.com/pranishatechnologies" target="_blank" rel="noopener noreferrer"> <i className="fab fa-facebook"></i></Link></li>
@@ -73,14 +74,18 @@ function FooterHomeOne({ className }) {
                         </div>
                     </div>
                 </div>
- 
-                <div className={`footer-copyright text-center p-3 ${className || ''}`}>
+
+                                <div className="footer-copyright p-3">
                     <div className="auto-container">
-                        <div className="inner-container">
-                            <div className="copyright-text"> © 2021 Pranisha Technologies Pvt Ltd</div>
+                        <div className="inner-container footer-bottom-row">
+                        <div className="copyright-text">
+                            © 2025 Pranisha Technologies Pvt Ltd
+                        </div>
+                        <BacktoTop />
                         </div>
                     </div>
-                </div>      
+                    </div>
+
             </footer>
         </>
     );

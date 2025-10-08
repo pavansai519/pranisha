@@ -1,36 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React from "react";
+import { FaChevronUp } from "react-icons/fa";
 
-function BackToTop({ className = '' }) {
-    const [isVisible, setIsVisible] = useState(false);
+const BackToTop = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsVisible(window.scrollY > window.innerHeight);
-        };
-
-        // Add scroll event listener
-        window.addEventListener('scroll', handleScroll);
-
-        // Cleanup event listener on unmount
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
-    };
-
-    return (
-        isVisible && (
-            <button
-                className={`scroll-to-top scroll-to-target ${className}`} onClick={scrollToTop}
-            >
-                <i className="fa fa-angle-up" />
-            </button>
-        )
-    );
-}
+  return (
+    <div className="back-to-top-footer" onClick={scrollToTop}>
+      <FaChevronUp className="arrow" />
+      <span>Back to top</span>
+    </div>
+  );
+};
 
 export default BackToTop;

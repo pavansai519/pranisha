@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -392,81 +391,168 @@ body {
   }
 }
 /**************all projects css****************************/
-/* Each row */
-.project-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  background: #111;
-  border-radius: 12px;
-  padding: 2rem;
-  margin-bottom: 3rem;
-  transition: transform 0.3s ease;
+/**************************portfolio page***************************/
+/****************************portfolio page***************************/
+:root {
+  --bg: #000;
+  --accent: #ffa324;
+  --text: #fff;
+  --muted: #aaa;
+  --radius: 12px;
 }
-.project-row:hover {
-  transform: translateY(-6px);
+ 
+.pf-section {
+  background: var(--bg);
+  padding: 60px 20px;
+  color: var(--text);
 }
-
-/* Reverse rows */
-.project-row.reverse {
-  flex-direction: row-reverse;
+ 
+.pf-header {
+  text-align: center;
+  margin-bottom: 40px;
 }
-
-/* Image styling */
-.project-image img {
-  width: 360px;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 10px;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease;
+ 
+.pf-eyebrow {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: var(--accent);
+  text-transform: uppercase;
 }
-.project-row:hover .project-image img {
-  filter: grayscale(0);
-}
-
-/* Content */
-.project-content {
-  flex: 1;
-}
-.project-content h3 {
-  font-size: 1.8rem;
-  color: #fff;
-  margin-bottom: 0.5rem;
-}
-.project-content .tagline {
+ 
+.pf-sub {
   font-size: 1rem;
+  color: var(--muted);
+}
+ 
+.pf-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+ 
+.pf-row {
+  display: grid;
+  gap: 18px;
+}
+ 
+/* Row Layouts */
+.row1 {
+  grid-template-columns: 1fr 2fr;
+}
+ 
+.row2 {
+  grid-template-columns: 2fr 1fr;
+}
+ 
+.row3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+ 
+/* All Tiles Same Height */
+.pf-tile {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  height: 400px;
+}
+ 
+.pf-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+ 
+.pf-tile:hover img {
+  transform: scale(1.05);
+}
+ 
+/* Meta Overlay */
+.pf-tile-meta {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+}
+ 
+.pf-tile-meta h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fcfcfc;
+}
+ 
+.pf-tile-meta span {
+  display: block;
+  font-size: 0.85rem;
   color: #ffa324;
-  margin-bottom: 0.75rem;
+}
+ 
+/* Load Button */
+.pf-load {
+  text-align: center;
+  margin-top: 30px;
+}
+ 
+.pf-btn {
+  border: none;
+  padding: 12px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+ 
+.pf-btn:hover {
+  background: #ffb84d;
+  color: #fcfcfc;
+}
+ 
+.pf-btn a {
+  text-decoration: none;
+  color: #000;
   font-weight: 600;
 }
-.project-content p {
-  font-size: 1rem;
-  color: #ccc;
-  line-height: 1.6;
-}
-/* Default left */
-.project-content.align-left {
-  text-align: left;
-}
-
-/* Right alignment */
-.project-content.align-right {
-  text-align: right;
-}
-
-
+ 
 /* Responsive */
 @media (max-width: 992px) {
-  .project-row,
-  .project-row.reverse {
-    flex-direction: column;
-    text-align: center;
+  .row1,
+  .row2,
+  .row3 {
+    grid-template-columns: 1fr;
   }
-
-  .project-image img {
-    width: 100%;
-    height: auto;
+ 
+  .pf-tile {
+    height: 220px;
   }
 }
+ 
+/* ------------------ NEW ADDITION FOR 8, 9, 10 LAYOUT ------------------ */
+ 
+/* Special layout for row with 8, 9, 10 images */
+.special-row {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: stretch;
+  gap: 18px;
+}
+ 
+.pf-tile.wide {
+  height: 500px;
+  width: 100%;
+  object-fit: fill; /* 8th image larger height and width */
+}
+ 
+.pf-vertical-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+ 
+.pf-vertical-stack .pf-tile.stacked {
+  height: 244px;
+  width: 500px; /* smaller height for 9th and 10th */
+}
+ 
+ 

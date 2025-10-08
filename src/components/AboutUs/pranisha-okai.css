@@ -1,0 +1,875 @@
+/* pranisha-okai.css
+   Right-image, left-small-text Okai-style banner
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+:root{
+  --okai-bg: #070708;
+  --okai-muted: #9aa3ad;
+  --okai-accent: #ff5a5f;
+  --okai-card: #0f1113;
+  --okai-maxw: 1300px;
+}
+
+/* root */
+.okai-banner-root {
+  position: relative;
+  min-height: 100vh;
+  color: #fff;
+  background: linear-gradient(180deg,#070708,#0b0b0c);
+  overflow: hidden;
+}
+
+/* particle canvas */
+.okai-banner-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100svh;
+  z-index: 0;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+/* overlay */
+.okai-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+  z-index: 1;
+}
+
+/* container / layout */
+.okai-container {
+  max-width: var(--okai-maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 80px;
+}
+
+/* inner wrapper with explicit columns */
+.okai-inner {
+  width: 100%;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LEFT: narrow column (small text) */
+.okai-left-col {
+  width: 560px; /* narrow left column like Okai */
+  max-width: 72%;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+}
+.okai-left-eyebrow {
+  color: #ffa324;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.okai-left-primary {
+  font-size: 42px; /* intentionally small/condensed */
+  line-height: 1.12;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.2px;
+}
+.okai-left-desc {
+  color: var(--okai-muted);
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* left CTAs smaller */
+.okai-left-ctas { display:flex; gap:10px; margin-top: 8px; align-items:center; }
+.okai-btn-primary.small {
+  background: #fff;
+  color: #0b0b0c;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+}
+.okai-btn-ghost.small {
+  background: transparent;
+  border: 1px solid #fff ;
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.okai-btn-ghost.small:hover{
+  background-color: #fff;
+  color: #000 ;
+  font-weight: 600;
+}
+.okai-left-meta { margin-top: 12px; color: var(--okai-muted); font-size: 12px; display:flex; gap:8px; align-items:center; }
+.okai-meta-dot { opacity: 0.6; }
+
+/* RIGHT: big visual */
+.okai-right-col {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.okai-media-stack-right {
+  width: 560px; /* make right visual larger than before to emphasize image */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+/* cards (right) */
+.okai-media-card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 22px 60px rgba(2,6,23,0.6);
+  background-size: cover;
+  background-position: center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* sizes and transforms tuned for right emphasis */
+.okai-media-card-top {
+  width: 500px;
+  height: 580px;
+  /* transform: translateY(-22px) rotate(-2deg); */
+  border: 1px solid rgba(255,255,255,0.03);
+}
+.okai-media-card-mid {
+  width: 520px;
+  height: 280px;
+  transform: translateY(-8px) rotate(1.4deg);
+  border: 1px solid rgba(255,255,255,0.03);
+  opacity: 0.98;
+}
+.okai-media-card-bottom {
+  width: 420px;
+  height: 180px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 12px;
+  transform: translateY(0) rotate(0deg);
+  border: 1px solid rgba(255,255,255,0.02);
+  background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+}
+
+/* small logo inside bottom card */
+.okai-media-smalllogo { width: 160px; height: auto; opacity: 0.98; filter: drop-shadow(0 8px 26px rgba(0,0,0,0.6)); }
+
+/* responsive behavior */
+@media (max-width: 1100px) {
+  .okai-container { padding-left: 20px; padding-right: 20px; }
+  .okai-media-stack-right { width: 420px; }
+  .okai-media-card-top { width: 420px; height: 260px; transform: translateY(-18px) rotate(-2deg); }
+  .okai-media-card-mid { width: 380px; height: 220px; transform: translateY(-6px) rotate(1.6deg); }
+  .okai-media-card-bottom { width: 320px; height: 160px; }
+  .okai-left-col { width: 320px; }
+}
+
+@media (max-width: 800px) {
+  /* stack: left text top, image below on small screens */
+  .okai-inner { flex-direction: column-reverse; gap: 18px; align-items: center; justify-content: center; padding-top: 80px; }
+  .okai-left-col { width: 100%; max-width: 760px; text-align: left; align-items: flex-start; }
+  .okai-right-col { width: 100%; display:flex; justify-content:center; }
+  .okai-media-stack-right { width: 92%; align-items:center; }
+  .okai-media-card-top, .okai-media-card-mid { width: 100%; height: 260px; transform: none; }
+  .okai-media-card-bottom { width: 80%; height: 140px; }
+  .okai-left-primary { font-size: 20px; }
+  .okai-left-desc { font-size: 14px; max-width: 70ch; }
+}
+
+
+/*************************cursor css****************************************/
+
+/* custom-cursor.css - styles used by CustomCursor.jsx */
+
+/* Base dot (small solid circle) */
+.cc-dot {
+  --cc-dot-size: 10px;
+  width: var(--cc-dot-size);
+  height: var(--cc-dot-size);
+  border-radius: 50%;
+  background: rgba(255,255,255,1);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform: translate3d(-50%,-50%,0);
+  pointer-events: none;
+  z-index: 2147483647; /* maximum practical z-index */
+  transition: transform 150ms ease, width 160ms ease, height 160ms ease, opacity 200ms ease;
+  will-change: transform, width, height, opacity;
+  opacity: 1;
+}
+
+/* Trailing ring */
+.cc-ring {
+  --cc-ring-size: 28px;
+  width: var(--cc-ring-size);
+  height: var(--cc-ring-size);
+  border-radius: 50%;
+  border: 1.4px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.02);
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform: translate3d(-50%,-50%,0);
+  pointer-events: none;
+  z-index: 2147483646;
+  transition: transform 220ms linear, width 160ms ease, height 160ms ease, border-color 160ms ease, opacity 160ms ease;
+  will-change: transform, width, height, border-color, opacity;
+  opacity: 1;
+}
+/* when the ring is in accent state, add background change globally */
+body.cursor-accent-active {
+  /* example: subtle red-tinted background overlay */
+  background-color: rgba(255,90,95,0.02) !important;
+  /* or change a specific section: */
+  /* .site-header { background: rgba(255,90,95,0.03); } */
+}
+
+/* if you want a full-page overlay effect (layered) you could also do: */
+body.cursor-accent-active::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255,90,95,0.02);
+  pointer-events: none;
+  z-index: 9000; /* below UI but above backgrounds if needed */
+}
+
+/* Hover state (on interactive elements) */
+/* These class names are added via delegated pointerover/pointerout in the component */
+.cc-dot.cc-hover {
+  transform: translate3d(-50%,-50%,0) scale(0.85);
+  width: calc(var(--cc-dot-size) * 0.85);
+  height: calc(var(--cc-dot-size) * 0.85);
+  background: rgba(255,255,255,0.95);
+}
+
+.cc-ring.cc-hover {
+  transform: translate3d(-50%,-50%,0) scale(1.45);
+  width: calc(var(--cc-ring-size) * 1.45);
+  height: calc(var(--cc-ring-size) * 1.45);
+  opacity: 1;
+  /* border-color set inline via JS variable when created (dot.dataset or style variable) */
+}
+
+/* small accessibility: hide on reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .cc-ring, .cc-dot {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+/**************************service page*****************/
+
+.services-section-four {
+  position: relative;
+  padding: 80px 20px;
+ 
+}
+ 
+.auto-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+ 
+/* --- Service Item --- */
+.service-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 40px 0;
+  gap: 16px;
+}
+ 
+ 
+ 
+/* Left box special */
+.left-box {
+  flex-direction: row;       /* box first, text next */
+  text-align: center;
+}
+ 
+/* Content inside left box */
+.left-box .content {
+  text-align: center;          /* heading left aligned */
+}
+ 
+ 
+.service-item .content {
+  flex: 1;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;    
+ 
+}
+ 
+.service-item .content h5 {
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #ffa324;
+}
+ 
+.service-item .content p {
+  font-size: 16px;
+  line-height: 1.8;
+  padding: 10px;
+  color: #fcfcfc;
+  font-family: "Ibrand";
+   display: -webkit-box;
+  -webkit-line-clamp: 4;      /* 3 lines max */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+ 
+/* --- Float Box --- */
+.float-box {
+  width: 200px;
+  height: 200px;
+  background: #0ea5a4;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+ 
+.float-box  {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 110px;
+  letter-spacing: 1px;
+  color: #cea67c;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+ 
+ 
+@font-face {
+  font-family: "Ibrand";
+  src: url("./assets/fonts/Ibrand.woff2") format("woff2"),
+       url("./assets/fonts/Ibrand.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+ 
+ 
+ 
+ .short {
+  /* font-family: "Ibrand", sans-serif; */
+  font-weight: 700;
+  font-size: 150px;
+  letter-spacing: 1px;
+  color: #cea67c;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+ 
+/* --- Right & Left Alignment --- */
+.right-box .float-box {
+  width: 530px;
+  background: linear-gradient(280deg, #ffa324, #070707);
+  order: 2;
+}
+ 
+.left-box .float-box {
+  width: 530px;
+  background: linear-gradient(90deg, #ffa324, #070707);
+  order: 0;
+}
+ 
+.left-box .content {
+  text-align: right;
+    max-width: 800px;
+
+}
+.right-box .content {
+  text-align: left;
+  max-width: 800px;
+}
+ 
+/* --- Hover Effects --- */
+.float-box:hover {
+ 
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+ 
+.float-box:hover .short {
+  color: #fff;
+  font-weight: 700;
+  text-shadow:
+    0 0 10px rgba(255, 163, 36, 0.8),
+    0 0 20px rgba(255, 163, 36, 0.6),
+    0 0 30px rgba(255, 163, 36, 0.4);
+  transition: all 0.3s ease;
+}
+
+@media (min-width:1440px) and (max-width:1920px){
+  .services-section-four {
+    padding: 80px 0px;
+  }
+  .auto-container {
+    max-width: 1600px;
+    margin:  0 auto;
+}
+
+}
+/**************************header css*****************/
+/* Base header (fixed at top) */
+.custom-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 84px;                 /* default height */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 56px 144px 40px 145px;
+  background: rgba(10,10,12,0.6); /* translucent so particles show through if you use them */
+  backdrop-filter: blur(6px);     /* nice blur for depth (optional) */
+  color: #fff;
+  z-index: 9999;                 /* sit above page content */
+  transition: height 220ms ease, padding 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
+  will-change: height, padding, box-shadow, background-color;
+}
+
+/* When sticky (after scrolling) — shrink slightly and add shadow */
+.custom-header.is-sticky {
+  height: 64px;                  /* shrunk height */
+  padding: 80px 280px 60px 280px;
+  box-shadow: 0 8px 24px rgba(2,6,23,0.6);
+  background: rgba(10,10,12,0.78);
+}
+
+/* Logo area: size adjusts on sticky */
+.custom-header .logo img {
+  height: 44px;
+  transition: height 200ms ease;
+}
+.custom-header.is-sticky .logo img {
+  height: 36px;
+}
+
+/* Phone and right area layout */
+.custom-header .header-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Hamburger */
+.hamburger {
+  display: inline-flex;
+  width: 42px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  margin: 3px 0;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+/* Fullscreen nav styles (you can keep existing styles or adjust) */
+.fullscreen-nav {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 9998;
+  background: rgba(7,7,8,0.98);
+  color: #fff;
+  overflow: hidden;
+}
+.fullscreen-nav.active { display: block; }
+.fullscreen-nav .close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+}
+.nav-content {
+  display: flex;
+  gap: 48px;
+  padding: 90px 48px;
+}
+.nav-links { display: flex; flex-direction: column; gap: 18px; font-size: 22px; }
+.nav-links a { color: #fff; text-decoration: none; }
+
+/* Info boxes on the nav */
+.info-boxes { display: flex; flex-direction: column; gap: 16px; max-width: 420px; }
+.info-card { background: rgba(255,255,255,0.02); padding: 18px; border-radius: 10px; }
+
+/* Content spacing: prevent page content being hidden under fixed header */
+/* Add margin/padding to top of main content equal to header height */
+body > *:not([data-global-particles]) {
+  /* don't add margin if you already handle spacing; use #root or main in your app if preferred */
+}
+
+/* Recommended approach: add padding-top to app container (example: #root or main) */
+#root, #__next, .app-root, main {
+  padding-top: 84px; /* match .custom-header height (non-sticky) */
+}
+
+/* If header shrinks, you may keep layout consistent; optionally use CSS variables or JS to adjust if needed */
+
+/* responsive tweaks */
+
+
+/* On mobile (max width 768px for example) */
+@media (max-width: 576px) {
+  .phone-label,
+  .phone-number {
+    display: none !important;
+  }
+}
+@media (max-width: 768px) {
+  .custom-header { height: 68px; padding: 10px 14px; }
+  .custom-header.is-sticky { height: 56px; padding: 8px 12px; }
+  .custom-header .logo img { height: 40px; }
+  .custom-header.is-sticky .logo img { height: 34px; }
+  .nav-content { padding: 70px 20px; gap: 24px; }
+}
+@media (min-width:1024px) and (max-width:1440px){
+  .custom-header.is-sticky {
+    padding: 45px 200px 45px 200px;
+  }
+}
+
+/*********************about & team *******************/
+ 
+.about-section-six {
+ 
+  padding: 20px 0;
+  color: #fff;
+}
+ 
+.about-section-six  {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+ 
+.aboutimage-box img {
+  width: 100%;       /* make it scale to container */
+  max-width: 1600px; /* optional max size */
+  height: 500px;     /* keep fixed height or use auto */
+  float: left;       /* aligns image to left */
+  margin: 0;         /* remove right margin */
+  object-fit: cover; /* optional: crop nicely if needed */
+}
+
+ 
+ 
+.content-box {
+  position: relative;
+  margin-left: 10px;
+  border-radius: 6px;
+  z-index: 2;
+}
+ 
+.about-section-six .sub-title {
+  color: #ffa324;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+ 
+.about-section-six h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 20px;
+    color: #fcfcfc;
+}
+ 
+.about-section-six h2 span {
+  color: #ffa324;
+}
+ 
+.about-section-six p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff;
+  margin-bottom: 30px;
+}
+ 
+.about-section-six .theme-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+ 
+.about-section-six .theme-btn:hover {
+  background: #fff;
+  color: #000;
+}
+ 
+ 
+
+ 
+ /************************portfolio********************/
+
+ .portfolio-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1; /* Below the text, above the image */
+}
+
+.portfolio-card:hover::after {
+    opacity: 1;
+}
+.portfolio-card {
+  transform: translateY(40px);
+  opacity: 0;
+}
+[data-aos].aos-animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* The text overlay container */
+.portfolio-card .card-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    
+    transform: translateY(20px); /* Start slightly lower */
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 2; /* Above the dark overlay */
+}
+
+.portfolio-card:hover .card-info {
+    transform: translateY(0);
+    opacity: 1;
+}
+.page-title{
+  color: #ffa324;
+  text-align: center;
+}
+.page-subtitle{
+  text-align: center;
+}
+/* Text styling inside the overlay */
+.card-info h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+    color: #fff;
+}
+
+.card-info p {
+    font-size: 1rem;
+    color: #ccc;
+    margin: 0;
+}
+
+/* 15. Static Portfolio Grid Section (NEW) */
+.portfolio-showcase {
+  padding: 80px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.portfolio-header h2 {
+  color: #ffa324;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-header p {
+  color: #b3b3b3;
+  margin-bottom: 3rem;
+}
+
+/* Grid Layout (Masonry Style) */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-auto-rows: 300px;
+  gap: 1.5rem;
+  padding: 0 2rem;
+}
+
+/* Dynamic item sizes to mimic reference style */
+.item-2, .item-3 { grid-row: span 2; }
+.item-5, .item-7 { grid-column: span 2; }
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #111;
+  transition: transform 0.4s ease;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.08);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  transition: opacity 0.4s ease;
+}
+
+.portfolio-item:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.overlay p {
+  font-size: 0.9rem;
+  color: #ffa324;
+  margin-top: 0.3rem;
+}
+
+.load-more {
+  margin-top: 3rem;
+}
+
+.load-more button {
+  background: transparent;
+  border: 1px solid #ffa324;
+  color: #ffa324;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.load-more button:hover {
+  background: #ffa324;
+  color: #000;
+}
+
+
+ /***************************header css*******************/
+
+ /* Services link same as other items */
+.nav .navigation > li > a {
+  font-weight: normal;   /* remove bold */
+  text-transform: none;  /* no uppercase, default case */
+}
+
+/* Dropdown styles */
+.nav .dropdown .sub-menu {
+  display: none;            /* hide by default */
+  position: absolute;       /* show below Services */
+  background: #fff;         /* white dropdown background */
+  padding: 10px 0;
+  margin: 0;
+  list-style: none;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+/* Show dropdown on hover (desktop) */
+.nav .dropdown:hover .sub-menu {
+  display: block;
+}
+
+/* Each dropdown item row by row */
+.nav .dropdown .sub-menu li {
+  display: block;
+  margin: 0;
+}
+
+.nav .dropdown .sub-menu li a {
+  display: block;
+  padding: 8px 16px;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.nav .dropdown .sub-menu li a:hover {
+  background: #f5f5f5;
+}
+
+/****************bannneeee css*****************/

@@ -14,9 +14,7 @@
 /* root */
 .okai-banner-root {
   position: relative;
-  min-height: 100vh;
   color: #fff;
-  background: linear-gradient(180deg,#070708,#0b0b0c);
   overflow: hidden;
 }
 
@@ -35,7 +33,6 @@
 .okai-banner-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
   z-index: 1;
 }
 
@@ -154,6 +151,21 @@
   height: 580px;
   /* transform: translateY(-22px) rotate(-2deg); */
   border: 1px solid rgba(255,255,255,0.03);
+}
+.okai-description {
+  transform: translateX(-60%);
+  color: #fff;
+  text-align: center;
+  z-index: 2;
+}
+
+.okai-description h4{
+  color: #fcfcfc;
+}
+.okai-description span{
+  font-size: 12px;
+  font-weight: 300;
+
 }
 .okai-media-card-mid {
   width: 520px;
@@ -442,141 +454,8 @@ body.cursor-accent-active::before {
 }
 
 }
-/**************************header css*****************/
-/* Base header (fixed at top) */
-.custom-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 84px;                 /* default height */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 56px 144px 40px 145px;
-  background: rgba(10,10,12,0.6); /* translucent so particles show through if you use them */
-  backdrop-filter: blur(6px);     /* nice blur for depth (optional) */
-  color: #fff;
-  z-index: 9999;                 /* sit above page content */
-  transition: height 220ms ease, padding 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
-  will-change: height, padding, box-shadow, background-color;
-}
-
-/* When sticky (after scrolling) — shrink slightly and add shadow */
-.custom-header.is-sticky {
-  height: 64px;                  /* shrunk height */
-  padding: 80px 280px 60px 280px;
-  box-shadow: 0 8px 24px rgba(2,6,23,0.6);
-  background: rgba(10,10,12,0.78);
-}
-
-/* Logo area: size adjusts on sticky */
-.custom-header .logo img {
-  height: 44px;
-  transition: height 200ms ease;
-}
-.custom-header.is-sticky .logo img {
-  height: 36px;
-}
-
-/* Phone and right area layout */
-.custom-header .header-right {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-/* Hamburger */
-.hamburger {
-  display: inline-flex;
-  width: 42px;
-  height: 36px;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-.hamburger span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: #fff;
-  margin: 3px 0;
-  transition: transform 180ms ease, opacity 180ms ease;
-}
-.hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-
-/* Fullscreen nav styles (you can keep existing styles or adjust) */
-.fullscreen-nav {
-  position: fixed;
-  inset: 0;
-  display: none;
-  z-index: 9998;
-  background: rgba(7,7,8,0.98);
-  color: #fff;
-  overflow: hidden;
-}
-.fullscreen-nav.active { display: block; }
-.fullscreen-nav .close-btn {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  background: transparent;
-  border: none;
-  color: #fff;
-  font-size: 26px;
-  cursor: pointer;
-}
-.nav-content {
-  display: flex;
-  gap: 48px;
-  padding: 90px 48px;
-}
-.nav-links { display: flex; flex-direction: column; gap: 18px; font-size: 22px; }
-.nav-links a { color: #fff; text-decoration: none; }
-
-/* Info boxes on the nav */
-.info-boxes { display: flex; flex-direction: column; gap: 16px; max-width: 420px; }
-.info-card { background: rgba(255,255,255,0.02); padding: 18px; border-radius: 10px; }
-
-/* Content spacing: prevent page content being hidden under fixed header */
-/* Add margin/padding to top of main content equal to header height */
-body > *:not([data-global-particles]) {
-  /* don't add margin if you already handle spacing; use #root or main in your app if preferred */
-}
-
-/* Recommended approach: add padding-top to app container (example: #root or main) */
-#root, #__next, .app-root, main {
-  padding-top: 84px; /* match .custom-header height (non-sticky) */
-}
-
-/* If header shrinks, you may keep layout consistent; optionally use CSS variables or JS to adjust if needed */
-
-/* responsive tweaks */
 
 
-/* On mobile (max width 768px for example) */
-@media (max-width: 576px) {
-  .phone-label,
-  .phone-number {
-    display: none !important;
-  }
-}
-@media (max-width: 768px) {
-  .custom-header { height: 68px; padding: 10px 14px; }
-  .custom-header.is-sticky { height: 56px; padding: 8px 12px; }
-  .custom-header .logo img { height: 40px; }
-  .custom-header.is-sticky .logo img { height: 34px; }
-  .nav-content { padding: 70px 20px; gap: 24px; }
-}
-@media (min-width:1024px) and (max-width:1440px){
-  .custom-header.is-sticky {
-    padding: 45px 200px 45px 200px;
-  }
-}
 
 /*********************about & team *******************/
  
@@ -727,81 +606,106 @@ body > *:not([data-global-particles]) {
 }
 
 /* 15. Static Portfolio Grid Section (NEW) */
-.portfolio-grid-section {
-    padding: 8rem 0;
-}
-
-.portfolio-grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-}
-
-.portfolio-column-left,
-.portfolio-column-right {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.portfolio-header {
-    padding: 1rem;
-}
-
-.portfolio-header .sub-title {
-    display: block;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600;
-    color: #ffa324;
-    margin-bottom: 1rem;
+.portfolio-showcase {
+  padding: 80px 0;
+  color: #fff;
+  text-align: center;
 }
 
 .portfolio-header h2 {
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    margin-bottom: 1.5rem;
+  color: #ffa324;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 .portfolio-header p {
-    color: #a0a0a0;
-    max-width: 45ch;
+  color: #b3b3b3;
+  margin-bottom: 3rem;
 }
 
-.portfolio-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    background-color: #1a1a1a;
+/* Grid Layout (Masonry Style) */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-auto-rows: 300px;
+  gap: 1.5rem;
+  padding: 0 2rem;
 }
 
-.portfolio-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+/* Dynamic item sizes to mimic reference style */
+.item-2, .item-3 { grid-row: span 2; }
+.item-5, .item-7 { grid-column: span 2; }
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #111;
+  transition: transform 0.4s ease;
 }
 
-.view-all-button-wrapper {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    flex-grow: 1; /* Pushes the button to the bottom */
-    padding: 1rem;
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
 }
 
-.view-all-btn {
-    border: 1px solid var(--text-color);
-    color: var(--text-color);
-    border-radius: 50px;
-    padding: 0.8rem 2rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
+.portfolio-item:hover img {
+  transform: scale(1.08);
 }
 
-.view-all-btn:hover {
-    background-color: var(--text-color);
-    color: #000;
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  transition: opacity 0.4s ease;
 }
+
+.portfolio-item:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.overlay p {
+  font-size: 0.9rem;
+  color: #ffa324;
+  margin-top: 0.3rem;
+}
+
+.load-more {
+  margin-top: 3rem;
+}
+
+.load-more button {
+  background: transparent;
+  border: 1px solid #ffa324;
+  color: #ffa324;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.load-more button:hover {
+  background: #ffa324;
+  color: #000;
+}
+
 
  /***************************header css*******************/
 

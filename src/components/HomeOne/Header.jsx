@@ -58,7 +58,7 @@ function Header() {
           className="close-btn"
           onClick={() => setMenuOpen({ main: false, services: false })}
         >
-          ✕
+         
         </button>
 
         <div className="nav-content">
@@ -66,6 +66,9 @@ function Header() {
           <nav className="nav-links">
             <Link to="/" onClick={() => setMenuOpen({ main: false })}>
               Home
+            </Link>
+            <Link to="/aboutus" onClick={() => setMenuOpen({ main: false })}>
+              About Us
             </Link>
             <Link to="/portfolio" onClick={() => setMenuOpen({ main: false })}>
               Portfolio
@@ -135,6 +138,7 @@ function Header() {
                 </li> */}
               </ul>
             </div>
+
             <Link to="/team" onClick={() => setMenuOpen({ main: false })}>
               Team
             </Link>

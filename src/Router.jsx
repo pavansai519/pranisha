@@ -10,6 +10,10 @@ import DigitalMarketing from './components/DigitalMarketing.jsx';
 import WebDevelopment from './components/WebDevelopment.jsx';
 import Portfolio from "./components/Portfolio.jsx";
 import Team from "./components/Team.jsx";
+import Bondstreet from "./components/Portfolio/Bondstreet.jsx";
+import Shr from "./components/Portfolio/shr.jsx";
+import Pcg from "./components/Portfolio/pcg.jsx";
+import Poh from "./components/Portfolio/Poh.jsx"; 
 
 
 import Contact from "./components/ContactPages/Contact.jsx";
@@ -30,8 +34,24 @@ const router = createBrowserRouter([
         path: "/about",
         element: <AboutUs />
       },
-      
-     {
+      {
+        path:"/portfolio/bondstreet",
+        element:<Bondstreet/>
+      },
+
+      {
+        path:"/portfolio/shr",
+        element:<Shr/> 
+      },
+      {
+        path:"/portfolio/pcg",
+        element:<Pcg/>
+      },
+      {
+        path:"/portfolio/poh",
+        element:<Poh/>
+      },
+      {
       path:"/branding",
       element:<Brading/>
      },
