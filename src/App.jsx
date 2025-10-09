@@ -3,7 +3,6 @@ import {useEffect, useState} from "react";
 import Loader from "./components/Helper/Loader.jsx";
 import CustomCursor from "./components/HomeOne/CustomCursor.jsx";
 import GlobalParticles from "./components/GlobalParticles.jsx";
-import CustomCursor2 from "./components/HomeOne/CustomCursor2.jsx";
 import Socials from "./components/Socialicons.jsx";
 
 
