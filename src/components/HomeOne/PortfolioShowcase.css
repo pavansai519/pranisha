@@ -119,6 +119,7 @@
  
 .ps-btn:hover {
   color: #ffa324;
+  border:1px solid #fcfcfc;
 }
  
 .ps-btn a {

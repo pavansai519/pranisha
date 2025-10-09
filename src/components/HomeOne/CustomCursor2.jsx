@@ -1,48 +1,54 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useRef, useState } from "react";
+import "./CustomCursor.css";
 
-function CustomCursor() {
-    const [position, setPosition] = useState({ x: 0, y: 0 });
-    const [isHovering, setIsHovering] = useState(false);
+export default function CustomCursor() {
+  const cursorRef = useRef(null);
+  const [hovering, setHovering] = useState(false);
+  const mouse = useRef({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
+  const pos = useRef({ x: mouse.current.x, y: mouse.current.y });
 
-    useEffect(() => {
-        const handleMouseMove = (e) => {
-            setPosition({ x: e.clientX, y: e.clientY });
-        };
+  useEffect(() => {
+    const cursor = cursorRef.current;
 
-        const handleMouseEnter = () => setIsHovering(true);
-        const handleMouseLeave = () => setIsHovering(false);
-
-        // Find all portfolio cards and add event listeners
-        const portfolioCards = document.querySelectorAll('.portfolio-card');
-        portfolioCards.forEach(card => {
-            card.addEventListener('mouseenter', handleMouseEnter);
-            card.addEventListener('mouseleave', handleMouseLeave);
-        });
-
-        window.addEventListener('mousemove', handleMouseMove);
-
-        // Cleanup function
-        return () => {
-            window.removeEventListener('mousemove', handleMouseMove);
-            portfolioCards.forEach(card => {
-                card.removeEventListener('mouseenter', handleMouseEnter);
-                card.removeEventListener('mouseleave', handleMouseLeave);
-            });
-        };
-    }, []); // Empty dependency array means this runs once on mount
-
-    const cursorStyle = {
-        left: `${position.x}px`,
-        top: `${position.y}px`,
-        opacity: isHovering ? 1 : 0,
-        transform: `translate(-50%, -50%) scale(${isHovering ? 1 : 0})`,
+    const handleMove = (e) => {
+      mouse.current.x = e.clientX;
+      mouse.current.y = e.clientY;
     };
 
-    return (
-        <div className="custom-cursor" style={cursorStyle}>
-            View
-        </div>
-    );
-}
+    const smooth = 0.2; // adjust for more/less trailing
+    const animate = () => {
+      pos.current.x += (mouse.current.x - pos.current.x) * smooth;
+      pos.current.y += (mouse.current.y - pos.current.y) * smooth;
+      cursor.style.transform = `translate3d(${pos.current.x}px, ${pos.current.y}px, 0) translate(-50%, -50%)`;
+      requestAnimationFrame(animate);
+    };
+    animate();
 
-export default CustomCursor;
+    // Hover triggers
+    const handleEnter = () => setHovering(true);
+    const handleLeave = () => setHovering(false);
+
+    // 👇 Target portfolio tiles
+    const tiles = document.querySelectorAll(".ps-tile");
+    tiles.forEach((tile) => {
+      tile.addEventListener("mouseenter", handleEnter);
+      tile.addEventListener("mouseleave", handleLeave);
+    });
+
+    window.addEventListener("mousemove", handleMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMove);
+      tiles.forEach((tile) => {
+        tile.removeEventListener("mouseenter", handleEnter);
+        tile.removeEventListener("mouseleave", handleLeave);
+      });
+    };
+  }, []);
+
+  return (
+    <div ref={cursorRef} className={`cursor-ring ${hovering ? "hovering" : ""}`}>
+      {hovering && <span className="cursor-label">View</span>}
+    </div>
+  );
+}

@@ -27,15 +27,11 @@ function App() {
             <div className={`appie-visible ${loading === false ? 'active' : ''}`}>
              <Router />
             </div>
-            <CustomCursor2/>
+           
             <Socials/>
             <GlobalParticles particleCount={20} maxSpeed={0.45} />
             <CustomCursor
-                hideNative={true}
-                accent="#ff5a5f"
-                dotSize={10}
-                outlineSize={28}
-                smoothing={0.22}
+               
       />
         </>
     );

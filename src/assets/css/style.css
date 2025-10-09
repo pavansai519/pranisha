@@ -17816,7 +17816,7 @@ Sidebar
 
 .footer-section-six {
   position: relative;
-  border-top: 1px solid rgba(255, 255, 255, 0.09);  /* <-- light white line */
+  border-top: 2px solid rgba(255, 255, 255, 0.09);  /* <-- light white line */
 background-color: #000;
   background-repeat: no-repeat;
   background-position: center center;
@@ -17889,7 +17889,7 @@ background-color: #000;
   font-size: 0.95rem;
   text-align: center;
   padding: 15px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.09);  /* <-- light white line */
+  border-top: 2px solid rgba(255, 255, 255, 0.09);  /* <-- light white line */
 
 }
 
@@ -19305,4 +19305,5 @@ select {
 }
  
  
+ /********************viwe css*****************/
  
