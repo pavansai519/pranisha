@@ -9837,7 +9837,6 @@ hr{
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url(../images/icons/pattern-13.png);
   content: "";
 }
 .testimonial-section-two .testimonial-column {
@@ -17878,7 +17877,7 @@ background-color: #000;
   display: flex;
   justify-content: center;   /* center everything horizontally */
   align-items: center;       /* vertically align center */
-  gap: 800px;                 /* space between copyright and back-to-top */
+  gap: 600px;                 /* space between copyright and back-to-top */
   flex-wrap: wrap;           /* responsive layout on small screens */
   color: #fff;
   background-color: #000;
@@ -18389,7 +18388,7 @@ body > *:not([data-global-particles]) {
  
  
 /* --- Laptops (769px – 1440px) --- */
-@media (min-width: 769px) and (max-width: 1440px) {
+@media (min-width: 769px) and (max-width: 1444px) {
   /* .custom-header {
     padding: 0 3px;
   } */
@@ -18406,7 +18405,7 @@ body > *:not([data-global-particles]) {
   .nav-content {
     grid-template-columns: 1fr 280px;
     gap:10px;
-    padding-top: 150px;
+    padding-top: 90px;
     padding-left:200px;
   }
   .nav-links a {
@@ -18421,7 +18420,7 @@ body > *:not([data-global-particles]) {
 }
  
 /* --- Desktops (1441px – 2000px) --- */
-@media (min-width: 1441px) and (max-width: 2000px) {
+@media (min-width: 1445px) and (max-width: 2000px) {
   .custom-header {
     padding: 50px 240px 50px 240px ;
   }
@@ -18811,9 +18810,13 @@ select {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width:1445px) {
   .team-grid {
     grid-template-columns: repeat(3, 1fr); /* 4 per row on desktop */
+  }
+  .team-section{
+    padding: 60px 180px;
+
   }
 }
 
@@ -19305,5 +19308,51 @@ select {
 }
  
  
- /********************viwe css*****************/
+ /********************Teams and conditions*****************/
+ .terms-section {
+  background: transparent;
+  padding: 30px 20px;
+  color: #ffa324;
+}
+ 
+.terms-section .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+ 
+.terms-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffa324;
+  margin-bottom: 10px;
+}
+ 
+.update-date {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 40px;
+}
+ 
+.terms-content h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 30px;
+  color: #ffa324;
+}
+ 
+ 
+.terms-content a {
+  color: #ffa324;
+  text-decoration: none;
+  pointer-events: none;
+}
+.points{
+    line-height: 1.8;
+  font-size: 18px;
+  margin-top: 10px;
+    color: #fcfcfc;
+}
+
  

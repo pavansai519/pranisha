@@ -69,10 +69,10 @@ const Branding = () => {
                   <ul className="sub-nav">
                     <li>Media Relations</li>
                     <li>Press Release Services</li>
-                    <li>Reputation Management</li>
+                    {/* <li>Reputation Management</li> */}
                     <li>Thought Leadership</li>
                     <li>Event Promotion & Coverage</li>
-                   <li>Thought Leadership</li>
+                   {/* <li>Thought Leadership</li> */}
 
 
                   </ul>
@@ -103,11 +103,11 @@ const Branding = () => {
                 <h3>Press Release Services</h3>
                 <p>Communicate your biggest milestones effectively with professionally crafted press releases. We handle writing, distribution, and media follow-up to ensure your news reaches the right audience at the right time.</p>
               </div>
-              <div id="refinement" className={`content-item ${highlightedItem === 'refinement' ? 'highlighted' : ''}`}>
+              {/* <div id="refinement" className={`content-item ${highlightedItem === 'refinement' ? 'highlighted' : ''}`}>
                 <div className="item-icon"><i className="fas fa-pen-fancy"></i></div>
                 <h3>Reputation Management</h3>
                 <p>Safeguard your brand’s image with proactive and responsive reputation strategies. From crisis communication to online sentiment monitoring, we help maintain public trust and confidence..</p>
-              </div>
+              </div> */}
               <div id="finalization" className={`content-item ${highlightedItem === 'finalization' ? 'highlighted' : ''}`}>
                 <div className="item-icon"><i className="fas fa-check-circle"></i></div>
                 <h3>Thought Leadership</h3>
@@ -118,11 +118,11 @@ const Branding = () => {
                 <h3>Event Promotion & Coverage</h3>
                 <p>Maximize exposure for your events with targeted PR campaigns. Whether it’s a product launch, webinar, or CSR initiative, we ensure media presence, buzz, and audience engagement.</p>
               </div>
-               <div id="Thought Leadership" className={`content-item ${highlightedItem === 'Thought Leadership' ? 'highlighted' : ''}`}>
+               {/* <div id="Thought Leadership" className={`content-item ${highlightedItem === 'Thought Leadership' ? 'highlighted' : ''}`}>
                 <div className="item-icon"><i className="fas fa-check-circle"></i></div>
                 <h3>Thought Leadership</h3>
                 <p>Expand your reach through powerful digital PR and influencer collaboration. We identify relevant voices in your industry to amplify your message across social platforms and digital media.</p>
-              </div>
+              </div> */}
             </div>
           </section>
 

@@ -78,10 +78,11 @@ function FooterHomeOne({ className }) {
                  <div className="footer-copyright p-3">
                     <div className="auto-container">
                         <div className="inner-container footer-bottom-row">
-                        <div className="copyright-text">
-                            © 2025 Pranisha Technologies Pvt Ltd
-                        </div>
-                        <BacktoTop />
+                           <div className="copyright-text">
+                            © 2025 Pranisha Technologies Pvt Ltd | &nbsp;                            <Link to="/terms-and-conditions" className='copyright-text'>Privacy Policy</Link>
+                           </div>
+                           
+                          <BacktoTop />
                         </div>
                     </div>
                  </div>

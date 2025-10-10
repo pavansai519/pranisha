@@ -390,6 +390,55 @@ body {
   }
 }
 
+/* 🌐 Fix overlap between 1024px and 1445px */
+@media (min-width: 1024px) and (max-width: 1445px) {
+  .branding-container {
+    gap: 30px;
+    padding: 0 30px;
+    align-items: flex-start;
+  }
+
+  .services-sidebar {
+    width: 260px;               /* slightly smaller sidebar */
+    padding: 25px;
+    position: sticky;
+    top: 100px;
+    max-height: calc(100vh - 140px);
+  }
+
+  .services-sidebar h3 {
+    font-size: 22px;
+  }
+
+  .nav-items {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .services-content {
+    flex: 1;
+    padding: 0 5px;
+    height: auto;
+    overflow-y: visible;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr 1fr; /* 2 columns remain */
+    gap: 20px;
+  }
+
+  .content-item {
+    padding: 20px;
+  }
+
+  .section-header h2 {
+    font-size: 30px;
+  }
+
+  .section-header p {
+    font-size: 16px;
+  }
+}
 
 
 

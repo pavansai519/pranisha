@@ -14,6 +14,9 @@ import Bondstreet from "./components/Portfolio/Bondstreet.jsx";
 import Shr from "./components/Portfolio/shr.jsx";
 import Pcg from "./components/Portfolio/pcg.jsx";
 import Poh from "./components/Portfolio/Poh.jsx"; 
+import TermsAndConditions from "./components/Policy.jsx";
+
+
 
 
 import Contact from "./components/ContactPages/Contact.jsx";
@@ -38,7 +41,10 @@ const router = createBrowserRouter([
         path:"/portfolio/bondstreet",
         element:<Bondstreet/>
       },
-
+      {
+        path:"/terms-and-conditions",
+        element:<TermsAndConditions/>
+      },
       {
         path:"/portfolio/shr",
         element:<Shr/> 
@@ -55,10 +61,10 @@ const router = createBrowserRouter([
       path:"/branding",
       element:<Brading/>
      },
-    {
+     {
       path:"/portfolio",
       element:<Portfolio/>
-    },
+     },
      {
       path:"/digitalmarketing",
       element:<DigitalMarketing/>

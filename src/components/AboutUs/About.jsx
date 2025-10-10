@@ -4,7 +4,7 @@ import AboutMen from "../../../public/about-us.png"; // your image
  
 function AboutHomeOne({ className }) {
   return (
-    <section className={`about-section-six ${className || ""}`}>
+    <section className={`about-sections-six ${className || ""}`}>
       <div className="auto-container">
         <div className="row align-items-center">
           {/* Left Image */}

@@ -82,7 +82,7 @@ const DigitalMarketing = () => {
                       <li>ReactJS UI/UX Design</li>
                       <li>ReactJS Plugin & Component Development</li>
                       <li>ReactJS API Integration</li>
-                      <li>ReactJS eCommerce Development</li>
+                      {/* <li>ReactJS eCommerce Development</li> */}
                     </ul>
                   )}
                 </li>
@@ -100,9 +100,9 @@ const DigitalMarketing = () => {
                     <ul className="sub-nav">
                       <li>Native App Development</li>
                       <li>Cross-Platform App Development</li>
-                      <li>Programming Languages</li>
+                      {/* <li>Programming Languages</li> */}
                       <li>Development Frameworks</li>
-                      <li>IDEs & Tools</li>
+                      {/* <li>IDEs & Tools</li> */}
                       <li>Back-end Development</li>
                     </ul>
                   )}
@@ -173,11 +173,11 @@ const DigitalMarketing = () => {
                   <h3>ReactJS API Integration</h3>
                   <p>Seamlessly integrate RESTful APIs, GraphQL, and third-party services like Stripe, Firebase, and AWS.</p>
                 </div>
-                <div id="monitoring" className={`content-item ${highlightedItem === 'monitoring' ? 'highlighted' : ''}`}>
+                {/* <div id="monitoring" className={`content-item ${highlightedItem === 'monitoring' ? 'highlighted' : ''}`}>
                   <div className="item-icon"><i className="fas fa-eye"></i></div>
                   <h3>ReactJS eCommerce Development</h3>
                   <p>Create dynamic product pages, optimized checkout flows, and smooth shopping experiences.</p>
-                </div>
+                </div> */}
               </div>
             </section>
              )}
@@ -200,21 +200,21 @@ const DigitalMarketing = () => {
                   <h3>Cross-Platform App Development</h3>
                   <p>Create high-quality apps for multiple platforms using React Native, Flutter, or Xamarin.</p>
                 </div>
-                <div id="engagement" className={`content-item ${highlightedItem === 'engagement' ? 'highlighted' : ''}`}>
+                {/* <div id="engagement" className={`content-item ${highlightedItem === 'engagement' ? 'highlighted' : ''}`}>
                   <div className="item-icon"><i className="fas fa-comments"></i></div>
                   <h3>Programming Languages</h3>
                   <p>We use JavaScript, Swift, Kotlin, Java, HTML, CSS, and more for mobile app development.</p>
-                </div>
+                </div> */}
                 <div id="ads" className={`content-item ${highlightedItem === 'ads' ? 'highlighted' : ''}`}>
                   <div className="item-icon"><i className="fas fa-bullhorn"></i></div>
                   <h3>Development Frameworks</h3>
                   <p>Creating targeted ad campaigns for platforms like Facebook, Instagram, and LinkedIn. Utilize frameworks like React Native, Flutter, Xamarin, and Ionic for efficient app development.</p>
                 </div>
-                  <div id="engagement" className={`content-item ${highlightedItem === 'engagement' ? 'highlighted' : ''}`}>
+                  {/* <div id="engagement" className={`content-item ${highlightedItem === 'engagement' ? 'highlighted' : ''}`}>
                   <div className="item-icon"><i className="fas fa-comments"></i></div>
                   <h3>IDEs & Tools</h3>
                   <p>We use Xcode, Android Studio, Visual Studio, and Eclipse for robust app development.</p>
-                </div>
+                </div> */}
                 <div id="ads" className={`content-item ${highlightedItem === 'ads' ? 'highlighted' : ''}`}>
                   <div className="item-icon"><i className="fas fa-bullhorn"></i></div>
                   <h3>Back-end Development</h3>

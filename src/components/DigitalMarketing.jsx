@@ -61,8 +61,8 @@ const DigitalMarketing = () => {
                       <li>Search Ads</li>
                       <li>Display Ads</li>
                       <li>Shopping Ads</li>
-                      <li>YouTube Ads</li>
-                      <li>App Promotion</li>
+                      {/* <li>YouTube Ads</li> */}
+                      {/* <li>App Promotion</li> */}
                       <li>Local Ads</li>
                     </ul>
                   )}
@@ -115,7 +115,6 @@ const DigitalMarketing = () => {
               <section id="google-ads" className="content-section animate-in">
                <div className="section-header">
                 <h2>Google Ads</h2>
-                <div className="divider"></div>
                 <p>
                   We offer a comprehensive range of Google Ads services to help your business reach its target audience and achieve its marketing goals.
                 </p>
@@ -140,17 +139,17 @@ const DigitalMarketing = () => {
                   <p>Shopping ads are a great way to promote your products and services to potential customers.</p>
                 </div>
 
-                <div id="youtube-ads" className={`content-item ${highlightedItem === 'youtube-ads' ? 'highlighted' : ''}`}>
+                {/* <div id="youtube-ads" className={`content-item ${highlightedItem === 'youtube-ads' ? 'highlighted' : ''}`}>
                   <div className="item-icon"><i className="fas fa-play-circle"></i></div>
                   <h3>YouTube Ads</h3>
                   <p>With over 2 billion monthly active users, YouTube is an excellent platform for promoting your business.</p>
-                </div>
+                </div> */}
 
-                <div id="app-promotion" className={`content-item ${highlightedItem === 'app-promotion' ? 'highlighted' : ''}`}>
+                {/* <div id="app-promotion" className={`content-item ${highlightedItem === 'app-promotion' ? 'highlighted' : ''}`}>
                   <div className="item-icon"><i className="fas fa-mobile-alt"></i></div>
                   <h3>App Promotion</h3>
                   <p>Our app promotion services are designed to help you promote your mobile app and increase downloads and installs.</p>
-                </div>
+                </div> */}
 
                 <div id="local-ads" className={`content-item ${highlightedItem === 'local-ads' ? 'highlighted' : ''}`}>
                   <div className="item-icon"><i className="fas fa-map-marker-alt"></i></div>
@@ -165,7 +164,6 @@ const DigitalMarketing = () => {
               <section id="social-media" className="content-section animate-in">
                 <div className="section-header">
                 <h2>Social Media Marketing</h2>
-                <div className="divider"></div>
                 <p>We offer a comprehensive range of social media marketing services to help your business reach its target audience.</p>
               </div>
 
@@ -201,7 +199,6 @@ const DigitalMarketing = () => {
               <section id="influencer-marketing" className="content-section animate-in">
                  <div className="section-header">
                 <h2>Influencer Marketing</h2>
-                <div className="divider"></div>
                 <p>We offer a comprehensive range of influencer marketing services to help your business reach its target audience.</p>
               </div>
 
