@@ -6,7 +6,7 @@ import BacktoTop from '../BackToTop'
 function FooterHomeOne({ className }) {
     return (
         <>
-            <footer  className={`footer-section-six pt-90 pb-10  ${className || ''}`}>
+            <footer  className={`footer-section-six  ${className || ''}`}>
                 <div className=""></div>
                 <div className="widgets-section pb-4">
                     <div className="auto-container">

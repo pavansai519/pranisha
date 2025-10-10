@@ -197,8 +197,23 @@
   .okai-left-primary { font-size: 20px; }
   .okai-left-desc { font-size: 14px; max-width: 70ch; }
 }
+@media (min-width:1250px) and (max-width:1444px){
+  .okai-banner-root{
+    padding: 20px 60px;
+  }
+}
+@media  (max-width:576px){
+  .okai-banner-root{
+    padding: 0px 20px 20px 20px;
+  }
+  .about-sections-six h2{
+    font-size: 28px !important;
+  }
+  .okai-description{
 
-
+transform: translateX(-2%);
+  }
+}
 /*************************cursor css****************************************/
 
 /* custom-cursor.css - styles used by CustomCursor.jsx */
@@ -430,8 +445,13 @@ body.cursor-accent-active::before {
     0 0 30px rgba(255, 163, 36, 0.4);
   transition: all 0.3s ease;
 }
+@media (min-width:1250px) and (max-width:1444px){
+  .services-section-four {
+    padding: 60px 80px;
+  }
+}
 
-@media (min-width:1440px) and (max-width:1920px){
+@media (min-width:1445px) and (max-width:1920px){
   .services-section-four {
     padding: 80px 0px;
   }
@@ -441,6 +461,75 @@ body.cursor-accent-active::before {
 }
 
 }
+@media (max-width: 576px) {
+  .services-section-four {
+    padding: 25px 15px;
+  }
+
+  .service-item {
+    flex-direction: column !important;
+    gap: 25px;
+    margin: 25px 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .service-item .content {
+    padding: 20px;
+    max-width: 100%;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .service-item .content h5 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #ffa324;
+  }
+
+  .service-item .content p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #f4f4f4;
+    padding: 0 5px;
+    display: block;
+    -webkit-line-clamp: unset;
+    overflow: visible;
+  }
+
+  .float-box {
+    width: 160px !important;
+    height: 160px;
+    font-size: 80px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .short {
+    font-size: 90px !important;
+  }
+
+  .left-box .content,
+  .right-box .content {
+    text-align: center !important;
+    max-width: 100%;
+  }
+
+  .left-box .float-box,
+  .right-box .float-box {
+    width: 290px !important;
+    height: 160px;
+    order: 0 !important;
+  }
+
+  /* Hover effect scaled down for mobile */
+  .float-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+}
+
 /**************************header css*****************/
 /* Base header (fixed at top) */
 .custom-header {
@@ -485,28 +574,68 @@ body.cursor-accent-active::before {
   gap: 14px;
 }
 
-/* Hamburger */
+/* 🌟 Hamburger Button */
 .hamburger {
   display: inline-flex;
-  width: 42px;
-  height: 36px;
+  width: 48px;
+  height: 46px;
   align-items: center;
   justify-content: center;
   background: transparent;
   border: none;
   cursor: pointer;
+  position: relative;
+  z-index: 1000;
 }
+
+/* Base lines */
 .hamburger span {
-  display: block;
-  width: 22px;
+  position: absolute;
+  width: 26px;
   height: 2px;
   background: #fff;
-  margin: 3px 0;
-  transition: transform 180ms ease, opacity 180ms ease;
+  border-radius: 2px;
+  transition: all 0.35s ease-in-out;
+  right: 0; /* ✅ right align the lines */
 }
-.hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+
+/* Default bar placement */
+.hamburger span:nth-child(1) {
+  top: 10px;
+  width:29px;
+
+}
+.hamburger span:nth-child(2) {
+  top: 17px;
+    width:23px;
+
+}
+.hamburger span:nth-child(3) {
+  top: 24px;
+  width:17px;
+  
+}
+
+/* ✅ When Open — forms a perfect X */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 17px;
+  width:28px;
+
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 28px;
+    width:28px;
+
+}
 
 /* Fullscreen nav styles (you can keep existing styles or adjust) */
 .fullscreen-nav {
@@ -541,47 +670,21 @@ body.cursor-accent-active::before {
 .info-boxes { display: flex; flex-direction: column; gap: 16px; max-width: 420px; }
 .info-card { background: rgba(255,255,255,0.02); padding: 18px; border-radius: 10px; }
 
-/* Content spacing: prevent page content being hidden under fixed header */
-/* Add margin/padding to top of main content equal to header height */
 body > *:not([data-global-particles]) {
   /* don't add margin if you already handle spacing; use #root or main in your app if preferred */
 }
 
-/* Recommended approach: add padding-top to app container (example: #root or main) */
 #root, #__next, .app-root, main {
   padding-top: 84px; /* match .custom-header height (non-sticky) */
 }
 
-/* If header shrinks, you may keep layout consistent; optionally use CSS variables or JS to adjust if needed */
 
-/* responsive tweaks */
-
-
-/* On mobile (max width 768px for example) */
-@media (max-width: 576px) {
-  .phone-label,
-  .phone-number {
-    display: none !important;
-  }
-}
-@media (max-width: 768px) {
-  .custom-header { height: 68px; padding: 10px 14px; }
-  .custom-header.is-sticky { height: 56px; padding: 8px 12px; }
-  .custom-header .logo img { height: 40px; }
-  .custom-header.is-sticky .logo img { height: 34px; }
-  .nav-content { padding: 70px 20px; gap: 24px; }
-}
-@media (min-width:1024px) and (max-width:1440px){
-  .custom-header.is-sticky {
-    padding: 45px 200px 45px 200px;
-  }
-}
 
 /*********************about & team *******************/
  
 .about-sections-six {
  
-  padding: 20px 0;
+  padding: 20px 20px;
   color: #fff;
 }
  
@@ -655,8 +758,17 @@ body > *:not([data-global-particles]) {
   background: #fff;
   color: #000;
 }
- 
- 
+ @media (max-width:576px){
+  .aboutimage-box img{
+    max-width: 420px;
+    height:300px
+  }
+ }
+ @media (min-width:1250px) and (max-width:1444px){
+  .about-sections-six{
+    padding:20px 70px 20px 10px;
+  }
+ }
 
  
  /************************portfolio********************/
