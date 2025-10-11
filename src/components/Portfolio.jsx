@@ -4,7 +4,10 @@ import "aos/dist/aos.css";
 import Header from "./HomeOne/Header.jsx";
 import Footer from "./HomeOne/Footer1.jsx";
 import "../components/HomeOne/PortfolioShowcase.css"
+import Circle from "./Circle.jsx";
+
  
+
 const projects = [
   { id: 1, image: "https://picsum.photos/seed/6/800/800", title: "Popicorn", category: "Branding" },
   { id: 2, image:"https://picsum.photos/seed/6/800/800", title: "Novotel", category: "Campaign" },
@@ -71,10 +74,9 @@ export default function PortfolioShowcase() {
             </article>
           ))}
         </div>
- 
-        
       </div>
     </section>
+    <Circle/>
     <Footer/>
     </>
   );

@@ -18824,6 +18824,14 @@ select {
 
   }
 }
+@media (min-width:1444px) and (max-width:2000px){
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .team-section{
+    padding: 60px 180px;
+  }
+}
 /* 📱 Mobile (below 576px) */
 @media (max-width: 576px) {
   .team-section {
@@ -19352,7 +19360,12 @@ select {
   top: -50px;
   text-decoration:#3d3d3d line-through;
 }
- 
+ @media (min-width:1024px)and (max-width:1444px){
+  #backtoworks{
+    left:60px;
+    top:500px;
+  }
+ }
  
  /********************Teams and conditions*****************/
  .terms-section {

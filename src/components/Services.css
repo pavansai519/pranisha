@@ -390,13 +390,14 @@ body {
   }
 }
 
+
 /* 🌐 Fix overlap between 1024px and 1445px (fully enforced) */
 @media screen and (min-width: 1024px) and (max-width: 1445px) {
   .branding-container {
     display: flex !important;
     flex-direction: row !important;
     gap: 30px !important;
-    padding: 0 30px !important;
+    padding: 0px 90px  !important;
     align-items: flex-start !important;
   }
 
@@ -440,7 +441,13 @@ body {
   .section-header p {
     font-size: 16px !important;
   }
+   .footer-section-six{
+    margin-top: 200px;
+   }
+  
 }
+
+
 
 
 
