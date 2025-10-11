@@ -112,18 +112,19 @@
 }
 
 .ps-btn {
-  border: none;
+  border: 1px solid #ffa324;
   padding: 12px 25px;
   border-radius: 25px;
   cursor: pointer;
-  background: var(--accent);
-  color: #000;
+  background: transparent;
+  color: #fff;
   font-weight: 600;
   transition: background 0.3s;
 }
 
 .ps-btn:hover {
-  background: #ffb84d;
+  color: #ffa324;
+  border: 1px solid #fff;
 }
 
 .ps-btn a {

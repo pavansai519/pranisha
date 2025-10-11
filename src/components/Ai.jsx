@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Services.css';
 import Header from "./HomeOne/Header.jsx";
-import Footer from "./HomeOne/Footer.jsx";
+import Footer from "./HomeOne/Footer2.jsx";
 import PageBanner from "./PageBanner.jsx";
 
 

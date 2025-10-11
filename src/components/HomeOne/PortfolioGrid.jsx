@@ -70,7 +70,7 @@ export default function PortfolioShowcase() {
  
         <div className="ps-load">
           <button className="ps-btn">
-            <a href="/portfolio">Load More</a>
+            <a href="/portfolio">Load More ➜</a>
           </button>
         </div>
       </div>
