@@ -3,11 +3,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 import "./PortfolioShowcase.css";
-import BSM from "../../assets/images/Portfolio/Bst/pic1.webp"
+import BSM from "../../assets/images/Portfolio/Bst/pic1.webp";
 
 const projects = [
   { id: 1, image: BSM, title: "BondStreet", category: "", url: "/portfolio/bondstreet" },
-  { id: 2, image:"https://picsum.photos/seed/2/800/800", title: "Novotel", category: "Campaign", url: "/portfolio/bondstreet" },
+  { id: 2, image: "https://picsum.photos/seed/2/800/800", title: "Novotel", category: "Campaign", url: "/portfolio/bondstreet" },
   { id: 3, image: "https://picsum.photos/seed/3/800/800", title: "GMR", category: "Advertising", url: "/portfolio/bondstreet" },
   { id: 4, image: "https://picsum.photos/seed/4/800/800", title: "Hyderabad Hunters", category: "Sports", url: "/portfolio/bondstreet" },
   { id: 5, image: "https://picsum.photos/seed/5/800/800", title: "Prost", category: "Packaging", url: "/portfolio/bondstreet" },
@@ -27,7 +27,6 @@ export default function PortfolioShowcase() {
         const y = e.clientY - rect.top;
         const rotateY = ((x / rect.width) - 0.9) * 14;
         const rotateX = -((y / rect.height) - 0.9) * 14;
-
         tile.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
       });
 
@@ -49,6 +48,7 @@ export default function PortfolioShowcase() {
           <p className="ps-sub">And it only gets better</p>
         </header>
 
+        {/* === Project Grid === */}
         <div className="ps-grid custom-grid">
           {projects.map((project, index) => (
             <Link
@@ -65,11 +65,13 @@ export default function PortfolioShowcase() {
           ))}
         </div>
 
+        {/* === Load More Button === */}
         <div className="ps-load">
-          <button className="ps-btn">
-            <a href="/portfolio">Load More ➜</a>
-          </button>
+          <Link to="/portfolio" className="ps-btn">
+            Load More ➜
+          </Link>
         </div>
       </div>
-    </section>        
-  )}
+    </section>
+  );
+}
