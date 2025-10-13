@@ -17919,11 +17919,11 @@ Sidebar
     gap:10px
   }
 }
-@media (min-width:1250px) and (max-width:1280px) {
+/* @media (min-width:1250px) and (max-width:1280px) {
     .footer-section-six{
        margin-top: 300px;
   }
-}
+} */
 
 @media (min-width:1200px) and (max-width:1444px){
   .footer-section-six{
