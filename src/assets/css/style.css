@@ -17925,13 +17925,11 @@ Sidebar
   }
 }
 
-@media (min-width:1250px) and (max-width:1444px){
+@media (min-width:1200px) and (max-width:1444px){
   .footer-section-six{
      padding: 80px 10px 10px 110px;
   }
-  .footer-bottom-row{
-    gap:170px
-  }
+  
  
  
 }
