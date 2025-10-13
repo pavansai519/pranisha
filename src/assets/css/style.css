@@ -18314,7 +18314,7 @@ body > *:not([data-global-particles]) {
  
  
 /* --- Laptops (769px – 1440px) --- */
-@media (min-width: 1250px) and (max-width: 1464px) {
+@media (min-width: 1250px) and (max-width: 1564px) {
   /* .custom-header {
     padding: 0 3px;
   } */
@@ -18355,7 +18355,7 @@ body > *:not([data-global-particles]) {
 }
  
 /* --- Desktops (1441px – 2000px) --- */
-@media (min-width: 1465px) and (max-width: 2000px) {
+@media (min-width: 1565px) and (max-width: 2000px) {
   .custom-header {
     padding: 50px 240px 50px 240px ;
   }
