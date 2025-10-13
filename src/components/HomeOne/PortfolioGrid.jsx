@@ -67,13 +67,9 @@ export default function PortfolioShowcase() {
 
         <div className="ps-load">
           <button className="ps-btn">
-<<<<<<< HEAD
             <a href="/portfolio">Load More ➜</a>
-=======
-            <Link to="/portfolio">Load More</Link>
->>>>>>> cdb594d0 ( Responive of divices)
           </button>
         </div>
       </div>
-    </section>
+    </section>        
   )}
