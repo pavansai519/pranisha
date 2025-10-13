@@ -128,14 +128,14 @@ function Header() {
                     PR & Media
                   </Link>
                 </li>
-                {/* <li>
+                <li>
                   <Link
-                    to="/cloud"
+                    to="/events"
                     onClick={() => setMenuOpen({ main: false })}
                   >
-                    Cloud
+                    Events
                   </Link>
-                </li> */}
+                </li>
               </ul>
             </div>
 

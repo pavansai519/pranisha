@@ -938,7 +938,7 @@ Scroll To Top style
 }
 .social-icon-two li a:hover {
   color: var(--theme-color-light);
-  background-color: var(--bg-theme-color1);
+  /* background-color: var(--bg-theme-color1); */
 }
 
 /*Social Icon Three*/
@@ -17383,19 +17383,18 @@ Sidebar
 .user-links li a {
   position: relative;
   display: inline-block;
-  color: inherit;
+  color: #fcfcfc;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
-.user-links li a:hover {
-  color: #ffa324;
-}
+
 .user-links li a:before {
+  color: #fcfcfc;
   position: absolute;
   left: 0;
   bottom: 0;
   width: 0;
-  height: 1px;
+  /* height: 1px; */
   background-color: var(--bg-theme-color3);
   content: "";
   -webkit-transition: all 300ms ease;
@@ -17530,13 +17529,16 @@ Sidebar
 }
 .footer-bottom .copyright-text {
   position: relative;
-  color: #8c8f94;
+  color: #ffa324;
 }
 .footer-bottom .copyright-text a {
   color: inherit;
 }
 .footer-bottom .copyright-text a:hover {
   color: #ffffff;
+}
+.footer-link{
+  color: #fcfcfc;
 }
 
 @-webkit-keyframes modal-video {
@@ -17737,13 +17739,13 @@ Sidebar
 .footer-section-six {
   position: relative;
   padding: 80px 10px 10px 10px;
-  border-top: 2px solid rgba(255, 255, 255, 0.09);  /* <-- light white line */
-  background-color: #000;
+  background-image: url("/footer.jpeg");
+  filter: brightness(65%);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover; /* fit the whole image inside footer */
-
+  background-size: cover; /* Better for responsive scaling */
 }
+
 
 
 .user-links .fa {
@@ -17751,17 +17753,17 @@ Sidebar
   padding: 1px 3px;
 }
 .user-links li a{
-  color:#737678;
+  color:#fcfcfc;
 } 
 
 .widget-title {
-  color:#fff;
+  color:#ffa324;
   font-size: 24px;
   font-family: var(--title-font);
   padding: 0px 10px;
 }
 .logo-text {
-  color:#737678;
+  color:#fcfcfc;
   padding-top: 10px;
 }
  
@@ -17792,8 +17794,65 @@ Sidebar
 }
 
 .copyright-text{
-  color :#737678;
+  color :#fcfcfc;
 }
+/* ========= Fancy Hover Effect ========= */
+.user-links a {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  color: #737678;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+ 
+.user-links a span {
+  display: inline-block;
+  transition: transform 0.45s ease;
+}
+ 
+/* Replace text (new text on hover) */
+.user-links a::after {
+  content: attr(data-replace);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  transform-origin: 100% 50%;
+  transform: translate3d(200%, 0, 0);
+  transition: transform 0.45s ease;
+}
+ 
+/* Underline animation */
+.user-links a::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* height: 2px; */
+  width: 100%;
+  background-color: #54b3d6;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform 0.45s ease;
+}
+ 
+/* Hover magic */
+.user-links a:hover::after,
+.user-links a:focus::after {
+  transform: translate3d(0, 0, 0);
+}
+ 
+.user-links a:hover::before,
+.user-links a:focus::before{
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+ 
+.user-links a:hover span {
+  transform: translate3d(-200%, 0, 0);
+} 
 
 .footer-bottom-row {
   display: flex;
@@ -17802,14 +17861,14 @@ Sidebar
   gap: 600px;                 /* space between copyright and back-to-top */
   flex-wrap: wrap;           /* responsive layout on small screens */
   color: #fff;
-  background-color: #000;
+  /* background-color: #000; */
 }
 
 .footer-copyright {
   color: #aaa;
   font-size: 0.95rem;
   padding: 15px 0;
-  border-top: 2px solid rgba(255, 255, 255, 0.09);  
+  /* border-top: 2px solid rgba(255, 255, 255, 0.09);   */
 
 }
 
@@ -17878,6 +17937,8 @@ Sidebar
 }
 
 
+
+
 .particle-banner {
   position: relative;
   width: 100vw;
@@ -17937,7 +17998,6 @@ Sidebar
 
 /********************************************my custom css***********************/
 
-/************************** header*************************** */
 
 /* make header fixed at top and above content */
 .custom-header {

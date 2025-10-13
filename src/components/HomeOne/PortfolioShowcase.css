@@ -7,7 +7,6 @@
 
 /* ===== Section ===== */
 .ps-section {
-  background: var(--bg);
   padding: 60px 20px;
   color: var(--text);
 }
@@ -43,8 +42,8 @@
 }
 
 /* Assign grid areas with specific sizes */
-.tile-1 { grid-area: tile1; width: 460px; height: 450px; }
-.tile-2 { grid-area: tile2; width: 440px; height: 360px; }
+.tile-1 { grid-area: tile1; width: 360px; height: 450px; }
+.tile-2 { grid-area: tile2; width: 460px; height: 460px; }
 .tile-3 { grid-area: tile3; width: 420px; height: 390px; }
 .tile-4 { grid-area: tile4; width: 480px; height: 460px; }
 .tile-5 { grid-area: tile5; width: 440px; height: 450px; }

@@ -50,11 +50,7 @@ export default function PortfolioShowcase() {
             ))}
           </div>
 
-                  <div className="ps-load">
-                    <button className="ps-btn">
-                      <Link to="/portfolio">Load More</Link>
-                    </button>
-                  </div>
+                 
                 </div>
         </section>
         <Circle />

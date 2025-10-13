@@ -4,10 +4,11 @@ import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 import "./PortfolioShowcase.css";
 import BSM from "../../assets/images/Portfolio/Bst/pic1.webp";
+import New from "../../assets/images/Portfolio/new.png";
 
 const projects = [
-  { id: 1, image: BSM, title: "BondStreet", category: "", url: "/portfolio/bondstreet" },
-  { id: 2, image: "https://picsum.photos/seed/2/800/800", title: "Novotel", category: "Campaign", url: "/portfolio/bondstreet" },
+  { id: 1, image: New, title: "BondStreet", category: "", url: "/portfolio/bondstreet" },
+  { id: 2, image: BSM, title: "Novotel", category: "Campaign", url: "/portfolio/bondstreet" },
   { id: 3, image: "https://picsum.photos/seed/3/800/800", title: "GMR", category: "Advertising", url: "/portfolio/bondstreet" },
   { id: 4, image: "https://picsum.photos/seed/4/800/800", title: "Hyderabad Hunters", category: "Sports", url: "/portfolio/bondstreet" },
   { id: 5, image: "https://picsum.photos/seed/5/800/800", title: "Prost", category: "Packaging", url: "/portfolio/bondstreet" },
@@ -66,7 +67,7 @@ export default function PortfolioShowcase() {
         </div>
 
         {/* === Load More Button === */}
-        <div className="ps-load">
+        <div className="ps-load ">
           <Link to="/portfolio" className="ps-btn">
             Load More ➜
           </Link>
