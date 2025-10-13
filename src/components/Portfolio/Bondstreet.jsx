@@ -5,7 +5,13 @@ import Header from "../HomeOne/Header.jsx";
 import Footer from "../HomeOne/Footer1.jsx";
 import { Link } from "react-router-dom";
 import Circle from "../Circle.jsx";
-
+import "../Portfolio3.css"
+import Banner from "../../assets/images/Portfolio/Bst/Banner2.webp";
+import pic1 from "../../assets/images/Portfolio/Bst/pic6.webp";
+import pic2 from "../../assets/images/Portfolio/Bst/pic2.webp";
+import pic3 from "../../assets/images/Portfolio/Bst/pic3.webp";
+import pic4 from "../../assets/images/Portfolio/Bst/pic4.webp";
+import pic5 from "../../assets/images/Portfolio/Bst/pic5.webp";
 
 
 function ProjectDetail() {
@@ -13,18 +19,18 @@ function ProjectDetail() {
     AOS.init({ duration: 1200, once: true, easing: "ease-out-cubic" });
   }, []);
 
-  //  Static single project data
+  // Static project data
   const project = {
-    title: "NextGen Startup",
-    category: "Branding",
-    heroImage: "https://picsum.photos/seed/startup/1200/800",
+    title: "",
+    category: "",
+    heroImage: Banner,
     gallery: [
-      "https://picsum.photos/seed/startup1/900/600",
-      "https://picsum.photos/seed/startup2/900/600",
-      "https://picsum.photos/seed/startup3/900/600",
-    ], galleryExtras: [
-      "https://picsum.photos/seed/startupExtra1/900/600",
-      "https://picsum.photos/seed/startupExtra2/900/600",
+      pic1,pic2,pic3,pic4,pic5,
+
+
+    ],
+    galleryExtras: [
+      
     ],
   };
 
@@ -32,21 +38,21 @@ function ProjectDetail() {
     <>
       <Header />
 
-      {/* Hero Section */}
-      <section className="project-hero-section" data-aos="fade-down">
-        <img src={project.heroImage} alt={project.title} className="hero-bg" />
-        <div className="project-hero-overlay">
+      {/* === HERO SECTION === */}
+      <section className="pd-hero" data-aos="fade-down">
+        <img src={project.heroImage} alt={project.title} className="pd-hero-img" />
+        <div className="pd-hero-overlay">
           <h1>{project.title}</h1>
           <p>{project.category}</p>
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section className="project-gallery-section">
-        <div className="project-gallery">
+      {/* === GALLERY SECTION === */}
+      <section className="pd-gallery">
+        <div className="pd-gallery-grid">
           {project.gallery.map((img, index) => (
             <div
-              className="gallery-card"
+              className="pd-gallery-item"
               key={index}
               data-aos="fade-up"
               data-aos-delay={index * 200}
@@ -54,31 +60,30 @@ function ProjectDetail() {
               <img src={img} alt={`${project.title} ${index + 1}`} />
             </div>
           ))}
-       
-        {project.galleryExtras && (
-            <div className="gallery-row">
+
+          {project.galleryExtras && (
+            <div className="pd-gallery-row">
               {project.galleryExtras.map((extra, idx) => (
                 <div
                   key={idx}
-                  className="gallery-card"
+                  className="pd-gallery-item"
                   data-aos="fade-up"
                   data-aos-delay={600 + idx * 200}
-                  onClick={() => setSelectedImg(extra)}
                 >
                   <img src={extra} alt={`Extra ${idx + 1}`} />
                 </div>
               ))}
             </div>
-        
           )}
-           </div>
+        </div>
       </section>
 
-      {/* Back Button */}
-      <div className="project-back-btn">
+      {/* === BACK BUTTON === */}
+      <div className="pd-back-btn">
         <Link to="/Portfolio">← Back to Portfolio</Link>
       </div>
-        <Circle />
+
+      <Circle />
       <Footer />
     </>
   );

@@ -10,7 +10,7 @@ function ServiceHomeOne({ className }) {
  
  
 {/*  IT Services */}
-        <div className="service-item right-box">
+        <div className="service-itemm right-box">
           <div className="content">
             <h5 className="service-title">IT Services</h5>
             <p>
@@ -26,7 +26,7 @@ function ServiceHomeOne({ className }) {
        
  
         {/* Branding */}
-        <div className="service-item left-box">
+        <div className="service-itemm left-box">
           <div className="float-box">
             <span className="short">BR</span>
           </div>
@@ -40,7 +40,7 @@ function ServiceHomeOne({ className }) {
         </div>
  
          {/*  Digital Marketing */}
-        <div className="service-item right-box">
+        <div className="service-itemm right-box">
           <div className="content">
             <h5 className="service-title">Digital Marketing</h5>
             <p>
@@ -54,7 +54,7 @@ function ServiceHomeOne({ className }) {
         </div>
  
         {/*  Events */}
-        <div className="service-item left-box">
+        <div className="service-itemm left-box">
           <div className="float-box">
             <span className="short">EV</span>
           </div>
@@ -68,7 +68,7 @@ function ServiceHomeOne({ className }) {
         </div>
  
         {/* PR Media */}
-        <div className="service-item right-box">
+        <div className="service-itemm right-box">
           <div className="content">
             <h5 className="service-title">PR Media</h5>
             <p>

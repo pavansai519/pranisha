@@ -80,6 +80,7 @@
   font-size: 42px; /* intentionally small/condensed */
   line-height: 1.12;
   font-weight: 600;
+  font-family: var(--title-font);
   color: #fff;
   letter-spacing: 0.2px;
 }
@@ -309,7 +310,7 @@ body.cursor-accent-active::before {
 }
  
 /* --- Service Item --- */
-.service-item {
+.service-itemm {
   position: relative;
   display: flex;
   align-items: center;
@@ -331,7 +332,7 @@ body.cursor-accent-active::before {
 }
  
  
-.service-item .content {
+.service-itemm .content {
   flex: 1;
   padding: 30px;
   border-radius: 12px;
@@ -340,20 +341,20 @@ body.cursor-accent-active::before {
  
 }
  
-.service-item .content h5 {
-  font-family: "Poppins", sans-serif;
+.service-itemm .content h5 {
+  font-family: "Outfit", sans-serif;
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 12px;
   color: #ffa324;
 }
  
-.service-item .content p {
+.service-itemm .content p {
   font-size: 16px;
   line-height: 1.8;
   padding: 10px;
   color: #fcfcfc;
-  font-family: "Ibrand";
+  font-family: "montserrat", sans-serif;
    display: -webkit-box;
   -webkit-line-clamp: 4;      /* 3 lines max */
   -webkit-box-orient: vertical;
