@@ -4,14 +4,10 @@ import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 import Header from "./HomeOne/Header.jsx";
 import Footer from "./HomeOne/Footer1.jsx";
-<<<<<<< HEAD
 import "../components/HomeOne/PortfolioShowcase.css"
 import Circle from "./Circle.jsx";
 
  
-=======
-import "../components/HomeOne/PortfolioShowcase.css";
->>>>>>> cdb594d0 ( Responive of divices)
 
 const projects = [
   { id: 1, image: "https://picsum.photos/seed/6/800/800", title: "Popicorn", category: "Branding", url: "/portfolio/bondstreet" },
@@ -54,21 +50,15 @@ export default function PortfolioShowcase() {
             ))}
           </div>
 
-          <div className="ps-load">
-            <button className="ps-btn">
-              <Link to="/portfolio">Load More</Link>
-            </button>
-          </div>
-        </div>
-<<<<<<< HEAD
-      </div>
-    </section>
-    <Circle/>
-    <Footer/>
-=======
-      </section>
-      <Footer />
->>>>>>> cdb594d0 ( Responive of divices)
-    </>
+                  <div className="ps-load">
+                    <button className="ps-btn">
+                      <Link to="/portfolio">Load More</Link>
+                    </button>
+                  </div>
+                </div>
+        </section>
+        <Circle />
+        <Footer />
+      </>
   );
 }
