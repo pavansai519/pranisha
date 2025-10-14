@@ -7,7 +7,7 @@
 
 /* ===== Section ===== */
 .ps-section {
-  padding: 60px 20px;
+  padding: 20px 20px;
   color: var(--text);
 }
 
@@ -107,7 +107,7 @@
 /* ===== Load Button ===== */
 .ps-load {
   text-align: center;
-  margin-top: 40px;
+  padding-top: 50px;
 }
 
 .ps-btn {
@@ -238,7 +238,7 @@
 /* ===== MEDIUM DESKTOP (1250px–1444px) ===== */
 @media (min-width: 1250px) and (max-width: 1444px) {
   .ps-section {
-    padding: 70px 80px;
+    padding: 50px 80px 10px 80px;
   }
 
   .custom-grid {

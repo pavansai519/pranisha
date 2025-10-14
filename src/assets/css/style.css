@@ -17929,6 +17929,9 @@ Sidebar
   .footer-section-six{
      padding: 80px 10px 10px 110px;
   }
+  .footer-bottom-row{
+    gap:100px
+  }
   
  
  
@@ -18256,14 +18259,25 @@ body > *:not([data-global-particles]) {
   cursor: pointer;
 }
  
-/* container that holds links & cards */
 .nav-content {
   width: 80%;
   display: grid;
   grid-template-columns: 1fr 300px;
   gap: 40px;
-  padding-left: 50px;
+  padding: 60px 50px 40px;
+  max-height: 90vh;        /* Keeps inside viewport */
+  overflow-y: scroll;       /* Scroll enabled */
+  overflow-x: hidden;       /* Hide horizontal overflow */
+
+  /* Hide scrollbar but allow scroll */
+  scrollbar-width: none;    /* Firefox */
+  -ms-overflow-style: none; /* IE & Edge */
 }
+
+.nav-content::-webkit-scrollbar {
+  display: none;            /* Chrome, Safari */
+}
+
  
 /* LEFT column */
 .nav-links {
@@ -18442,7 +18456,7 @@ body > *:not([data-global-particles]) {
  .page-banner {
      /* same dark theme as your design */
   color: #fff;
-  padding: 100px 0 80px;
+  padding: 100px 0 20px;
   text-align: center;
   position: relative;
 }
@@ -18484,7 +18498,11 @@ body > *:not([data-global-particles]) {
   color: #aaa;
 }
 
-
+@media (min-width:1200px) and (max-width:1444px){
+  .page-banner{
+    padding-left:100px ;
+  }
+}
 
 /* ================================
    Contact Page Styles
@@ -18662,7 +18680,7 @@ select {
 /*************************clents css and social icons*******************/
 
 .clients-section {
-  padding: 40px 20px;
+  padding: 10px 20px 30px 20px;
   position: relative;
 }
 .clients-section .sec-title {
@@ -18756,7 +18774,7 @@ select {
     margin-top: 35px;
   }
   .clients-section{
-    padding: 40px 60px;
+    padding: 0px 60px 50px 60px;
   }
   .client-box img {
      max-height: 100px;
@@ -18880,7 +18898,7 @@ select {
     grid-template-columns: repeat(3, 1fr); /* 4 per row on desktop */
   }
   .team-section{
-    padding: 60px 180px;
+    padding: 60px 100px;
 
   }
 }
