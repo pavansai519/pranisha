@@ -5,12 +5,13 @@ import { Link } from "react-router-dom";
 import "./PortfolioShowcase.css";
 import BSM from "../../assets/images/Portfolio/Bst/pic1.webp";
 import New from "../../assets/images/Portfolio/new.png";
+import pcg from "../../assets/images/Portfolio/pcg/pcg1.webp"
 
 const projects = [
-  { id: 1, image: New, title: "BondStreet", category: "", url: "/portfolio/bondstreet" },
-  { id: 2, image: BSM, title: "Novotel", category: "Campaign", url: "/portfolio/bondstreet" },
-  { id: 3, image: "https://picsum.photos/seed/3/800/800", title: "GMR", category: "Advertising", url: "/portfolio/bondstreet" },
-  { id: 4, image: "https://picsum.photos/seed/4/800/800", title: "Hyderabad Hunters", category: "Sports", url: "/portfolio/bondstreet" },
+  { id: 1, image: BSM, title: "BondStreet", category: "", url: "/portfolio/bondstreet" },
+  { id: 2, image: New, title: "Novotel", category: "", url: "/portfolio/bondstreet" },
+  { id: 3, image: "https://picsum.photos/seed/4/800/800", title: "PCG", category: "", url: "/portfolio/pcg" },
+  { id: 4, image: pcg, title: "PCG", category: "", url: "/portfolio/pcg" },
   { id: 5, image: "https://picsum.photos/seed/5/800/800", title: "Prost", category: "Packaging", url: "/portfolio/bondstreet" },
   { id: 6, image: "https://picsum.photos/seed/6/800/800", title: "Thickshake", category: "F&B", url: "/portfolio/bondstreet" },
 ];
