@@ -518,7 +518,7 @@ body.cursor-accent-active::before {
 
   .left-box .float-box,
   .right-box .float-box {
-    width: 290px !important;
+    width: 20px !important;
     height: 160px;
     order: 0 !important;
   }

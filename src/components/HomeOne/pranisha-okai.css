@@ -538,7 +538,97 @@ body.cursor-accent-active::before {
 }
  
  
+@media (max-width:576px){
+  .aboutimage-box img{
+    max-width: 420px;
+    height:300px;
+  }
+}
+ 
+@media (min-width:1250px) and (max-width:1444px){
+  .about-sections-six{
+    padding:20px 70px 20px 10px;
+  }
+}
+.tab.active-tab .content-column {
+  animation: fadeSlideUp 1s ease forwards, floaty 6s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+ 
+.tab.active-tab .image-column img {
+  opacity: 0;
+  animation: fadeZoomIn 1.2s ease forwards;
+  animation-delay: 0.3s;
+}
+ 
+.tab.active-tab h3 {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  color: #fff;
+  animation: textReveal 1.4s ease forwards;
+}
+.tab.active-tab h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: #ffa324;
+  transform: translateX(0);
+  animation: textCover 1.2s ease forwards;
+}
+ 
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(60px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+ 
+@keyframes fadeZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.15) translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+@keyframes textCover {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+ 
+@keyframes textReveal {
+  0% {
+    opacity: 0;
+    letter-spacing: 4px;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: normal;
+    transform: translateY(0);
+  }
+}
+ 
 
+.typewriter {
+  white-space: pre-wrap;
+  overflow: hidden;
+  color: #fff;
+}
  
  /************************portfolio********************/
 

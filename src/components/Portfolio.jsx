@@ -50,7 +50,6 @@ export default function PortfolioShowcase() {
             ))}
           </div>
 
-                 
                 </div>
         </section>
         <Circle />

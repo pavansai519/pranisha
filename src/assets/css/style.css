@@ -17739,7 +17739,7 @@ Sidebar
 .footer-section-six {
   position: relative;
   padding: 80px 10px 10px 10px;
-  background-image: url("/footer.jpeg");
+  background-image: url("/footer_bg.png");
   filter: brightness(65%);
   background-repeat: no-repeat;
   background-position: center center;
@@ -18679,31 +18679,41 @@ select {
 
 /*************************clents css and social icons*******************/
 
-.clients-section {
-  padding: 10px 20px 30px 20px;
-  position: relative;
-}
-.clients-section .sec-title {
-  margin-bottom: 40px;
-  text-align: center;
-}
+ 
 .clients-section .sec-title h2 {
+  position: relative;
+  display: inline-block;
   font-size: 36px;
   font-weight: 600;
   font-family: var(--title-font);
   margin: 10px 0;
+  color: #ffa324;
+  transition: color 0.4s ease;
 }
-.clients-section .sec-title .sub-title {
-  font-size: 16px;
-  color: #a0a0a0;
-  text-align: center;
-  font-weight: 500;
-  font-family: var(--text-font);
-  text-transform: lowercase;
+ 
+ 
+.clients-section .sec-title h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 55%;
+  height: 2px;
+  width: 0;
+  background-color: #ffa324;
+  transform: translateY(-50%);
+  transition: width 0.4s ease;
 }
- .clients-section .sec-title h2{
-      color: #ffa324;
- }
+ 
+ 
+.clients-section .sec-title h2:hover {
+  color: #fcfcfc;
+  letter-spacing: 5px;
+}
+ 
+.clients-section .sec-title h2:hover::after {
+  width: 100%;
+}
+ 
 /* === Grid Layout (Desktop/Laptop) === */
 .clients-grid {
   display: grid;
@@ -18765,6 +18775,23 @@ select {
   }
 }
 @media (min-width: 1250px) and (max-width: 1444px) {
+    .clients-section .sec-title h2 {
+    font-size: 42px;
+    letter-spacing: 2px;
+    margin: 20px 0 15px;
+    color: #ffa324;
+  }
+
+  .clients-section .sec-title h2::after {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .clients-section .sec-title h2:hover {
+    color: #fff;
+    letter-spacing: 6px;
+    text-shadow: 0 0 12px rgba(255, 163, 36, 0.5);
+  }
   .clients-grid {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 160px);
@@ -18774,15 +18801,32 @@ select {
     margin-top: 35px;
   }
   .clients-section{
-    padding: 0px 60px 50px 60px;
+    padding: 40px 60px;
   }
   .client-box img {
      max-height: 100px;
   max-width: 80%;
-
+ 
   }
 }
 @media (min-width: 1444px) and (max-width: 2000px) {
+    .clients-section .sec-title h2 {
+    font-size: 42px;
+    letter-spacing: 2px;
+    margin: 20px 0 15px;
+    color: #ffa324;
+  }
+
+  .clients-section .sec-title h2::after {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .clients-section .sec-title h2:hover {
+    color: #fff;
+    letter-spacing: 6px;
+    text-shadow: 0 0 12px rgba(255, 163, 36, 0.5);
+  }
   .clients-grid {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 180px);
@@ -18792,7 +18836,7 @@ select {
     margin-top: 40px;
   }
 }
-
+ 
  
 /* === Mobile & Tablet: Auto-Scrolling Row === */
 .marquee {
@@ -18856,13 +18900,15 @@ select {
   color: #ffa324;
   transform: scale(1.1);
 }
-
+ 
 @media (max-width:576px){
   .socials-text{
     display: none;
   }
 }
-
+ 
+ 
+ 
 
 
  /****************************team*******************/

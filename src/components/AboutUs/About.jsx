@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import AboutMen from "../../../public/about-us.png"; // your image
+import AboutMen from "../../../public/about-us.png";
  
 function AboutHomeOne({ className }) {
+  const fullText = `Pranisha Technologies stands out as a creative and technology-driven digital solutions company, delivering high-quality services in branding, web development, and digital marketing. Their best work includes crafting professional brand identities through logo design, packaging, and hoarding creatives that leave a lasting impression. On the technology side, they excel in custom websites, WordPress solutions, ReactJS development, and mobile applications, ensuring businesses achieve strong online visibility.
+Their digital marketing expertise covers SEO, social media, and performance marketing, helping brands grow faster and reach the right audience. With a passionate team, industry-level strategies, and innovative execution, Pranisha Technologies has become a trusted partner for businesses seeking modern, scalable, and result-oriented digital solutions.`;
+ 
+  const [displayText, setDisplayText] = useState("");
+ 
+  useEffect(() => {
+    let i = 0;
+    const typing = setInterval(() => {
+      if (i < fullText.length) {
+        setDisplayText((prev) => prev + fullText.charAt(i));
+        i++;
+      } else {
+        clearInterval(typing);
+      }
+    }, 10);
+ 
+    return () => clearInterval(typing);
+  }, []);
+ 
   return (
     <section className={`about-sections-six ${className || ""}`}>
       <div className="auto-container">
@@ -22,10 +41,7 @@ function AboutHomeOne({ className }) {
                 All our experience <br />
                 started <span>7 years ago</span>
               </h2>
-              <p>
-               Pranisha Technologies stands out as a creative and technology-driven digital solutions company, delivering high-quality services in branding, web development, and digital marketing. Their best work includes crafting professional brand identities through logo design, packaging, and hoarding creatives that leave a lasting impression. On the technology side, they excel in custom websites, WordPress solutions, ReactJS development, and mobile applications, ensuring businesses achieve strong online visibility.<br/>
-               Their digital marketing expertise covers SEO, social media, and performance marketing, helping brands grow faster and reach the right audience. With a passionate team, industry-level strategies, and innovative execution, Pranisha Technologies has become a trusted partner for businesses seeking modern, scalable, and result-oriented digital solutions.
-              </p>
+              <p className="typewriter">{displayText}</p>
  
               <Link to="/contact" className="theme-btn">
                 Contact Us
@@ -39,3 +55,5 @@ function AboutHomeOne({ className }) {
 }
  
 export default AboutHomeOne;
+ 
+ 
