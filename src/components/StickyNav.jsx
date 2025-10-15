@@ -13,31 +13,15 @@ const projects = [
     link: "/portfolio/pcg",
     thumbnail: pcg,
   },
-  {
-    title: "Project 5",
-    link: "/portfolio/project5",
-    thumbnail: "https://via.placeholder.com/200x140?text=Project+5",
-  },
+  
   {
     title: "Next Rof",
     link: "/portfolio/rof",
     thumbnail: rof,
   },
-  {
-    title: "Project 7",
-    link: "/portfolio/project7",
-    thumbnail: "https://via.placeholder.com/200x140?text=Project+7",
-  },
-  {
-    title: "Project 8",
-    link: "/portfolio/project8",
-    thumbnail: "https://via.placeholder.com/200x140?text=Project+8",
-  },
-  {
-    title: "Project 9",
-    link: "/portfolio/project9",
-    thumbnail: "https://via.placeholder.com/200x140?text=Project+9",
-  },
+  
+ 
+ 
   { title: "BondStreet", link: "/portfolio/bondstreet", thumbnail: BSM },
 ];
  
