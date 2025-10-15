@@ -455,6 +455,66 @@ body.cursor-accent-active::before {
 }
 
 }
+/* ===== Responsive Fix for Small Mobile Devices (max-width: 576px) ===== */
+@media (max-width: 576px) {
+  .services-section-four {
+    padding: 40px 10px;
+  }
+
+  .service-itemm {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 20px;
+    margin: 30px 0;
+  }
+
+  .float-box {
+    width: 200%;
+    height: 160px !important;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ffa324, #070707);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 0 !important;
+  }
+
+  .short {
+    font-size: 80px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 163, 36, 0.6);
+  }
+
+  .service-itemm .content {
+    padding: 15px 10px;
+    text-align: center !important;
+    box-shadow: none;
+  }
+
+  .service-itemm .content h5 {
+    font-size: 22px;
+    color: #ffa324;
+  }
+
+  .service-itemm .content p {
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 0;
+    -webkit-line-clamp: unset;
+    display: block;
+  }
+
+  .auto-container {
+    padding: 0 10px;
+  }
+
+  .left-box .content,
+  .right-box .content {
+    max-width: 100%;
+    text-align: center !important;
+  }
+}
+
 
 
 

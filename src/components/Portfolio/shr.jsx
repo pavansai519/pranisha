@@ -1,64 +1,164 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Header from "../HomeOne/Header.jsx";
 import Footer from "../HomeOne/Footer1.jsx";
 import { Link } from "react-router-dom";
+import Circle from "../Circle.jsx";
+import { FaTimes } from "react-icons/fa";
+import StickyNav from "../StickyNav.jsx";
+import "./Portfolio2.css";
+import Banner from "../../assets/images/Portfolio/shr/shrBanner.webp";
+import pic1 from "../../assets/images/Portfolio/shr/shr2.webp";
+import pic2 from "../../assets/images/Portfolio/shr/shr3.webp";
+import pic3 from "../../assets/images/Portfolio/shr/shr4.webp";
+import pic4 from "../../assets/images/Portfolio/shr/shr5.webp";
+import pic5 from "../../assets/images/Portfolio/shr/shr6.webp";
+
+import demoVideo from "/car.mp4";
+import OnlyRingCursorUnified from "../HomeOne/CustomCursor.jsx";
 
 function ProjectDetail() {
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedVideo, setSelectedVideo] = useState(null);
+
   useEffect(() => {
     AOS.init({ duration: 1200, once: true, easing: "ease-out-cubic" });
   }, []);
 
-  // 🖼 Static single project data
+  useEffect(() => {
+    const isOpen = !!selectedImage || !!selectedVideo;
+    document.body.classList.toggle("no-scroll", isOpen);
+    return () => document.body.classList.remove("no-scroll");
+  }, [selectedImage, selectedVideo]);
+
   const project = {
-    title: "NextGen Startup",
-    category: "Branding",
-    heroImage: "https://picsum.photos/seed/startup/1200/800",
-    gallery: [
-      "https://picsum.photos/seed/startup1/900/600",
-      "https://picsum.photos/seed/startup2/900/600",
-      "https://picsum.photos/seed/startup3/900/600",
-    ],
+    title: "",
+    category: "",
+    heroImage: Banner,
+    gallery: [pic1, pic2, pic3, pic4, pic5],
   };
 
   return (
     <>
+      <OnlyRingCursorUnified />
       <Header />
 
-      {/* Hero Section */}
-      <section className="project-hero-section" data-aos="fade-down">
-        <img src={project.heroImage} alt={project.title} className="hero-bg" />
+      {/* === HERO SECTION === */}
+      <section className="project-hero" data-aos="fade-down">
+        <img
+          src={project.heroImage}
+          alt={project.title}
+          className="project-hero-img"
+        />
         <div className="project-hero-overlay">
           <h1>{project.title}</h1>
           <p>{project.category}</p>
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section className="project-gallery-section">
-        <div className="project-gallery">
+      {/* === GALLERY SECTION === */}
+      <section className="project-gallery">
+        <div className="project-gallery-grid">
           {project.gallery.map((img, index) => (
             <div
-              className="gallery-card"
+              className="project-gallery-item ps-tile"
               key={index}
               data-aos="fade-up"
               data-aos-delay={index * 200}
             >
-              <img src={img} alt={`${project.title} ${index + 1}`} />
+              <img
+                src={img}
+                alt={`Gallery ${index + 1}`}
+                onClick={() => setSelectedImage(img)}
+                style={{ cursor: "pointer" }}
+              />
             </div>
           ))}
+
+          <div
+            className="project-gallery-item project-video-item ps-tile"
+            data-aos="fade-up"
+            data-aos-delay={600}
+          >
+            <video
+              src={demoVideo}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="project-video-thumb"
+              onClick={() => setSelectedVideo(demoVideo)}
+              style={{ cursor: "pointer" }}
+            />
+          </div>
         </div>
       </section>
 
-      {/* Back Button */}
-      <div className="project-back-btn">
-        <Link to="/Portfolio">← Back to Portfolio</Link>
+      {/* === IMAGE POPUP === */}
+      {selectedImage && (
+        <div
+          className="project-image-popup"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div
+            className="project-popup-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="project-close-popup"
+              onClick={() => setSelectedImage(null)}
+              aria-label="Close image"
+            >
+              <FaTimes />
+            </button>
+            <img src={selectedImage} alt="Expanded view" />
+          </div>
+        </div>
+      )}
+
+      {/* === VIDEO POPUP === */}
+      {selectedVideo && (
+        <div
+          className="project-video-popup"
+          onClick={() => setSelectedVideo(null)}
+        >
+          <div
+            className="project-video-popup-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="project-close-popup"
+              onClick={() => setSelectedVideo(null)}
+              aria-label="Close video"
+            >
+              <FaTimes />
+            </button>
+            <video src={selectedVideo} controls autoPlay />
+          </div>
+        </div>
+      )}
+
+       <div data-aos="fade-up" data-aos-delay="300" style={{ position: "relative" }}>
+        <StickyNav />
       </div>
 
+      <Circle />
       <Footer />
     </>
   );
 }
 
 export default ProjectDetail;
+
+
+
+
+
+
+
+
+
+
+
+

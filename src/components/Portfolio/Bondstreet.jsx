@@ -5,8 +5,9 @@ import Header from "../HomeOne/Header.jsx";
 import Footer from "../HomeOne/Footer1.jsx";
 import { Link } from "react-router-dom";
 import Circle from "../Circle.jsx";
-import "../Portfolio3.css";
+import "./Portfolio3.css";
 import { FaExpandAlt, FaTimes } from "react-icons/fa";
+import StickyNav from "../StickyNav.jsx";
 
 import Banner from "../../assets/images/Portfolio/Bst/Banner2.webp";
 import pic1 from "../../assets/images/Portfolio/Bst/pic6.webp";
@@ -74,14 +75,8 @@ function ProjectDetail() {
                 style={{ cursor: "pointer" }}
               />
 
-              {/* View Icon (restores old behavior) */}
-              <button
-                className="view-icon"
-                onClick={() => setSelectedImage(img)}
-                aria-label={`Open image ${index + 1}`}
-              >
-                <FaExpandAlt />
-              </button>
+          
+           
             </div>
           ))}
 
@@ -101,13 +96,7 @@ function ProjectDetail() {
               onClick={() => setSelectedVideo(demoVideo)} // click thumbnail to open popup
               style={{ cursor: "pointer" }}
             />
-            <button
-              className="view-icon"
-              onClick={() => setSelectedVideo(demoVideo)}
-              aria-label="Open video"
-            >
-              <FaExpandAlt />
-            </button>
+           
           </div>
         </div>
       </section>
@@ -152,9 +141,8 @@ function ProjectDetail() {
         </div>
       )}
 
-      {/* === BACK BUTTON === */}
-      <div className="pd-back-btn">
-        <Link to="/Portfolio">← Back to Portfolio</Link>
+     <div data-aos="fade-up" data-aos-delay="300" style={{ position: "relative" }}>
+        <StickyNav />
       </div>
 
       <Circle />

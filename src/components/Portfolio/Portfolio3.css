@@ -1,0 +1,291 @@
+/* ===========================
+   ProjectDetail — Updated CSS
+   =========================== */
+ 
+/* === HERO === */
+.pd-hero {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+  margin-top: 15px;
+}
+.pd-hero-img {
+  width: 100%;
+  height: 100%;
+  /* use cover for immersive hero — scale-down caused extra blank space */
+  object-fit:scale-down;
+  transition: transform 2s ease;
+}
+.pd-hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+ 
+/* === GALLERY === */
+.pd-gallery {
+  padding: 120px 220px;
+  text-align: center;
+}
+ 
+.pd-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  justify-items: center;
+  align-items: center;
+}
+ 
+/* tile base */
+.pd-gallery-item {
+  position: relative; /* required for absolute view-icon */
+  width: 100%;
+  max-width: 360px;
+  height: 360px;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+  background: #0a0a0a; /* subtle background to avoid flashes on slow loads */
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+ 
+/* image inside tile */
+.pd-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+.pd-gallery-item:hover img {
+  transform: scale(1.05);
+}
+ 
+/* make the whole tile clickable visually */
+.pd-gallery-item .video-thumb,
+.pd-gallery-item img {
+  pointer-events: auto;
+}
+ 
+/* === VIEW ICON ON IMAGE === */
+ 
+/* === INLINE VIDEO TILE === */
+.video-item {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 360px;
+  height: 360px;
+}
+.video-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+.video-item:hover .video-thumb {
+  transform: scale(1.05);
+}
+ 
+/* === POPUP STYLES === */
+.image-popup,
+.video-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+  padding: 30px;
+}
+ 
+/* container for the big image/video */
+.popup-content,
+.video-popup-content {
+  position: relative;
+  max-width: 100%;
+  max-height: calc(100vh - 60px); /* leave room for top/bottom padding */
+  max-width: 1100px;       /* max width for very large screens */
+ 
+  max-height: 80%;
+  border-radius: 10px;
+  overflow: visible;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+/* large image sizing */
+.popup-content img {
+  width: auto;             /* use natural aspect ratio */
+  height: auto;
+  max-width: 100%;         /* never exceed container width */
+  max-height: 100%;        /* never exceed container height */
+  object-fit: contain;     /* preserve aspect ratio and contain fully */
+  display: block;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6), 0 2px 8px rgba(255,255,255,0.03);
+}
+ 
+/* video sizing */
+.video-popup-content video {
+ width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+ 
+/* === CLOSE BUTTON (used for both image & video popups) === */
+.close-popup {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #ffa324;
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 1200;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.close-popup:hover {
+  transform: scale(1.05);
+  background: rgba(0,0,0,0.65);
+}
+ 
+/* legacy named class kept for parity (if you used close-video-popup elsewhere) */
+.close-video-popup {
+  /* just reuse close-popup look */
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  border: none;
+  font-size: 20px;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+}
+ 
+/* animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes zoomIn {
+  from { transform: scale(0.96); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.video-popup { animation: fadeIn 0.25s ease; }
+.video-popup-content { animation: zoomIn 0.25s ease; }
+ 
+/* === Responsive Grid Behavior === */
+@media (max-width: 992px) {
+  .pd-gallery {
+    padding: 80px 60px;
+  }
+  .pd-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .pd-gallery-item,
+  .video-item {
+    max-width: 100%;
+    height: 320px;
+  }
+}
+ 
+@media (max-width: 576px) {
+    .pd-hero {
+    height: auto;               /* allow natural image height */
+    margin-top: 10px;
+    background-color: #000;     /* fallback background to fill gaps */
+  }
+    .pd-hero-img {
+       width: 100%;
+    height: auto;               /* maintain natural aspect ratio */
+    object-fit: contain;        /* no cropping, no distortion */
+    object-position: center;
+    display: block;
+  }
+
+  .pd-gallery {
+    padding: 60px 20px;
+  }
+  .pd-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .pd-gallery-item,
+  .video-item {
+    max-width: 320px;
+    height: 320px;
+    margin: 0 auto;
+  }
+  .popup-content, .video-popup-content {
+    max-width: 95%;
+    max-height: 95%;
+  }
+}
+ 
+/* large-but-not-fullwidth screens */
+@media (min-width: 1200px) and (max-width: 1444px) {
+
+
+  .pd-gallery {
+    padding: 120px 100px;
+  }
+  .pd-gallery-grid {
+    gap: 30px;
+  }
+  .pd-gallery-item {
+    max-width: 360px;
+    height: 360px;
+  }
+  .popup-content {
+    max-width: 90%;
+    max-height: 90%;
+  }
+  .popup-content img {
+    height: 650px;
+    max-height: 70vh;
+    box-shadow: 0 0 25px rgba(255, 163, 36, 0.25);
+  }
+  .close-popup {
+    top: 12px;
+    right: 12px;
+    font-size: 18px;
+    padding: 8px;
+  }
+  .video-popup-content video {
+    height: 600px;
+  }
+  
+}
+ 
+/* === VIEW ICON POSITION — top-right corner === */
+
+ 

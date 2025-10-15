@@ -1,0 +1,185 @@
+/* pranisha-okai.css (mobile-first, robust) */
+
+/* Variables */
+:root {
+  --accent: #ffa324;
+  --float-bg: linear-gradient(90deg, #ffa324, #070707);
+  --float-bg-right: linear-gradient(280deg, #ffa324, #070707);
+  --panel-bg: rgba(0,0,0,0.08);
+  --text: #fcfcfc;
+}
+
+/* --- Base / Mobile (default) --- */
+.services-section-four {
+  position: relative;
+  padding: 40px 12px;
+  box-sizing: border-box;
+  color: var(--text);
+  background: #000;
+}
+
+.auto-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+/* stacked layout on mobile */
+.service-itemm {
+  display: flex;
+  flex-direction: column; /* mobile first: stacked */
+  gap: 16px;
+  align-items: center;
+  margin: 18px 0;
+}
+
+.service-itemm .content {
+  width: 100%;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: none;
+  text-align: center;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+.service-itemm .content h5 {
+  font-family: "Outfit", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--accent);
+}
+
+.service-itemm .content p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text);
+  display: block; /* allow full paragraph on mobile */
+  -webkit-line-clamp: unset;
+  -webkit-box-orient: unset;
+  overflow: visible;
+}
+
+/* float box (mobile: full width block) */
+.float-box {
+  width: 100%;
+  padding: 28px 0;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--float-bg);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.float-box .short {
+  font-weight: 700;
+  font-size: 80px;
+  color: #cea67c;
+  line-height: 0.9;
+  text-transform: uppercase;
+  transition: all .25s ease;
+}
+
+/* hover effects still work on mobile where supported */
+.float-box:hover .short { color: #fff; }
+
+/* ensure links have no default underline */
+.float-box, .ps-btn, a { text-decoration: none; }
+
+/* ----- Desktop overrides ----- */
+@media (min-width: 769px) {
+  .services-section-four {
+    padding: 80px 20px;
+  }
+
+  .auto-container { padding: 0; }
+
+  .service-itemm {
+    flex-direction: row; /* side-by-side on desktop */
+    align-items: center;
+    margin: 40px 0;
+  }
+
+  /* keep left/right semantics, but ensure explicit alignment */
+  .left-box { justify-content: flex-start; }
+  .right-box { justify-content: flex-end; }
+
+  .service-itemm .content {
+    flex: 1;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    background: transparent;
+    text-align: left;
+    max-width: 800px;
+  }
+
+  .service-itemm .content h5 {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .service-itemm .content p {
+    font-size: 16px;
+    line-height: 1.8;
+    padding: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* float-box sizes for desktop */
+  .left-box .float-box {
+    width: 230px;
+    height: 200px;
+    background: var(--float-bg);
+  }
+
+  .right-box .float-box {
+    width: 430px;
+    height: 200px;
+    background: var(--float-bg-right);
+  }
+
+  .float-box .short {
+    font-size: 110px;
+    color: #cea67c;
+  }
+
+  /* ensure text alignment as per left / right layout */
+  .left-box .content { text-align: right; }
+  .right-box .content { text-align: left; }
+}
+
+/* Large screens: expand container & tweak spacing */
+@media (min-width: 1440px) {
+  .services-section-four { padding: 80px 0; }
+  .auto-container { max-width: 1600px; }
+  .right-box .float-box { width: 430px; height: 200px; }
+  .left-box .float-box { width: 230px; height: 200px; }
+  .float-box .short { font-size: 110px; }
+}
+
+/* Hover & transition polish (desktop only) */
+@media (hover: hover) and (pointer: fine) {
+  .float-box {
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .float-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  }
+  .float-box:hover .short {
+    color: #fff;
+    text-shadow:
+      0 0 10px rgba(255, 163, 36, 0.8),
+      0 0 20px rgba(255, 163, 36, 0.6),
+      0 0 30px rgba(255, 163, 36, 0.4);
+  }
+}

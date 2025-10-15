@@ -8,7 +8,7 @@ export default function Pranisha() {
     <section className="banner-section">
   <video
     className="banner-video"
-    src="/car.mp4"
+    src="/logoo.mp4"
     autoPlay
     loop
     muted

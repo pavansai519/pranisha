@@ -1,0 +1,315 @@
+/* ===========================
+   ProjectDetail — Updated CSS
+   =========================== */
+
+/* === HERO === */
+.project-hero {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+  margin-top: 15px;
+}
+.project-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+  transition: transform 2s ease;
+}
+.project-hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+/* === GALLERY === */
+.project-gallery {
+  padding: 120px 180px;
+  text-align: center;
+}
+.project-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 90px;
+  justify-items: center;
+  align-items: center;
+}
+.project-gallery-item {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  height: 460px;
+  overflow: hidden;
+  border-radius: 2px;
+  transition: transform 0.4s ease;
+  background: #0a0a0a;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+.project-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+.project-gallery-item:hover img {
+  transform: scale(1.05);
+}
+.project-gallery-item .project-video-thumb,
+.project-gallery-item img {
+  pointer-events: auto;
+}
+
+/* === INLINE VIDEO TILE === */
+.project-video-item {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 360px;
+  height: 460px;
+}
+.project-video-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+.project-video-item:hover .project-video-thumb {
+  transform: scale(1.05);
+}
+
+/* === POPUP STYLES === */
+.project-image-popup,
+.project-video-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+  padding: 30px;
+}
+.project-popup-content,
+.project-video-popup-content {
+  position: relative;
+  max-width: 1100px;
+  max-height: 80%;
+  border-radius: 10px;
+  overflow: visible;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-popup-content img {
+  width: auto;
+  height: 700px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6),
+    0 2px 8px rgba(255, 255, 255, 0.03);
+}
+.project-video-popup-content video {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* === CLOSE BUTTON === */
+.project-close-popup {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #ffa324;
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 1200;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.project-close-popup:hover {
+  transform: scale(1.05);
+  background: rgba(0, 0, 0, 0.65);
+}
+.project-close-video-popup {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  font-size: 20px;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+}
+
+/* animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  from {
+    transform: scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.project-video-popup {
+  animation: fadeIn 0.25s ease;
+}
+.project-video-popup-content {
+  animation: zoomIn 0.25s ease;
+}
+
+/* === Responsive Grid Behavior === */
+@media (max-width: 992px) {
+  .project-gallery {
+    padding: 80px 60px;
+  }
+  .project-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .project-gallery-item,
+  .project-video-item {
+    max-width: 100%;
+    height: 320px;
+  }
+}
+@media (max-width: 576px) {
+
+  /* === HERO SECTION (mobile) === */
+    .project-hero {
+    height: auto;               /* allow natural image height */
+    margin-top: 10px;
+    background-color: #000;     /* fallback background to fill gaps */
+  }
+
+  .project-hero-img {
+    width: 100%;
+    height: auto;               /* maintain natural aspect ratio */
+    object-fit: contain;        /* no cropping, no distortion */
+    object-position: center;
+    display: block;
+  }
+
+  /* === GALLERY SECTION (already defined) === */
+  .project-gallery {
+    padding: 60px 20px;
+  }
+  .project-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .project-gallery-item,
+  .project-video-item {
+    max-width: 320px;
+    height: 320px;
+    margin: 0 auto;
+  }
+  .project-popup-content,
+  .project-video-popup-content {
+    max-width: 95%;
+    max-height: 95%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1444px) {
+  .project-gallery {
+    padding: 120px 100px;
+  }
+  .project-gallery-grid {
+    gap: 30px;
+  }
+  .project-gallery-item {
+    max-width: 360px;
+    height: 360px;
+  }
+  .project-popup-content {
+    max-width: 90%;
+    max-height: 90%;
+  }
+  .project-popup-content img {
+    height: 650px;
+    max-height: 70vh;
+    box-shadow: 0 0 25px rgba(255, 163, 36, 0.25);
+  }
+  .project-close-popup {
+    top: 12px;
+    right: 12px;
+    font-size: 18px;
+    padding: 8px;
+  }
+  .project-video-popup-content video {
+    height: 600px;
+  }
+}
+
+/* === VIEW ICON === */
+.project-gallery-item .project-view-icon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #ffa324;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.project-gallery-item:hover .project-view-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+.project-gallery-item .project-view-icon:hover {
+  background: rgba(0, 0, 0, 0.75);
+  transform: scale(1.1);
+}
+
+/* === BACK BUTTON === */
+.project-back-btn {
+  text-align: center;
+  margin-top: 40px;
+}
