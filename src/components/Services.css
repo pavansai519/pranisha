@@ -384,9 +384,16 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .content-grid {
     grid-template-columns: 1fr;
+  }
+  .section-header p {
+    font-size: 16px;
+    text-align: left;
+  }
+  .section-header h2{
+    text-align: left;
   }
 }
 
