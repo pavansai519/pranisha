@@ -445,17 +445,6 @@ body.cursor-accent-active::before {
   transition: all 0.3s ease;
 }
 
-@media (min-width:1440px) and (max-width:1920px){
-  .services-section-four {
-    padding: 80px 0px;
-  }
-  .auto-container {
-    max-width: 1600px;
-    margin:  0 auto;
-}
-
-}
-/* ===== Responsive Fix for Small Mobile Devices (max-width: 576px) ===== */
 @media (max-width: 576px) {
   .services-section-four {
     padding: 40px 10px;
@@ -469,14 +458,7 @@ body.cursor-accent-active::before {
   }
 
   .float-box {
-    width: 200%;
-    height: 160px !important;
-    border-radius: 10px;
-    background: linear-gradient(90deg, #ffa324, #070707);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    order: 0 !important;
+   display: none;
   }
 
   .short {
@@ -514,6 +496,81 @@ body.cursor-accent-active::before {
     text-align: center !important;
   }
 }
+@media (max-width: 576px) {
+  .services-section-four { padding: 30px 10px; }
+
+  .service-itemm {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    margin: 28px 0;
+  }
+
+  /* Make float-box visible, small and centered */
+  .float-box {
+    display: flex !important;
+    width: 140px;
+    height: 140px;
+    min-width: 240px;
+    min-height: 140px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #ffa324, #070707);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;         /* center horizontally */
+    order: 0;               /* ensure it stacks above/before content if desired */
+    transform: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  /* Smaller typography inside the float box */
+  .short {
+    font-size: 44px !important;
+    line-height: 1;
+    letter-spacing: 1px;
+    color: #cea67c;
+    text-transform: uppercase;
+    display: inline-block;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.25);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Content adjustments for mobile */
+  .service-itemm .content {
+    padding: 12px 8px;
+    box-shadow: none;
+    max-width: 100%;
+  }
+
+  .service-itemm .content h5 {
+    font-size: 20px;
+    margin-top: 6px;
+  }
+
+  .service-itemm .content p {
+    font-size: 14px;
+    -webkit-line-clamp: unset;
+    display: block;
+    padding: 0;
+  }
+
+  .auto-container { padding: 0 12px; }
+}
+
+@media (min-width:1440px) and (max-width:1920px){
+  .services-section-four {
+    padding: 80px 0px;
+  }
+  .auto-container {
+    max-width: 1600px;
+    margin:  0 auto;
+}
+
+}
+/* ===== Responsive Fix for Small Mobile Devices (max-width: 576px) ===== */
+
 
 
 

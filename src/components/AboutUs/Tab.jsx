@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-import WorkImg from '../../assets/images/resource/work-1.jpg';
+import WorkImg from '../../assets/images/OUR VISION.webp';
+import WorkImg1 from '../../assets/images/OUR MISSION.webp';
 
 function TabHome5({ className }) {
     const [activeIndex, setActiveIndex] = useState(1);
@@ -88,7 +89,7 @@ function TabHome5({ className }) {
 
                                     {/* {/ Image Column /} */}
                                     <div className="image-column col-xl-5 col-lg-6">
-                                        <img className="tab-image overlay-anim" src={WorkImg} alt=""/>
+                                        <img className="tab-image overlay-anim" src={WorkImg1} alt=""/>
                                     </div>
                                 </div>
                             </div>

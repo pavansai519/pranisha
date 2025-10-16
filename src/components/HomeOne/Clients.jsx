@@ -101,8 +101,7 @@ function ClientsHomeOne({ className }) {
         <div className="sec-title text-center">
           
           <h2>Our Clients</h2>
-          <span className="sub-title " style={{fontSize:"18px", color:"#fcfcfc"}}>
-            We serve a diverse range of clients from various industries and backgrounds
+          <span className="sub-title pt-4" style={{fontSize:"18px", color:"#a0a0a0"}}>
           </span>
         </div>
  

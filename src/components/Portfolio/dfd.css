@@ -1,95 +1,57 @@
-/* ===========================
-   IMAGE & VIDEO POPUP (UNIFIED)
-   =========================== */
-
-/* overlay container */
-.image-popup,
-.video-popup {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.85);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1200;
-  padding: 20px;           /* spacing from viewport edges */
-  box-sizing: border-box;
-}
-
-/* inner popup box that contains the media */
-.popup-content,
-.video-popup-content {
+.banner-section {
   position: relative;
   width: 100%;
-  max-width: 1100px;       /* max width for very large screens */
-  max-height: calc(100vh - 60px); /* leave room for top/bottom padding */
-  border-radius: 10px;
-  overflow: visible;       /* allow drop-shadow to show (not clip) */
-  background: transparent;
+  height: 100vh; /* full viewport */
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;           /* small safe gap inside */
-  box-sizing: border-box;
 }
 
-/* Ensure the full image is visible and never cropped */
-.popup-content img {
-  width: auto;             /* use natural aspect ratio */
-  height: auto;
-  max-width: 100%;         /* never exceed container width */
-  max-height: 100%;        /* never exceed container height */
-  object-fit: contain;     /* preserve aspect ratio and contain fully */
-  display: block;
-  border-radius: 8px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.6), 0 2px 8px rgba(255,255,255,0.03);
-}
-
-/* Video uses same contain behavior (if needed) */
-.video-popup-content video {
+/* === Background Video === */
+.banner-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
   width: auto;
   height: auto;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  display: block;
-  border-radius: 8px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+  will-change: transform; /* smooth GPU rendering */
+  backface-visibility: hidden;
 }
 
-/* Close button (inside popup, always visible) */
-.close-popup {
+/* === Optional Overlay for readability === */
+.banner-section::after {
+  content: "";
   position: absolute;
-  top: 12px;
-  right: 12px;
-  background: rgba(0,0,0,0.55);
-  color: #ffa324;
-  border: none;
-  border-radius: 6px;
-  font-size: 20px;
-  padding: 8px;
-  cursor: pointer;
-  z-index: 1300;
-  transition: transform 0.12s ease, background 0.12s ease;
-}
-.close-popup:hover { transform: scale(1.04); background: rgba(0,0,0,0.65); }
-
-/* small screens: allow popup to shrink but keep full image visible */
-@media (max-width: 768px) {
-  .popup-content,
-  .video-popup-content {
-    max-width: calc(100vw - 24px);
-    max-height: calc(100vh - 40px);
-    padding: 6px;
-  }
-  .popup-content img,
-  .video-popup-content video {
-    max-height: calc(100vh - 80px);
-    max-width: 100%;
-  }
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
 }
 
-/* Prevent the popup from being clipped by any practical parent overflow */
-html, body {
-  -webkit-overflow-scrolling: touch;
+/* === Overlay Content === */
+.banner-overlay {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.banner-content h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.banner-content p {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  color: #f0f0f0;
+  max-width: 600px;
+  margin: 0 auto;
 }

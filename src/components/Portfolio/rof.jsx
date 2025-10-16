@@ -15,7 +15,7 @@ import pic3 from "../../assets/images/Portfolio/rof/rof4.webp";
 import pic4 from "../../assets/images/Portfolio/rof/rof5.webp";
 import pic5 from "../../assets/images/Portfolio/rof/rof6.webp";
 
-import demoVideo from "/car.mp4";
+import demoVideo from "/logoo.mp4";
 import OnlyRingCursorUnified from "../HomeOne/CustomCursor.jsx";
 
 function ProjectDetail() {

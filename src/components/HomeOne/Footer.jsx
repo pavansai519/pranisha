@@ -13,7 +13,7 @@ function FooterHomeOne({ className }) {
               {/* ===== Logo and About ===== */}
               <div className={`footer-logo footer-column col-xl-3 ${className || ''}`}>
                 <div className="footer-widget about-widget">
-                  <div className="logo">
+                  <div className="footer-logo">
                     <Link to="/"><img src="/pranisha.png" alt="Pranisha Logo" /></Link>
                   </div>
                   <div className="logo-text">

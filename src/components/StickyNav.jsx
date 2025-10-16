@@ -2,13 +2,24 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-// Use public folder paths for images
+// Keep your original imports
+import BSM from "../assets/images/Portfolio/Bst/Bond.png";
+import pcg from "../assets/images/Portfolio/pcg/PCG.png";
+import shr from "../assets/images/Portfolio/shr/HOG.png";
+import poh from "../assets/images/Portfolio/poh/POH.png";
+import rof from "../assets/images/Portfolio/rof/ROI.png";
+import dess from "../assets/images/Portfolio/dess/dess.png"
+
+// Projects array using imported images
 const projects = [
-  { title: "Next POH", link: "/portfolio/poh", thumbnail: "/assets/images/Portfolio/poh/POH.png" },
-  { title: "Next SHR", link: "/portfolio/shr", thumbnail: "/assets/images/Portfolio/shr/HOG.png" },
-  { title: "Next PCG", link: "/portfolio/Portfolio/pcg/PCG.png", thumbnail: "/assets/images/Portfolio/pcg/PCG.png" },
-  { title: "Next Rof", link: "/portfolio/rof", thumbnail: "/assets/images/Portfolio/rof/ROI.png" },
-  { title: "BondStreet", link: "/portfolio/bondstreet", thumbnail: "/assets/images/Portfolio/Bst/Bond.png" },
+  { title: "Next POH", link: "/portfolio/poh", thumbnail: poh },
+  { title: "Next SHR", link: "/portfolio/shr", thumbnail: shr },
+  { title: "Next PCG", link: "/portfolio/pcg", thumbnail: pcg },
+  { title: "Next Rof", link: "/portfolio/rof", thumbnail: rof },
+  { title: "Next Dress", link: "/portfolio/dess", thumbnail: dess },
+
+  { title: "BondStreet", link: "/portfolio/bondstreet", thumbnail: BSM },
+
 ];
 
 function StickyNav() {
@@ -18,7 +29,6 @@ function StickyNav() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [previewIndex, setPreviewIndex] = useState(0);
 
-  // Update current project index based on URL
   useEffect(() => {
     const currentProjectIndex = projects.findIndex(p => p.link === location.pathname);
     if (currentProjectIndex !== -1) {
@@ -30,21 +40,11 @@ function StickyNav() {
   const prevIndex = i => (i === 0 ? projects.length - 1 : i - 1);
   const nextIndex = i => (i === projects.length - 1 ? 0 : i + 1);
 
-  const handleHover = () => {
-    setPreviewIndex(nextIndex(currentIndex)); // Show next project on hover
-  };
+  const handleHover = () => setPreviewIndex(nextIndex(currentIndex));
+  const handleMouseLeave = () => setPreviewIndex(nextIndex(currentIndex));
 
-  const handleMouseLeave = () => {
-    setPreviewIndex(nextIndex(currentIndex)); // Reset to default next
-  };
-
-  const handlePrevClick = () => {
-    navigate(projects[prevIndex(currentIndex)].link);
-  };
-
-  const handleNextClick = () => {
-    navigate(projects[nextIndex(currentIndex)].link);
-  };
+  const handlePrevClick = () => navigate(projects[prevIndex(currentIndex)].link);
+  const handleNextClick = () => navigate(projects[nextIndex(currentIndex)].link);
 
   const previewProject = projects[previewIndex];
 

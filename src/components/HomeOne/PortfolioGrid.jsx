@@ -6,10 +6,10 @@ import "./PortfolioShowcase.css";
 
 import BSM from "../../assets/images/Portfolio/Bst/pic1.webp";
 import pcg from "../../assets/images/Portfolio/pcg/pcg1.webp";
-import shr from "../../assets/images/Portfolio/shr/shr1.webp";
+import shr from "../../assets/images/Portfolio/shr/shr.webp";
 import poh from "../../assets/images/Portfolio/poh/poh1.webp";
 import rof from "../../assets/images/Portfolio/rof/rof1.webp";
-import New from "../../assets/images/Portfolio/new.png";
+import dess from "../../assets/images/Portfolio/dess/dess.webp";
 
 /*
   Per-project controls:
@@ -21,16 +21,16 @@ import New from "../../assets/images/Portfolio/new.png";
 
 const projects = [
   { id: 1, image: BSM, title: "BondStreet", url: "/portfolio/bondstreet", area: "tile1", width: "460px", height: "460px", fit: "cover", pos: "center center" },
-  { id: 2, image: poh,  title: "POH",       url: "/portfolio/poh",        area: "tile2", width: "360px", height: "450px", fit: "cover", pos: "center center" },
-  { id: 3, image: shr,  title: "SHR",       url: "/portfolio/shr",        area: "tile3", width: "420px", height: "450px", fit: "cover", pos: "center center" },
+  { id: 2, image: pcg,  title: "pcg",       url: "/portfolio/pcg",        area: "tile2", width: "360px", height: "450px", fit: "cover", pos: "center center" },
+  { id: 3, image: shr,  title: "SHR",       url: "/portfolio/shr",        area: "tile3", width: "440px", height: "450px", fit: "cover", pos: "center center" },
   
   /* 🔼 ROF moved up (now in tile4 position) */
-  { id: 4, image: rof,  title: "ROF",       url: "/portfolio/rof",        area: "tile4", width: "360px", height: "460px", fit: "fill", pos: "center center" },
+  { id: 4, image: poh,  title: "POH",       url: "/portfolio/poh",        area: "tile4", width: "360px", height: "460px", fit: "fill", pos: "center center" },
 
-  // { id: 5, image: shr,  title: "SHR (2)",   url: "/portfolio/shr",        area: "tile5", width: "460px", height: "460px", fit: "cover", pos: "center center" },
+  { id: 5, image: dess,  title: "dess",   url: "/portfolio/dess",        area: "tile5", width: "460px", height: "520px", fit: "cover", pos: "center center" },
   
   /* 🔽 PCG moved down (now in tile6 position) */
-  { id: 6, image: pcg,  title: "PCG",       url: "/portfolio/pcg",        area: "tile6", width: "400px", height: "390px", fit: "cover", pos: "center center" },
+  { id: 6, image: rof,  title: "ROF",       url: "/portfolio/rof",        area: "tile6", width: "360px", height: "460px", fit: "cover", pos: "center center" },
 ];
 
 export default function PortfolioShowcase() {
@@ -115,13 +115,14 @@ export default function PortfolioShowcase() {
             );
           })}
 
-          <div className="ps-load" role="group" aria-label="Load more area">
+          
+        
+      </div>
+      <div className="ps-load"  aria-label="Load more area">
               <Link to="/portfolio" className="ps-btn">Load More ➜</Link>
             </div>
         </div>
 
-        
-      </div>
     </section>
   );
 }

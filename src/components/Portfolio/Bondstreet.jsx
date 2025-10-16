@@ -17,7 +17,7 @@ import pic4 from "../../assets/images/Portfolio/Bst/pic4.webp";
 import pic5 from "../../assets/images/Portfolio/Bst/pic5.webp";
 
 // ✅ Video file
-import demoVideo from "/car.mp4";
+import demoVideo from "/logoo.mp4";
 import OnlyRingCursorUnified from "../HomeOne/CustomCursor.jsx"; // custom cursor
 
 function ProjectDetail() {

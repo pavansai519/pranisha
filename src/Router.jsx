@@ -15,7 +15,8 @@ import Bondstreet from "./components/Portfolio/Bondstreet.jsx";
 import Shr from "./components/Portfolio/shr.jsx";
 import Pcg from "./components/Portfolio/pcg.jsx";
 import Poh from "./components/Portfolio/Poh.jsx"; 
-import Rof from "./components/Portfolio/rof.jsx"; 
+import Rof from "./components/Portfolio/rof.jsx";
+import Dess from "./components/Portfolio/dess.jsx" 
 import TermsAndConditions from "./components/Policy.jsx";
 
 
@@ -62,6 +63,10 @@ const router = createBrowserRouter([
       {
         path:"/portfolio/rof",
         element:<Rof/>
+      },
+      {
+        path:"/portfolio/dess",
+        element:<Dess/>
       },
       {
       path:"/branding",
