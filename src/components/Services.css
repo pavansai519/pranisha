@@ -399,12 +399,12 @@ body {
 
 
 /* 🌐 Fix overlap between 1024px and 1445px (fully enforced) */
-@media screen and (min-width: 1024px) and (max-width: 1445px) {
+@media screen and (min-width: 1024px) and (max-width: 1466px) {
   .branding-container {
     display: flex !important;
     flex-direction: row !important;
     gap: 30px !important;
-    padding: 0px 90px 100px 90px !important;
+    padding: 0px 90px !important;
     align-items: flex-start !important;
   }
 
