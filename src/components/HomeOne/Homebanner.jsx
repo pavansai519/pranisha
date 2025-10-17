@@ -175,7 +175,7 @@ export default function Pranisha({
         // keep attributes friendly for mobile browsers
       >
         {/* sources appended dynamically on intersection */}
-        Your browser does not support the video tag.
+        
       </video>
 
       {/* optional loading indicator */}
