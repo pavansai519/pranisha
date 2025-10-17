@@ -19116,10 +19116,9 @@ select {
 
 /**************footer2 csss********/
 .cracking-footerr {
-  background-color: #000;
   color: #fff;
   text-align: center;
-  padding: 120px 20px 120px 20px;
+  padding: 140px 20px 120px 20px;
   position: relative;
 }
 
@@ -19153,7 +19152,8 @@ select {
     font-size: 18px;
   }
 }
-@media (min-width:1584px) and (max-width:2000px){
+
+@media (min-width:1484px) and (max-width:2000px){
   .cracking-footerr{
     padding: 20px 20px 100px 20px
   }
