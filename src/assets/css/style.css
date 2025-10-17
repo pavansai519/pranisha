@@ -19258,7 +19258,7 @@ select {
 /* Optional responsive tweak */
 @media (max-width: 768px) {
   .banner-section {
-    height: 85vh;
+    height: 90vh;
   }
   .banner-video{
     object-fit: cover; /* best for mobile */
@@ -19266,12 +19266,11 @@ select {
     height: 100%;
   }
 
-  .banner-overlay h1 {
-    font-size: 1.8rem;
-  }
-
-  .banner-overlay p {
-    font-size: 1rem;
+  
+}
+@media (max-width:1300px){
+  .banner-video{
+    height: 400px;
   }
 }
 
