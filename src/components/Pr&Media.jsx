@@ -3,6 +3,7 @@ import './Services.css';
 import Header from "./HomeOne/Header.jsx";
 import Footer from "./HomeOne/Footer2.jsx";
 import PageBanner from "./PageBanner.jsx";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -43,6 +44,21 @@ const Branding = () => {
 
   return (
     <>
+            <Helmet>
+                    <title>Pr&media | Creative Digital Marketing Agency</title>
+                    <meta
+                      name="description"
+                      content="Pranishaa helps businesses grow with innovative digital marketing, branding, and creative design solutions tailored to your brand goals."
+                    />
+                    <meta
+                      name="keywords"
+                      content="Digital Marketing, Branding Agency, Web Design, SEO, Social Media, PPC, Pranishaa"
+                    />
+                    <meta property="og:title" content="Pranishaa | Creative Digital Marketing Agency" />
+                    <meta property="og:description" content="Transform your business with Pranishaa's data-driven marketing and creative branding strategies." />
+                    <meta property="og:image" content="https://pranishaa.com/images/og-home.jpg" />
+                    <meta property="og:url" content="https://pranishaa.com/" />
+              </Helmet>
     <Header/>
       <PageBanner title="Pr & media" breadcrumb="Pr & media" />
      <div className="branding-page">

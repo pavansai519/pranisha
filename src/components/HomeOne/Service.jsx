@@ -13,7 +13,7 @@ function ServiceHomeOne({ className }) {
             <h5 className="service-title">IT Services</h5>
             <p>Transform your business with IT solutions like chatbots, <br/>automation, and data-driven decision-making tools.</p>
           </div>
-          <Link to="/webdevelopment" className="float-box">
+          <Link to="/Itdevelopment" className="float-box">
             <span className="short">IT</span>
           </Link>
         </div>

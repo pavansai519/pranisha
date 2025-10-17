@@ -109,10 +109,10 @@ function Header() {
                 </li>
                 <li>
                   <Link
-                    to="/webdevelopment"
+                    to="/Itdevelopment"
                     onClick={() => setMenuOpen({ main: false })}
                   >
-                    Web Development
+                    It Development
                   </Link>
                 </li>
                 <li>

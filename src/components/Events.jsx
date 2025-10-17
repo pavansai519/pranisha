@@ -94,77 +94,99 @@ const Events = () => {
             </nav>
           </aside>
 
-          {/* Main Content */}
-          <main className="services-content">
-            {/* Corporate Events Section */}
-            {openSection === 'corporate-events' && (
-              <section id="corporate-events" className="content-section animate-in">
-                <div className="section-header">
-                  <h2>Corporate Events</h2>
-                  <p>We organize professional corporate events that reflect your brand’s vision, engage your audience, and deliver lasting impressions.</p>
-                </div>
-                <div className="content-grid">
-                  <div id="conferences" className="content-item">
-                    <div className="item-icon"><i className="fas fa-microphone"></i></div>
-                    <h3>Conferences</h3>
-                    <p>Seamless planning, technology integration, and logistics to deliver impactful corporate conferences.</p>
-                  </div>
-                  <div id="launches" className="content-item">
-                    <div className="item-icon"><i className="fas fa-bullseye"></i></div>
-                    <h3>Product Launches</h3>
-                    <p>Creative product launch experiences designed to build hype and brand awareness among your audience.</p>
-                  </div>
-                  <div id="awards" className="content-item">
-                    <div className="item-icon"><i className="fas fa-trophy"></i></div>
-                    <h3>Award Ceremonies</h3>
-                    <p>Elegant award ceremonies that celebrate excellence with premium stage design and event coordination.</p>
-                  </div>
-                            <div id="team-building" className="content-item">
-                    <div className="item-icon"><i className="fas fa-users-cog"></i></div>
-                    <h3>Team Building Activities</h3>
-                    <p>We create engaging and collaborative team-building events that enhance employee bonding, motivation, and company culture.</p>
-                </div>
-                </div>
-              </section>
-            )}
+         {/* Main Content */}
+<main className="services-content">
+  {/* Corporate Events Section */}
+  {openSection === 'corporate-events' && (
+    <section id="corporate-events" className="content-section animate-in">
+      <div className="section-header">
+        <h2>Corporate Events</h2>
+        <p>
+          We organize impactful corporate events that communicate your brand’s purpose, foster engagement, and leave lasting impressions on attendees through exceptional planning, creative execution, and seamless coordination.
+        </p>
+      </div>
+      <div className="content-grid">
+        <div id="conferences" className="content-item">
+          <div className="item-icon"><i className="fas fa-microphone"></i></div>
+          <h3>Conferences</h3>
+          <p>
+            From concept to execution, we manage every detail of your corporate conference — including stage setup, branding, AV support, and guest coordination — ensuring a professional and memorable experience.
+          </p>
+        </div>
 
-           
+        <div id="launches" className="content-item">
+          <div className="item-icon"><i className="fas fa-bullseye"></i></div>
+          <h3>Product Launches</h3>
+          <p>
+            We craft innovative product launch events designed to excite audiences, boost media attention, and generate market buzz with creative storytelling, live demos, and immersive brand experiences.
+          </p>
+        </div>
 
-            {/* Brand Activations Section */}
-            {openSection === 'brand-activations' && (
-              <section id="brand-activations" className="content-section animate-in">
-                <div className="section-header">
-                  <h2>Brand Activations</h2>
-                  <p>We help brands engage audiences through immersive experiences that strengthen brand loyalty and recognition.</p>
-                </div>
-                <div className="content-grid">
-                  <div id="campaigns" className="content-item">
-                    <div className="item-icon"><i className="fas fa-star"></i></div>
-                    <h3>Experiential Campaigns</h3>
-                    <p>Interactive campaigns that connect your audience emotionally with your brand.</p>
-                  </div>
-                  <div id="demos" className="content-item">
-                    <div className="item-icon"><i className="fas fa-cubes"></i></div>
-                    <h3>Product Demos</h3>
-                    <p>Hands-on demonstrations that showcase product features and benefits in a memorable way.</p>
-                  </div>
-                  <div id="popup" className="content-item">
-                    <div className="item-icon"><i className="fas fa-store"></i></div>
-                    <h3>Pop-up Experiences</h3>
-                    <p>Creative temporary setups that captivate audiences and amplify your brand visibility.</p>
-                  </div>
-                            <div id="influencer" className="content-item">
-                    <div className="item-icon"><i className="fas fa-user-tag"></i></div>
-                    <h3>Influencer Collaborations</h3>
-                    <p>Partner with the right influencers to promote your brand authentically and reach your target audience effectively.</p>
-                </div>
-                </div>
-              </section>
-            )}
+        <div id="awards" className="content-item">
+          <div className="item-icon"><i className="fas fa-trophy"></i></div>
+          <h3>Award Ceremonies</h3>
+          <p>
+            Celebrate excellence in style with our award ceremonies that feature elegant stage design, seamless event flow, and customized experiences that make every recognition moment unforgettable.
+          </p>
+        </div>
 
-          
-            
-          </main>
+        <div id="team-building" className="content-item">
+          <div className="item-icon"><i className="fas fa-users-cog"></i></div>
+          <h3>Team Building Activities</h3>
+          <p>
+            We plan engaging team-building events that inspire collaboration, motivation, and stronger workplace culture through interactive activities, creative challenges, and memorable shared experiences.
+          </p>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {/* Brand Activations Section */}
+  {openSection === 'brand-activations' && (
+    <section id="brand-activations" className="content-section animate-in">
+      <div className="section-header">
+        <h2>Brand Activations</h2>
+        <p>
+          We bring your brand to life through experiential activations that spark emotional connections, drive engagement, and strengthen brand recognition among your ideal audience.
+        </p>
+      </div>
+      <div className="content-grid">
+        <div id="campaigns" className="content-item">
+          <div className="item-icon"><i className="fas fa-star"></i></div>
+          <h3>Experiential Campaigns</h3>
+          <p>
+            Our immersive campaigns create real-world brand experiences that emotionally connect with audiences, combining creativity, technology, and storytelling to boost brand visibility and loyalty.
+          </p>
+        </div>
+
+        <div id="demos" className="content-item">
+          <div className="item-icon"><i className="fas fa-cubes"></i></div>
+          <h3>Product Demos</h3>
+          <p>
+            We design interactive product demos that showcase features and benefits in engaging ways, helping customers understand value through hands-on, memorable brand interactions.
+          </p>
+        </div>
+
+        <div id="popup" className="content-item">
+          <div className="item-icon"><i className="fas fa-store"></i></div>
+          <h3>Pop-up Experiences</h3>
+          <p>
+            Our creative pop-up events generate excitement, draw crowds, and increase brand exposure through unique, temporary installations that deliver authentic and shareable experiences.
+          </p>
+        </div>
+
+        <div id="influencer" className="content-item">
+          <div className="item-icon"><i className="fas fa-user-tag"></i></div>
+          <h3>Influencer Collaborations</h3>
+          <p>
+            We connect your brand with relevant influencers to co-create authentic content, expand reach, and enhance credibility across digital and social platforms for maximum impact.
+          </p>
+        </div>
+      </div>
+    </section>
+  )}
+</main>
+
         </div>
       </div>
       <Footer />
