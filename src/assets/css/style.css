@@ -19226,17 +19226,47 @@ select {
 }
 
 /********************banner video css******************/
+/* pranisha-banner.css */
 .banner-section {
   position: relative;
   width: 100%;
-  height: 70vh; /* Full viewport height */
+  height: 70vh;
+  min-height: 320px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #000;
 }
 
-/* The video will cover the entire section */
+/* low-res placeholder image */
+.banner-placeholder {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  transition: opacity 420ms ease;
+  opacity: 1;
+  z-index: 0;
+}
+
+/* high-res poster as background (fallback) */
+.banner-poster {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 420ms ease;
+  opacity: 1;
+  z-index: 1;
+}
+
+/* video sits above poster; initially transparent */
 .banner-video {
   position: absolute;
   top: 50%;
@@ -19247,10 +19277,51 @@ select {
   height: auto;
   transform: translate(-50%, -50%);
   object-fit: cover;
-  z-index: 0;
-  will-change: transform; /* smooth GPU rendering */
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 420ms ease, transform 420ms ease;
+  will-change: opacity, transform;
   backface-visibility: hidden;
 }
+
+/* when visible -> fade in */
+.banner-video.visible {
+  opacity: 1;
+}
+
+/* helpers to hide placeholders once video visible */
+.hidden { opacity: 0 !important; pointer-events: none; }
+.visible { opacity: 1 !important; }
+
+/* small loader dot */
+.banner-loader {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  z-index: 10;
+}
+.banner-loader .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 0 8px rgba(255,255,255,0.12);
+  animation: pulse 1s infinite ease-in-out;
+}
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.6); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .banner-section { height: 50vh; min-height: 260px; }
+}
+@media (max-width: 420px) {
+  .banner-section { height: 40vh; min-height: 200px; }
+}
+
 
 /* Overlay content */
 
