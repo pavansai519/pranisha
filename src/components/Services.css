@@ -404,7 +404,7 @@ body {
     display: flex !important;
     flex-direction: row !important;
     gap: 30px !important;
-    padding: 0px 90px  !important;
+    padding: 0px 90px 100px 90px !important;
     align-items: flex-start !important;
   }
 
