@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import useToggle from '../../Hooks/useToggle.js';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Helmet } from "react-helmet-async";
 
 import Footer from './Footer.jsx';
 import Banner from './Homebanner.jsx';
@@ -26,6 +27,21 @@ function HomeOne() {
 
     return (
         <>
+         <Helmet>
+        <title>Pranishaa | Creative Digital Marketing Agency</title>
+        <meta
+          name="description"
+          content="Pranishaa helps businesses grow with innovative digital marketing, branding, and creative design solutions tailored to your brand goals."
+        />
+        <meta
+          name="keywords"
+          content="Digital Marketing, Branding Agency, Web Design, SEO, Social Media, PPC, Pranishaa"
+        />
+        <meta property="og:title" content="Pranishaa | Creative Digital Marketing Agency" />
+        <meta property="og:description" content="Transform your business with Pranishaa's data-driven marketing and creative branding strategies." />
+        <meta property="og:image" content="https://pranishaa.com/images/og-home.jpg" />
+        <meta property="og:url" content="https://pranishaa.com/" />
+      </Helmet>
             <Header action={drawerAction.toggle} />
 
             <Banner />
