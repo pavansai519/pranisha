@@ -19304,7 +19304,9 @@ select {
     animation: none;
   }
 }
-
+@media (min-width:1301px) and (max-width:1560px){
+  .banner-section { height: 520px;}
+}
 /* Responsive breakpoints (single source of truth) */
 @media (max-width: 1300px) {
   .banner-video {
