@@ -19231,6 +19231,7 @@ select {
 
 /********************banner video css******************/
 /* pranisha-banner.css */
+/* pranisha-banner.css (cleaned + optimized) */
 .banner-section {
   position: relative;
   width: 100%;
@@ -19240,37 +19241,12 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #000;
+  background: #000;           /* black fallback while video loads */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* low-res placeholder image */
-.banner-placeholder {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  transition: opacity 420ms ease;
-  opacity: 1;
-  z-index: 0;
-}
-
-/* high-res poster as background (fallback) */
-.banner-poster {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  transition: opacity 420ms ease;
-  opacity: 1;
-  z-index: 1;
-}
-
-/* video sits above poster; initially transparent */
+/* The video covers the section and is GPU-accelerated when possible */
 .banner-video {
   position: absolute;
   top: 50%;
@@ -19279,30 +19255,30 @@ select {
   min-height: 100%;
   width: auto;
   height: auto;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) translateZ(0); /* promote to own layer */
   object-fit: cover;
+  object-position: center;
   z-index: 2;
   opacity: 0;
   transition: opacity 420ms ease, transform 420ms ease;
   will-change: opacity, transform;
   backface-visibility: hidden;
+  display: block;            /* avoid inline element whitespace issues */
+  pointer-events: none;      /* allow clicks to pass through if you use click handlers on container */
 }
 
-/* when visible -> fade in */
+/* visible class added by JS when video has started playing */
 .banner-video.visible {
   opacity: 1;
 }
 
-/* helpers to hide placeholders once video visible */
-.hidden { opacity: 0 !important; pointer-events: none; }
-.visible { opacity: 1 !important; }
-
-/* small loader dot */
+/* small loading indicator (optional) */
 .banner-loader {
   position: absolute;
   right: 18px;
   bottom: 18px;
   z-index: 10;
+  pointer-events: none;
 }
 .banner-loader .dot {
   width: 10px;
@@ -19313,40 +19289,39 @@ select {
   animation: pulse 1s infinite ease-in-out;
 }
 @keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.6); opacity: 0.6; }
-  100% { transform: scale(1); opacity: 1; }
+  0%   { transform: scale(1);   opacity: 1; }
+  50%  { transform: scale(1.6); opacity: 0.6; }
+  100% { transform: scale(1);   opacity: 1; }
 }
 
-/* Responsive tweaks */
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .banner-video,
+  .banner-video.visible {
+    transition: none !important;
+  }
+  .banner-loader .dot {
+    animation: none;
+  }
+}
+
+/* Responsive breakpoints (single source of truth) */
+@media (max-width: 1300px) {
+  .banner-video {
+    height: 400px; /* prevents huge video decoding on mid-size screens */
+  }
+}
 @media (max-width: 768px) {
   .banner-section { height: 50vh; min-height: 260px; }
+  .banner-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%) translateZ(0);
+  }
 }
 @media (max-width: 420px) {
   .banner-section { height: 40vh; min-height: 200px; }
-}
-
-
-/* Overlay content */
-
-
-/* Optional responsive tweak */
-@media (max-width: 768px) {
-  .banner-section {
-    height: 90vh;
-  }
-  .banner-video{
-    object-fit: cover; /* best for mobile */
-    width: 100%;
-    height: 100%;
-  }
-
-  
-}
-@media (max-width:1300px){
-  .banner-video{
-    height: 400px;
-  }
 }
 
 
