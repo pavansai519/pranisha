@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import "../components/HomeOne/PortfolioShowcase.css";
 import Header from "../components/HomeOne/Header.jsx";
 import Footer from "../components/HomeOne/Footer1.jsx";
+import { Helmet } from "react-helmet-async";
 
 import BSM from "../assets/images/Portfolio/Bst/pic1.webp";
 import pcg from "../assets/images/Portfolio/pcg/pcg1.webp";
@@ -76,6 +77,21 @@ export default function PortfolioShowcase() {
 
   return (
     <>
+      <Helmet>
+              <title>Portfolio | Pranishaa - Let's Build Something Amazing</title>
+              <meta
+                name="description"
+                content="Get in touch with Pranishaa for digital marketing, branding, and web development solutions. We're here to turn your ideas into impact."
+              />
+              <meta
+                name="keywords"
+                content="Contact Pranishaa, Digital Marketing Agency, Branding, Web Design, SEO Help"
+              />
+              <meta property="og:title" content="Contact Pranishaa" />
+              <meta property="og:description" content="Reach out to Pranishaa for expert marketing, branding, and design services that drive business success." />
+              <meta property="og:image" content="https://pranishaa.com/images/og-contact.jpg" />
+              <meta property="og:url" content="https://pranishaa.com/contact" />
+            </Helmet>
     <Header/>
     <section className="ps-section">
       <div className="ps-inner container">

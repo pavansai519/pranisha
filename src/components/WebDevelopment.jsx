@@ -9,33 +9,27 @@ const DigitalMarketing = () => {
   const [highlightedItem, setHighlightedItem] = useState(null);
   const [openSection, setOpenSection] = useState('WordPress Website');
 
-    useEffect(() => {
-      const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.2
-      };
-  
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-in');
-          }
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add('animate-in');
         });
-      }, observerOptions);
-  
-      const elements = document.querySelectorAll('.content-item, .content-section');
-      elements.forEach(el => observer.observe(el));
-  
-      return () => observer.disconnect();
-    }, []);
-  
-    // Switch whole section
-    const scrollToSection = (sectionId) => {
-      setHighlightedItem(null);
-      setOpenSection(sectionId);
-      setActiveSection(sectionId);
-    };
+      },
+      { threshold: 0.2 }
+    );
+
+    const elements = document.querySelectorAll('.content-item, .content-section');
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
+  const scrollToSection = (sectionId) => {
+    setHighlightedItem(null);
+    setOpenSection(sectionId);
+    setActiveSection(sectionId);
+  };
 
   return (
     <>
@@ -48,181 +42,182 @@ const DigitalMarketing = () => {
             <h3>Our Services</h3>
             <nav className="services-nav">
               <ul>
-                {/* SEO */}
-                <li>
-                  <button
-                    className={`nav-items ${activeSection === 'WordPress Website' ? 'active' : ''}`}
-                    onClick={() => scrollToSection('WordPress Website')}
-                  >
-                    <i className="fas fa-search"></i>
-                    <span>WordPress Website</span>
-                  </button>
-                  {openSection === 'WordPress Website' && (
-                    <ul className="sub-nav">
-                      <li>Custom Design</li>
-                      <li>Responsive Design</li>
-                      <li>Custom Development</li>
-                      <li>eCommerce Solutions</li>
-                    </ul>
-                  )}
-                </li>
-
-                {/* PPC */}
-                <li>
-                  <button
-                    className={`nav-items ${activeSection === 'ReactJS Development' ? 'active' : ''}`}
-                    onClick={() => scrollToSection('ReactJS Development')}
-                  >
-                    <i className="fas fa-ad"></i>
-                    <span>ReactJS Development</span>
-                  </button>
-                  {openSection === 'ReactJS Development' && (
-                    <ul className="sub-nav">
-                      <li>ReactJS Web App Development</li>
-                      <li>ReactJS UI/UX Design</li>
-                      <li>ReactJS Plugin & Component Development</li>
-                      <li>ReactJS API Integration</li>
-                      {/* <li>ReactJS eCommerce Development</li> */}
-                    </ul>
-                  )}
-                </li>
-
-                {/* Social Media Marketing */}
-                <li>
-                  <button
-                    className={`nav-items ${activeSection === 'Mobile App Development' ? 'active' : ''}`}
-                    onClick={() => scrollToSection('Mobile App Development')}
-                  >
-                    <i className="fas fa-share-alt"></i>
-                    <span>Mobile App Development</span>
-                  </button>
-                  {openSection === 'Mobile App Development' && (
-                    <ul className="sub-nav">
-                      <li>Native App Development</li>
-                      <li>Cross-Platform App Development</li>
-                      {/* <li>Programming Languages</li> */}
-                      <li>Development Frameworks</li>
-                      {/* <li>IDEs & Tools</li> */}
-                      <li>Back-end Development</li>
-                    </ul>
-                  )}
-                </li>
+                {['WordPress Website', 'Magento Website', 'Shopify Website', 'ReactJS Development', 'Mobile App Development'].map((service) => (
+                  <li key={service}>
+                    <button
+                      className={`nav-items ${activeSection === service ? 'active' : ''}`}
+                      onClick={() => scrollToSection(service)}
+                    >
+                      <i className="fas fa-angle-right"></i>
+                      <span>{service}</span>
+                    </button>
+                  </li>
+                ))}
               </ul>
             </nav>
           </aside>
 
           <main className="services-content">
-            {/* SEO Section */}
-              {openSection === 'WordPress Website' && (
 
-            <section id="WordPress Website" className="content-section">
-              <div className="section-header">
-                <h2>WordPress Website</h2>
-                <p>WordPress powers over 40% of all websites. Our WordPress services include creating beautiful, responsive websites that are easy to manage.</p>
-              </div>
-              <div className="content-grid">
-                <div id="keyword" className={`content-item ${highlightedItem === 'keyword' ? 'highlighted' : ''}`}>
-                  <div className="item-icon"><i className="fas fa-key"></i></div>
-                  <h3>Custom Design</h3>
-                  <p>We create a custom design reflecting your brand identity and optimized for conversions.</p>
+            {/* === WORDPRESS WEBSITE === */}
+            {openSection === 'WordPress Website' && (
+              <section id="WordPress Website" className="content-section">
+                <div className="section-header">
+                  <h2>WordPress Website</h2>
+                  <p>We craft high-performing, visually stunning WordPress websites optimized for speed, SEO, and user engagement — empowering your brand with flexibility and growth-ready designs.</p>
                 </div>
-                <div id="onpage" className={`content-item ${highlightedItem === 'onpage' ? 'highlighted' : ''}`}>
-                  <div className="item-icon"><i className="fas fa-file-alt"></i></div>
-                  <h3>Responsive Design</h3>
-                  <p>Your website will be fully responsive, looking perfect on any device.</p>
+                <div className="content-grid">
+                  <div className="content-item">
+                    <div className="item-icon"><i className="fas fa-paint-brush"></i></div>
+                    <h3>Custom Design</h3>
+                    <p>We design unique WordPress layouts that match your brand’s personality, ensuring a seamless user experience that boosts engagement and conversion rates across all devices.</p>
+                  </div>
+                  <div className="content-item">
+                    <div className="item-icon"><i className="fas fa-laptop"></i></div>
+                    <h3>Responsive Design</h3>
+                    <p>Our websites are fully responsive, adapting flawlessly to any screen size, providing consistent performance and stunning visuals for mobile, tablet, and desktop users.</p>
+                  </div>
+                  <div className="content-item">
+                    <div className="item-icon"><i className="fas fa-code"></i></div>
+                    <h3>Custom Development</h3>
+                    <p>We build feature-rich websites using the latest WordPress technologies, focusing on functionality, security, and seamless integration with third-party tools and plugins.</p>
+                  </div>
+                  <div className="content-item">
+                    <div className="item-icon"><i className="fas fa-shopping-cart"></i></div>
+                    <h3>eCommerce Solutions</h3>
+                    <p>Our WooCommerce development enables easy product management, secure checkout, and customizable store designs to help you sell smarter and grow your online revenue.</p>
+                  </div>
                 </div>
-                <div id="offpage" className={`content-item ${highlightedItem === 'offpage' ? 'highlighted' : ''}`}>
-                  <div className="item-icon"><i className="fas fa-link"></i></div>
-                  <h3>Custom Development</h3>
-                  <p>We build fast, secure websites using the latest WordPress technologies and frameworks.</p>
-                </div>
-                <div id="analytics" className={`content-item ${highlightedItem === 'analytics' ? 'highlighted' : ''}`}>
-                  <div className="item-icon"><i className="fas fa-chart-line"></i></div>
-                  <h3>eCommerce Solutions</h3>
-                  <p>Create user-friendly eCommerce websites to increase sales and conversions.</p>
-                </div>
-              </div>
-            </section>
-              )}
-            {/* PPC Section */}
-             {openSection === 'ReactJS Development' && (
+              </section>
+            )}
 
-            <section id="ReactJS Development" className="content-section">
-              <div className="section-header">
-                <h2>ReactJS Development</h2>
-                <p>Build fast, scalable, and interactive web applications using ReactJS with reusable components, SPAs, and API integrations.</p>
-              </div>
-              <div className="content-grid">
-                <div id="campaign" className={`content-item ${highlightedItem === 'campaign' ? 'highlighted' : ''}`}>
-                  <div className="item-icon"><i className="fas fa-bullseye"></i></div>
-                  <h3>ReactJS Web App Development</h3>
-                  <p>Develop SPAs and complex frontends ensuring smooth user experiences and fast load times.</p>
+            {/* === MAGENTO WEBSITE === */}
+            {openSection === 'Magento Website' && (
+              <section id="Magento Website" className="content-section">
+                <div className="section-header">
+                  <h2>Magento Website</h2>
+                  <p>Magento offers enterprise-level flexibility for online stores. We build secure, high-speed, and scalable Magento solutions that elevate your brand’s eCommerce experience.</p>
                 </div>
-                <div id="adcreation" className={`content-item ${highlightedItem === 'adcreation' ? 'highlighted' : ''}`}>
-                  <div className="item-icon"><i className="fas fa-ad"></i></div>
-                  <h3>ReactJS UI/UX Design</h3>
-                  <p>Create visually appealing, responsive, and interactive UI/UX components using modern frameworks.</p>
+                <div className="content-grid">
+                  <div className="content-item">
+                    <div className="item-icon"><i className="fas fa-tools"></i></div>
+                    <h3>Custom Development</h3>
+                    <p>Our Magento developers create powerful, tailored eCommerce platforms with advanced functionalities, integrations, and a focus on performance optimization for higher conversions.</p>
+                  </div>
+                  <div className="content-item">
+                    <div className="item-icon"><i className="fas fa-mobile-alt"></i></div>
+                    <h3>Responsive Design</h3>
+                    <p>We ensure your Magento store delivers a seamless user experience across all devices with clean navigation, fast loading, and elegant visual presentation.</p>
+                  </div>
+                  <div className="content-item">
+                    <div className="item-icon"><i className="fas fa-plug"></i></div>
+                    <h3>API & Extension Integration</h3>
+                    <p>Integrate essential APIs like CRMs, payment gateways, and analytics tools to expand your store’s functionality while maintaining stability and scalability.</p>
+                  </div>
+                  <div className="content-item">
+                    <div className="item-icon"><i className="fas fa-tachometer-alt"></i></div>
+                    <h3>Performance Optimization</h3>
+                    <p>We optimize Magento websites for speed, SEO, and reliability — ensuring quick load times, minimal bounce rates, and superior search visibility.</p>
+                  </div>
                 </div>
-                <div id="monitoring" className={`content-item ${highlightedItem === 'monitoring' ? 'highlighted' : ''}`}>
-                  <div className="item-icon"><i className="fas fa-eye"></i></div>
-                  <h3>ReactJS Plugin & Component Development</h3>
-                  <p>Build reusable and scalable React components and plugins tailored to your needs.</p>
-                </div>
-                <div id="optimization" className={`content-item ${highlightedItem === 'optimization' ? 'highlighted' : ''}`}>
-                  <div className="item-icon"><i className="fas fa-cogs"></i></div>
-                  <h3>ReactJS API Integration</h3>
-                  <p>Seamlessly integrate RESTful APIs, GraphQL, and third-party services like Stripe, Firebase, and AWS.</p>
-                </div>
-                {/* <div id="monitoring" className={`content-item ${highlightedItem === 'monitoring' ? 'highlighted' : ''}`}>
-                  <div className="item-icon"><i className="fas fa-eye"></i></div>
-                  <h3>ReactJS eCommerce Development</h3>
-                  <p>Create dynamic product pages, optimized checkout flows, and smooth shopping experiences.</p>
-                </div> */}
-              </div>
-            </section>
-             )}
-            {/* Social Media Section */}
-           {openSection === 'Mobile App Development' && (
+              </section>
+            )}
 
-            <section id="Mobile App Development" className="content-section">
-              <div className="section-header">
-                <h2>Mobile App Development</h2>
-                <p>We develop innovative, user-friendly mobile applications using native, hybrid, and cross-platform technologies.</p>
-              </div>
-              <div className="content-grid">
-                <div id="strategy" className={`content-item ${highlightedItem === 'strategy' ? 'highlighted' : ''}`}>
-                  <div className="item-icon"><i className="fas fa-lightbulb"></i></div>
-                  <h3>Native App Development</h3>
-                  <p>Develop apps optimized for iOS and Android using Swift, Objective-C, Java, and Kotlin.</p>
+            {/* === SHOPIFY WEBSITE === */}
+            {openSection === 'Shopify Website' && (
+              <section id="Shopify Website" className="content-section">
+                <div className="section-header">
+                  <h2>Shopify Website</h2>
+                  <p>Shopify makes it easy to start, run, and grow your online store. We provide expert Shopify solutions for design, development, and marketing success.</p>
                 </div>
-                <div id="content" className={`content-item ${highlightedItem === 'content' ? 'highlighted' : ''}`}>
-                  <div className="item-icon"><i className="fas fa-photo-video"></i></div>
-                  <h3>Cross-Platform App Development</h3>
-                  <p>Create high-quality apps for multiple platforms using React Native, Flutter, or Xamarin.</p>
+                <div className="content-grid">
+                  <div className="content-item">
+                    <div className="item-icon"><i className="fas fa-palette"></i></div>
+                    <h3>Custom Themes</h3>
+                    <p>We create visually appealing, conversion-driven Shopify themes tailored to your brand identity, ensuring a captivating shopping experience for every customer.</p>
+                  </div>
+                  <div className="content-item">
+                    <div className="item-icon"><i className="fas fa-store"></i></div>
+                    <h3>Store Setup</h3>
+                    <p>Our team handles everything from product catalog setup to payment integration, giving you a fully functional Shopify store ready to launch and sell.</p>
+                  </div>
+                  <div className="content-item">
+                    <div className="item-icon"><i className="fas fa-th-large"></i></div>
+                    <h3>App Integration</h3>
+                    <p>We integrate essential Shopify apps for marketing automation, inventory management, analytics, and customer support to streamline your online business operations.</p>
+                  </div>
+                  <div className="content-item">
+                    <div className="item-icon"><i className="fas fa-headset"></i></div>
+                    <h3>Maintenance & Support</h3>
+                    <p>Enjoy ongoing maintenance and expert support to keep your Shopify store secure, updated, and optimized for consistent business performance and growth.</p>
+                  </div>
                 </div>
-                {/* <div id="engagement" className={`content-item ${highlightedItem === 'engagement' ? 'highlighted' : ''}`}>
-                  <div className="item-icon"><i className="fas fa-comments"></i></div>
-                  <h3>Programming Languages</h3>
-                  <p>We use JavaScript, Swift, Kotlin, Java, HTML, CSS, and more for mobile app development.</p>
-                </div> */}
-                <div id="ads" className={`content-item ${highlightedItem === 'ads' ? 'highlighted' : ''}`}>
-                  <div className="item-icon"><i className="fas fa-bullhorn"></i></div>
-                  <h3>Development Frameworks</h3>
-                  <p>Creating targeted ad campaigns for platforms like Facebook, Instagram, and LinkedIn. Utilize frameworks like React Native, Flutter, Xamarin, and Ionic for efficient app development.</p>
+              </section>
+            )}
+
+            {/* === REACTJS DEVELOPMENT === */}
+            {openSection === 'ReactJS Development' && (
+              <section id="ReactJS Development" className="content-section">
+                <div className="section-header">
+                  <h2>ReactJS Development</h2>
+                  <p>Build lightning-fast, scalable web apps using ReactJS — combining modern architecture, reusable components, and seamless integration for exceptional performance.</p>
                 </div>
-                  {/* <div id="engagement" className={`content-item ${highlightedItem === 'engagement' ? 'highlighted' : ''}`}>
-                  <div className="item-icon"><i className="fas fa-comments"></i></div>
-                  <h3>IDEs & Tools</h3>
-                  <p>We use Xcode, Android Studio, Visual Studio, and Eclipse for robust app development.</p>
-                </div> */}
-                <div id="ads" className={`content-item ${highlightedItem === 'ads' ? 'highlighted' : ''}`}>
-                  <div className="item-icon"><i className="fas fa-bullhorn"></i></div>
-                  <h3>Back-end Development</h3>
-                  <p>Support apps using AWS, Azure, Google Cloud, PHP, Node.js, and other technologies.</p>
+                <div className="content-grid">
+                  <div className="content-item">
+                    <div className="item-icon"><i className="fas fa-bolt"></i></div>
+                    <h3>Web App Development</h3>
+                    <p>We create high-performance SPAs with ReactJS that offer smooth navigation, real-time updates, and an engaging experience optimized for every device.</p>
+                  </div>
+                  <div className="content-item">
+                    <div className="item-icon"><i className="fas fa-puzzle-piece"></i></div>
+                    <h3>Component Development</h3>
+                    <p>Our developers build modular and reusable components to ensure faster development cycles, cleaner code, and improved maintainability of your web applications.</p>
+                  </div>
+                  <div className="content-item">
+                    <div className="item-icon"><i className="fas fa-layer-group"></i></div>
+                    <h3>UI/UX Design</h3>
+                    <p>We combine creativity and usability to design interactive user interfaces that deliver seamless user experiences and boost engagement with intuitive navigation.</p>
+                  </div>
+                  <div className="content-item">
+                    <div className="item-icon"><i className="fas fa-link"></i></div>
+                    <h3>API Integration</h3>
+                    <p>We integrate RESTful APIs, GraphQL, and cloud services like AWS or Firebase to ensure real-time data synchronization and dynamic app performance.</p>
+                  </div>
                 </div>
-              </div>
-            </section>
-           )}
+              </section>
+            )}
+
+            {/* === MOBILE APP DEVELOPMENT === */}
+            {openSection === 'Mobile App Development' && (
+              <section id="Mobile App Development" className="content-section">
+                <div className="section-header">
+                  <h2>Mobile App Development</h2>
+                  <p>We design and develop user-centric mobile applications that combine innovation, performance, and usability — helping businesses thrive in the digital era.</p>
+                </div>
+                <div className="content-grid">
+                  <div className="content-item">
+                    <div className="item-icon"><i className="fas fa-mobile"></i></div>
+                    <h3>Native App Development</h3>
+                    <p>We build high-performance native apps for iOS and Android using Swift, Kotlin, and Java — optimized for speed, stability, and seamless functionality.</p>
+                  </div>
+                  <div className="content-item">
+                    <div className="item-icon"><i className="fas fa-sync"></i></div>
+                    <h3>Cross-Platform Development</h3>
+                    <p>Using frameworks like React Native and Flutter, we develop cross-platform apps that ensure consistent experiences while minimizing development time and costs.</p>
+                  </div>
+                  <div className="content-item">
+                    <div className="item-icon"><i className="fas fa-cloud"></i></div>
+                    <h3>Backend Integration</h3>
+                    <p>We integrate mobile apps with powerful backend systems like AWS, Firebase, and Node.js to provide real-time functionality and reliable data management.</p>
+                  </div>
+                  <div className="content-item">
+                    <div className="item-icon"><i className="fas fa-shield-alt"></i></div>
+                    <h3>Maintenance & Support</h3>
+                    <p>Our dedicated team ensures continuous app performance monitoring, updates, and improvements to keep your application fast, secure, and bug-free.</p>
+                  </div>
+                </div>
+              </section>
+            )}
           </main>
         </div>
       </div>

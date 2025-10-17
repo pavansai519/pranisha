@@ -19153,7 +19153,11 @@ select {
     font-size: 18px;
   }
 }
-
+@media (min-width:1444px) and (max-width:2000px){
+  .cracking-footerr{
+    padding: 20px 20px 100px 20px
+  }
+}
 
 /* Circle Button (Bottom Left) */
 .close-btn {

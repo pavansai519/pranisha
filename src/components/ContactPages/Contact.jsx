@@ -3,11 +3,29 @@ import Header from '../HomeOne/Header.jsx';
 import Footer from '../HomeOne/Footer.jsx';
 import PageBanner from '../PageBanner.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Helmet } from "react-helmet-async";
+
 import { faPhone, faEnvelope, faLocationDot, faUpload } from '@fortawesome/free-solid-svg-icons';
 
 function AboutWithContact() {
   return (
     <>
+     <Helmet>
+        <title>Contact Us | Pranishaa - Let's Build Something Amazing</title>
+        <meta
+          name="description"
+          content="Get in touch with Pranishaa for digital marketing, branding, and web development solutions. We're here to turn your ideas into impact."
+        />
+        <meta
+          name="keywords"
+          content="Contact Pranishaa, Digital Marketing Agency, Branding, Web Design, SEO Help"
+        />
+        <meta property="og:title" content="Contact Pranishaa" />
+        <meta property="og:description" content="Reach out to Pranishaa for expert marketing, branding, and design services that drive business success." />
+        <meta property="og:image" content="https://pranishaa.com/images/og-contact.jpg" />
+        <meta property="og:url" content="https://pranishaa.com/contact" />
+      </Helmet>
+      
       <Header />
       {/* About Banner / Image */}
       <PageBanner title="Contact" breadcrumb="Contact" />

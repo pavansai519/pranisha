@@ -8,6 +8,7 @@ import Circle from "../Circle.jsx";
 import "./Portfolio3.css";
 import { FaExpandAlt, FaTimes } from "react-icons/fa";
 import StickyNav from "../StickyNav.jsx";
+import { Helmet } from "react-helmet-async";
 
 import Banner from "../../assets/images/Portfolio/Bst/Banner2.webp";
 import pic1 from "../../assets/images/Portfolio/Bst/pic6.webp";
@@ -43,6 +44,21 @@ function ProjectDetail() {
 
   return (
     <>
+    <Helmet>
+            <title>Bonstreet-portfolio</title>
+            <meta
+              name="description"
+              content="Get in touch with Pranishaa for digital marketing, branding, and web development solutions. We're here to turn your ideas into impact."
+            />
+            <meta
+              name="keywords"
+              content="Contact Pranishaa, Digital Marketing Agency, Branding, Web Design, SEO Help"
+            />
+            <meta property="og:title" content="Contact Pranishaa" />
+            <meta property="og:description" content="Reach out to Pranishaa for expert marketing, branding, and design services that drive business success." />
+            <meta property="og:image" content="https://pranishaa.com/images/og-contact.jpg" />
+            <meta property="og:url" content="https://pranishaa.com/contact" />
+          </Helmet>
       {/* === Custom Animated Cursor === */}
       <OnlyRingCursorUnified />
 
