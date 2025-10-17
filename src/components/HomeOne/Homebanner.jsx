@@ -1,4 +1,3 @@
-// Pranisha.jsx
 import React, { useEffect, useRef, useState } from "react";
 
 export default function Pranisha({
@@ -13,7 +12,7 @@ export default function Pranisha({
   const [showVideo, setShowVideo] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  // ✅ detect webm support once
+  // detect webm support
   useEffect(() => {
     const v = document.createElement("video");
     const can =
@@ -23,7 +22,7 @@ export default function Pranisha({
     setUseWebm(Boolean(can && can !== "no"));
   }, []);
 
-  // ✅ start loading when in view
+  // watch when section is visible
   useEffect(() => {
     if (!containerRef.current) return;
     const obs = new IntersectionObserver(
@@ -35,13 +34,13 @@ export default function Pranisha({
           }
         });
       },
-      { root: null, rootMargin: "200px", threshold: 0.1 }
+      { rootMargin: "200px", threshold: 0.1 }
     );
     obs.observe(containerRef.current);
     return () => obs.disconnect();
   }, []);
 
-  // ✅ load and play video when visible
+  // load and play when visible
   useEffect(() => {
     if (!isInView || !videoRef.current) return;
 
@@ -52,25 +51,20 @@ export default function Pranisha({
     setIsLoading(true);
 
     const source = document.createElement("source");
-    if (useWebm) {
-      source.src = webm;
-      source.type = "video/webm";
-    } else {
-      source.src = mp4;
-      source.type = "video/mp4";
-    }
+    source.src = useWebm ? webm : mp4;
+    source.type = useWebm ? "video/webm" : "video/mp4";
     videoEl.appendChild(source);
 
     videoEl.preload = "auto";
     videoEl.load();
 
-    const onLoaded = async () => {
+    const onLoaded = () => {
       setTimeout(async () => {
         try {
           videoEl.muted = true;
           await videoEl.play();
         } catch (err) {
-          console.warn("Autoplay blocked:", err);
+          // autoplay might be blocked on some browsers
         } finally {
           setShowVideo(true);
           setIsLoading(false);
@@ -78,15 +72,8 @@ export default function Pranisha({
       }, lazyDelay);
     };
 
-    const onError = () => setIsLoading(false);
-
     videoEl.addEventListener("loadeddata", onLoaded);
-    videoEl.addEventListener("error", onError);
-
-    return () => {
-      videoEl.removeEventListener("loadeddata", onLoaded);
-      videoEl.removeEventListener("error", onError);
-    };
+    return () => videoEl.removeEventListener("loadeddata", onLoaded);
   }, [isInView, useWebm, mp4, webm, lazyDelay]);
 
   return (
@@ -95,7 +82,6 @@ export default function Pranisha({
       ref={containerRef}
       aria-label="Hero banner"
     >
-      {/* 🎬 Video only (no poster or placeholder) */}
       <video
         ref={videoRef}
         className={`banner-video ${showVideo ? "visible" : "hidden"}`}
@@ -103,9 +89,11 @@ export default function Pranisha({
         muted
         loop
         playsInline
-      />
+        preload="none"
+      >
+        Your browser does not support the video tag.
+      </video>
 
-      {/* optional loader */}
       {isLoading && (
         <div className="banner-loader" aria-hidden>
           <div className="dot" />
