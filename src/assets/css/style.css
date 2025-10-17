@@ -19152,8 +19152,12 @@ select {
     font-size: 18px;
   }
 }
-
-@media (min-width:1464px) and (max-width:2000px){
+@media (min-width:1300px) and (max-width:1563px){
+  .cracking-footerr{
+    padding: 100px 20px 20px 20px;
+  }
+}
+@media (min-width:1564px) and (max-width:2000px){
   .cracking-footerr{
     padding: 20px 20px 100px 20px
   }
