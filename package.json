@@ -33,7 +33,9 @@
     "react-router-dom": "^7.1.5",
     "react-scroll-trigger": "^0.6.14",
     "react-slider": "^2.0.6",
+    "react-tsparticles": "^2.12.2",
     "swiper": "^11.1.10",
+    "tsparticles": "^3.9.1",
     "yarn": "^1.22.22",
     "yet-another-react-lightbox": "^3.21.4"
   },
