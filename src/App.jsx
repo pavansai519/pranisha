@@ -21,7 +21,6 @@ function App() {
     return (
         <>
           <Preloader />
-          <DiwaliParticles  /> 
              
             {loading && (
                 <div className={`appie-loader ${loading ? 'active' : ''}`}>
@@ -33,7 +32,7 @@ function App() {
             </div>
            
             <Socials/>
-            {/* <GlobalParticles particleCount={20} maxSpeed={0.45} /> */}
+            <GlobalParticles diwaliMode={true} />
             <CustomCursor
                
       />
