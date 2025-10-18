@@ -12,7 +12,8 @@ export default function Preloader() {
   return (
     <div className={`preloader ${loaded ? "preloader--hide" : ""}`}>
       <div className="spark"></div>
-      <h2>✨ Happy Diwali ✨</h2>
+      <h4> Happy Diwali  </h4>
+      <h2>Pranisha Technologies</h2>
     </div>
   );
 }

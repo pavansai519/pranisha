@@ -4,8 +4,6 @@ import Loader from "./components/Helper/Loader.jsx";
 import CustomCursor from "./components/HomeOne/CustomCursor.jsx";
 import GlobalParticles from "./components/GlobalParticles.jsx";
 import Socials from "./components/Socialicons.jsx";
-
-import DiwaliParticles from "./components/DiwaliEffects.jsx";
 import Preloader from "./components/Preloader.jsx";
 
 
@@ -20,10 +18,10 @@ function App() {
 
     return (
         <>
-          <Preloader />
-             
+        <Preloader/>
             {loading && (
                 <div className={`appie-loader ${loading ? 'active' : ''}`}>
+
                     <Loader />
                 </div>
             )}
@@ -32,7 +30,7 @@ function App() {
             </div>
            
             <Socials/>
-            <GlobalParticles diwaliMode={true} />
+            <GlobalParticles particleCount={20} maxSpeed={0.45} />
             <CustomCursor
                
       />

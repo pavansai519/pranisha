@@ -20,9 +20,15 @@
   font-size: 2rem;
   font-family: "Poppins", sans-serif;
   text-shadow: 0 0 10px #ffae00;
-  margin-top: 20px;
+  margin-top: 5px;
 }
-
+.preloader h4 {
+  color: #ffd700;
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 0 0 10px #ffae00;
+  margin-top: 5px;
+}
 .spark {
   width: 60px;
   height: 60px;
