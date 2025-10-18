@@ -17,17 +17,20 @@ function ServiceHomeOne({ className }) {
             <span className="short">IT</span>
           </Link>
         </div>
-
-        {/* Branding */}
+        
+         {/* AI */}
         <div className="service-itemm left-box">
-          <Link to="/branding" className="float-box">
-            <span className="short">BR</span>
+          <Link to="/ai" className="float-box">
+            <span className="short">AI</span>
           </Link>
           <div className="content">
-            <h5 className="service-title">Branding</h5>
-            <p>Build a strong, memorable identity with professional logo design, visuals, captivating visuals and brand strategy tailored to your business.</p>
+            <h5 className="service-title">Artificial Intelligence</h5>
+            <p>Utilize advanced AI technologies to streamline operations, enhance efficiency, and create intelligent, data-driven business solutions.</p>
           </div>
         </div>
+
+
+        
 
         {/* Digital Marketing */}
         <div className="service-itemm right-box">
@@ -40,14 +43,14 @@ function ServiceHomeOne({ className }) {
           </Link>
         </div>
 
-        {/* Events */}
+        {/* Branding */}
         <div className="service-itemm left-box">
-          <Link to="/events" className="float-box">
-            <span className="short">EV</span>
+          <Link to="/branding" className="float-box">
+            <span className="short">BR</span>
           </Link>
           <div className="content">
-            <h5 className="service-title">Events</h5>
-            <p>Plan, manage, and execute unforgettable events with <br/>seamless coordination,and expert end-to-end services.</p>
+            <h5 className="service-title">Branding</h5>
+            <p>Build a strong, memorable identity with professional logo design, visuals, captivating visuals and brand strategy tailored to your business.</p>
           </div>
         </div>
 
@@ -62,14 +65,16 @@ function ServiceHomeOne({ className }) {
           </Link>
         </div>
 
-        {/* AI */}
+       
+
+        {/* Events */}
         <div className="service-itemm left-box">
-          <Link to="/ai" className="float-box">
-            <span className="short">AI</span>
+          <Link to="/events" className="float-box">
+            <span className="short">EV</span>
           </Link>
           <div className="content">
-            <h5 className="service-title">Artificial Intelligence</h5>
-            <p>Utilize advanced AI technologies to streamline operations, enhance efficiency, and create intelligent, data-driven business solutions.</p>
+            <h5 className="service-title">Events</h5>
+            <p>Plan, manage, and execute unforgettable events with <br/>seamless coordination,and expert end-to-end services.</p>
           </div>
         </div>
 

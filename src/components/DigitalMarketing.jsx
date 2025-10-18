@@ -63,6 +63,29 @@ const DigitalMarketing = () => {
             <h3>Our Services</h3>
             <nav className="services-nav">
               <ul>
+
+{/*SEO */}
+                <li>
+                  <button
+                    className={`nav-items ${activeSection === 'SEO' ? 'active' : ''}`}
+                    onClick={() => scrollToSection('SEO')}
+                  >
+                    <i className="fas fa-search"></i>
+                    <span>SEO</span>
+                  </button>
+                  {openSection === 'SEO' && (
+                    <ul className="sub-nav">
+                      
+                      <li>On-Page Social Media Marketing</li>
+                      <li>Off-Page Social Media Marketing </li>
+                      <li>Pay-Per-Click (PPC) </li>
+                      <li>Social Media Content</li>
+                      {/* <li>App Promotion</li> */}
+                      {/* <li>Local Ads</li> */}
+                    </ul>
+                  )}
+                </li>
+
                 {/* Google Ads */}
                 <li>
                   <button
@@ -74,6 +97,7 @@ const DigitalMarketing = () => {
                   </button>
                   {openSection === 'google-ads' && (
                     <ul className="sub-nav">
+                      
                       <li>Search Ads</li>
                       <li>Display Ads</li>
                       <li>Shopping Ads</li>
@@ -127,6 +151,58 @@ const DigitalMarketing = () => {
 
           {/* ✅ Only one section visible at a time */}
           <main className="services-content">
+
+
+
+
+
+          {openSection === "SEO" && (
+  <section id="seo" className="content-section animate-in">
+    <div className="section-header">
+      <h2>SEO</h2>
+      <p>
+Boost website visibility and attract targeted traffic with expert SEO, including on-page optimization, off-page link building, and technical strategies..
+</p>
+
+    </div>
+
+    <div className="content-grid">
+      <div id="onpage-smm" className={`content-item ${highlightedItem === 'onpage-smm' ? 'highlighted' : ''}`}>
+        <div className="item-icon"><i className="fas fa-laptop-code"></i></div>
+        <h3>On-Page Social Media Marketing </h3>
+        <p>
+         Maximize engagement with on-page SMM by optimizing profiles, creating keyword-rich posts, scheduling content, and analyzing performance to enhance visibility.
+        </p>
+      </div>
+
+      <div id="offpage-smm" className={`content-item ${highlightedItem === 'offpage-smm' ? 'highlighted' : ''}`}>
+        <div className="item-icon"><i className="fas fa-share-alt"></i></div>
+        <h3>Off-Page Social Media Marketing </h3>
+        <p>
+        Increase reach and authority with off-page SMM, using backlinks, influencer collaborations, social campaigns, and community engagement to boost credibility.
+        </p>
+      </div>
+
+      <div id="ppc-ads" className={`content-item ${highlightedItem === 'ppc-ads' ? 'highlighted' : ''}`}>
+        <div className="item-icon"><i className="fas fa-bullseye"></i></div>
+        <h3>Pay-Per-Click (PPC) </h3>
+        <p>
+          Generate instant traffic and measurable ROI with targeted PPC campaigns, optimizing ads on Google, Bing, and social platforms for leads.
+        </p>
+      </div>
+
+         <div id="social-content" className={`content-item ${highlightedItem === 'social-content' ? 'highlighted' : ''}`}>
+        <div className="item-icon"><i className="fas fa-share-alt"></i></div>
+        <h3>Social Media Content</h3>
+        <p>
+         Boost engagement and brand visibility with tailored social media content, including posts, visuals, and reels that connect with your audience.
+        </p>
+      </div>
+    </div>
+  </section>
+)}
+
+
             {openSection === "google-ads" && (
               <section id="google-ads" className="content-section animate-in">
                <div className="section-header">
