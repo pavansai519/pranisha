@@ -54,13 +54,13 @@ const testimonials = [
   {
     image: TestiImg1,
     name: 'Vamshi Krishna',
-    designation: 'Designer',
+    designation: 'Developer',
     text: 'I was looking for a reliable digital marketing agency that could help me with my SEO and Google Ads campaigns, and I am glad that I found Pranisha Technologies. Their team is highly professional and knowledgeable, and they helped me.',
   },
   {
     image: TestiImg2,
     name: 'Suresh Deevi',
-    designation: 'Designer',
+    designation: 'Client',
     text: 'Pranisha Technologies helped us with influencer marketing campaigns, and we were impressed with their approach and results. Their team understood our target audience and goals, and they helped us to reach out to the right influencers and maximize our ROI.',
   },
   {
@@ -72,13 +72,13 @@ const testimonials = [
   {
     image: TestiImg1,
     name: 'Khaja Wasim',
-    designation: 'Designer',
+    designation: 'Client',
     text: 'Pranisha Technologies provided us with a stunning website design that perfectly reflected our brand’s image and values. Their team was highly responsive and easy to work with, and they delivered the project on time and within budget. We are extremely...',
   },
   {
     image: TestiImg1,
     name: 'Laxman',
-    designation: 'Designer',
+    designation: 'Developer',
     text: 'Pranisha Technologies helped us with our social media marketing campaigns, and the results have been exceptional. Their team is highly skilled and knowledgeable, and they helped us to reach a wider audience and improve our engagement rates. ',
   },
 ];

@@ -45,10 +45,10 @@ function FooterHomeOne({ className }) {
                   <p className="widget-title">Our Services</p>
                   <ul className="user-links">
                     <li><Link to="/branding" data-replace="Branding"><span>Branding</span></Link></li>
-                    <li><Link to="/digitalmarketing" data-replace="Digital Marketing"><span>Digital Marketing</span></Link></li>
-                    <li><Link to="/Itdevelopment" data-replace="It Development"><span>It Development</span></Link></li>
-                     <li><Link to="/events" data-replace="Events"><span>Events</span></Link></li>
                     <li><Link to="/ai" data-replace="AI"><span>AI</span></Link></li>
+                    <li><Link to="/Itdevelopment" data-replace="It Development"><span>It Development</span></Link></li>
+                    <li><Link to="/digitalmarketing" data-replace="Digital Marketing"><span>Digital Marketing</span></Link></li>
+                     <li><Link to="/events" data-replace="Events"><span>Events</span></Link></li>
                     <li><Link to="/pr-media" data-replace="PR & Media"><span>PR & Media</span></Link></li>
                   </ul>
                 </div>

@@ -18910,54 +18910,73 @@ select {
 
 
  /****************************team*******************/
- .team-section {
+ /* 🌐 TEAM SECTION - Corporate Responsive Design */
+.team-section {
   text-align: center;
-  padding: 60px 300px;
   color: #fff;
+  max-width: 1400px; /* keeps layout centered and contained */
+  margin: 0 auto;
+  padding: 60px 8vw; /* fluid side spacing */
 }
 
+/* ✨ Section Title */
 .section-title {
   color: #ffa324;
   font-size: 38px;
   font-weight: 600;
-  margin-bottom: 40px;
-  margin-top: 40px;
+  margin: 40px 0;
 }
 
-/* Grid layout */
+/* 🧩 Grid Layout */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
   gap: 30px;
+  justify-content: center;
 }
 
+/* 📱 Tablet */
 @media (min-width: 768px) {
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 1024px) and (max-width:1445px) {
-  .team-grid {
-    grid-template-columns: repeat(3, 1fr); /* 4 per row on desktop */
-  }
-  .team-section{
-    padding: 60px 100px;
-
-  }
-}
-@media (min-width:1444px) and (max-width:2000px){
+/* 💻 Desktop */
+@media (min-width: 1200px) and (max-width:1560px){
   .team-grid {
     grid-template-columns: repeat(3, 1fr);
+
   }
-  .team-section{
-    padding: 60px 180px;
+  .team-section {
+    padding: 80px 6vw; /* add more breathing room on big screens */
+  }
+   .team-img{  
+    width: 350px;
+    height: 350px;
   }
 }
-/* 📱 Mobile (below 576px) */
+
+/* 🖥️ Ultra-wide (4K and larger monitors) */
+@media (min-width: 1561px) and (max-width:2000px) {
+  .team-section {
+        padding: 80px 6vw; /* add more breathing room on big screens */
+
+  }
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+  .team-img{  
+    width: 350px;
+    height: 350px;
+  }
+}
+
+/* 📱 Mobile Adjustments (below 576px) */
 @media (max-width: 576px) {
   .team-section {
-    padding: 40px 20px; /* reduce side padding for small screens */
+    padding: 40px 5vw; /* reduce side padding */
   }
 
   .section-title {
@@ -18966,16 +18985,7 @@ select {
   }
 
   .team-grid {
-    grid-template-columns: 1fr; /* single column layout */
     gap: 20px;
-  }
-
-  .team-card {
-    padding: 8px;
-  }
-
-  .team-img {
-    height: 300px; /* reduce image height */
   }
 
   .team-name {
@@ -18996,30 +19006,36 @@ select {
   }
 }
 
+/* 🧍 Team Card */
 .team-card {
   padding: 10px;
   border-radius: 10px;
   text-align: center;
-  overflow: hidden; 
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(255, 163, 36, 0.2);
+}
+
+/* 🖼️ Team Image - Responsive and Elegant */
 .team-img {
   width: 100%;
-  height: 360px;
+  height:auto;
   object-fit: cover;
-  border-radius: 0px;
+  border-radius: 0;
   filter: grayscale(100%);
   transition: transform 2s ease, filter 4s ease;
 }
 
-/* Image smoothly zooms and colorizes */
 .team-card:hover .team-img {
-  transform: scale(1.01);
+  transform: scale(1.03);
   filter: grayscale(0);
 }
 
-
-
+/* 🧾 Text Styles */
 .team-name {
   color: #fff;
   margin-top: 14px;
@@ -19033,19 +19049,24 @@ select {
   margin-bottom: 12px;
 }
 
+/* 🌐 Social Links */
 .socials {
   display: flex;
   justify-content: center;
   gap: 14px;
 }
+
 .socials a {
   font-size: 20px;
   color: #fff;
-  transition: color 0.2s;
+  transition: color 0.2s, transform 0.2s;
 }
+
 .socials a:hover {
   color: #1da1f2;
+  transform: scale(1.1);
 }
+
 
 /* Load More Button */
 .load-more-wrapper {
