@@ -98,7 +98,7 @@ function ProjectDetail() {
           ))}
 
           {/* === Inline Video Item === */}
-          <div
+          {/* <div
             className="pd-gallery-item video-item ps-tile"
             data-aos="fade-up"
             data-aos-delay={600}
@@ -114,7 +114,7 @@ function ProjectDetail() {
               style={{ cursor: "pointer" }}
             />
            
-          </div>
+          </div> */}
         </div>
       </section>
 

@@ -93,7 +93,7 @@ function ProjectDetail() {
             </div>
           ))}
 
-          <div
+          {/* <div
             className="project-gallery-item project-video-item ps-tile"
             data-aos="fade-up"
             data-aos-delay={600}
@@ -108,7 +108,7 @@ function ProjectDetail() {
               onClick={() => setSelectedVideo(demoVideo)}
               style={{ cursor: "pointer" }}
             />
-          </div>
+          </div> */}
         </div>
       </section>
 

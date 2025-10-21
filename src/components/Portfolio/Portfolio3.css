@@ -251,7 +251,7 @@
 }
  
 /* large-but-not-fullwidth screens */
-@media (min-width: 1200px) and (max-width: 1444px) {
+@media (min-width: 1200px) and (max-width: 1484px) {
 
 
   .pd-gallery {

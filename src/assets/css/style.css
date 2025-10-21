@@ -18953,7 +18953,7 @@ select {
   }
    .team-img{  
     width: 350px;
-    height: 350px;
+    height: 300px;
   }
 }
 
@@ -18970,6 +18970,7 @@ select {
   .team-img{  
     width: 350px;
     height: 350px;
+    /* max-height: 350px; */
   }
 }
 
@@ -19012,13 +19013,9 @@ select {
   border-radius: 10px;
   text-align: center;
   overflow: hidden;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.team-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 20px rgba(255, 163, 36, 0.2);
-}
+
 
 /* 🖼️ Team Image - Responsive and Elegant */
 .team-img {
@@ -19063,7 +19060,7 @@ select {
 }
 
 .socials a:hover {
-  color: #1da1f2;
+  color: #ffa324;
   transform: scale(1.1);
 }
 
