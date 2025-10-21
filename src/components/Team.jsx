@@ -5,7 +5,7 @@ import Footer from "./HomeOne/Footer1.jsx";
 import Circle from "./Circle.jsx";
 import { Helmet } from "react-helmet-async";
 import Sindhu from "../../src/assets/images/Team/Sinduja.png"
-import Praneetha from "../../src/assets/images/Team/Praneetha .png"
+import Praneetha from "../../src/assets/images/Team/Praneetha.png"
 import Akshay from "../../src/assets/images/Team/Akshay.png"
 import Aparna from "../../src/assets/images/Team/Aparna.png"
 import Avinash from "../../src/assets/images/Team/Avinash.png"
@@ -16,6 +16,7 @@ import Reshma from "../../src/assets/images/Team/Reshma.png"
 import Bindhu from "../../src/assets/images/Team/Bindhu.png"
 import Uttej from "../../src/assets/images/Team/Uttej.png"
 import Vamsi from "../../src/assets/images/Team/Vamsi.png"
+import Pavan from "../../src/assets/images/Team/Pavan.png"
 
 
 
@@ -42,6 +43,12 @@ const collaborators = [
     name: "uttej dega",
     role: "Graphic Designer & Video Editor",
     img: Uttej,
+    socials: { linkdin: "#", instagram: "#", facebook: "#" },
+  },
+  {
+    name: "Pavansai prathi",
+    role: "fullstack developer",
+    img: Pavan,
     socials: { linkdin: "#", instagram: "#", facebook: "#" },
   },
   {
