@@ -4,19 +4,19 @@ import Header from "./HomeOne/Header.jsx";
 import Footer from "./HomeOne/Footer1.jsx";
 import Circle from "./Circle.jsx";
 import { Helmet } from "react-helmet-async";
-import Sindhu from "../../src/assets/images/Team/Sinduja.png"
-import Praneetha from "../../src/assets/images/Team/Praneetha.png"
-import Akshay from "../../src/assets/images/Team/Akshay.png"
-import Aparna from "../../src/assets/images/Team/Aparna.png"
-import Avinash from "../../src/assets/images/Team/Avinash.png"
-import Fatima from "../../src/assets/images/Team/Fatima.png"
-import Priya from "../../src/assets/images/Team/Priya.png"
-import Ramu from "../../src/assets/images/Team/Ramu.png"
-import Reshma from "../../src/assets/images/Team/Reshma.png"
-import Bindhu from "../../src/assets/images/Team/Bindhu.png"
-import Uttej from "../../src/assets/images/Team/Uttej.png"
-import Vamsi from "../../src/assets/images/Team/Vamsi.png"
-import Pavan from "../../src/assets/images/Team/Pavan.png"
+import Sindhu from "../../src/assets/images/Team/Sinduja.webp"
+import Praneetha from "../../src/assets/images/Team/Praneetha.webp"
+import Akshay from "../../src/assets/images/Team/Akshay.webp"
+import Aparna from "../../src/assets/images/Team/Aparna.webp"
+import Avinash from "../../src/assets/images/Team/Avinash.webp"
+import Fatima from "../../src/assets/images/Team/Fatima.webp"
+import Priya from "../../src/assets/images/Team/Priya.webp"
+import Ramu from "../../src/assets/images/Team/Ramu.webp"
+import Reshma from "../../src/assets/images/Team/Reshma.webp"
+import Bindhu from "../../src/assets/images/Team/Bindhu.webp"
+import Uttej from "../../src/assets/images/Team/Uttej.webp"
+import Vamsi from "../../src/assets/images/Team/Vamsi.webp"
+import Pavan from "../../src/assets/images/Team/Pavan.webp"
 
 
 
@@ -83,7 +83,7 @@ const collaborators = [
   },
   {
     name: "Bindu Sai Basuthakar ",
-    role: "jr digital marketer",
+    role: "jr digital marketer(intern)",
     img: Bindhu,
     socials: { linkdin: "#", instagram: "#", facebook: "#" },
   },
