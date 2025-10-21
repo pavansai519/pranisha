@@ -38,12 +38,7 @@ const collaborators = [
     img: Vamsi,
     socials: { linkdin: "#", instagram: "#", facebook: "#" },
   },
-  {
-    name: "uttej dega",
-    role: "Graphic Designer & Video Editor",
-    img: Uttej,
-    socials: { linkdin: "#", instagram: "#", facebook: "#" },
-  },
+ 
   {
     name: "avinash",
     role: "fullstack developer",
