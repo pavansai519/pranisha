@@ -14,7 +14,6 @@ import Priya from "../../src/assets/images/Team/Priya.png"
 import Ramu from "../../src/assets/images/Team/Ramu.png"
 import Reshma from "../../src/assets/images/Team/Reshma.png"
 import Bindhu from "../../src/assets/images/Team/Bindhu.png"
-import Uttej from "../../src/assets/images/Team/Uttej.png"
 import Vamsi from "../../src/assets/images/Team/Vamsi.png"
 
 
