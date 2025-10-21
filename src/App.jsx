@@ -18,7 +18,7 @@ function App() {
 
     return (
         <>
-        <Preloader/>
+        {/* <Preloader/> */}
             {loading && (
                 <div className={`appie-loader ${loading ? 'active' : ''}`}>
 
@@ -30,7 +30,7 @@ function App() {
             </div>
            
             <Socials/>
-            <GlobalParticles particleCount={20} maxSpeed={0.45} />
+            <GlobalParticles particleCount={15} maxSpeed={0.45} />
             <CustomCursor
                
       />

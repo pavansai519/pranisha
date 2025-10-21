@@ -118,9 +118,9 @@ export default function PortfolioShowcase() {
           
         
       </div>
-      <div className="ps-load"  aria-label="Load more area">
+           {/* <div className="ps-load"  aria-label="Load more area">
               <Link to="/portfolio" className="ps-btn">Load More ➜</Link>
-            </div>
+            </div> */}
         </div>
 
     </section>

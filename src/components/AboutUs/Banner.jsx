@@ -24,10 +24,11 @@ export default function ParticleBanner({
   logoPath = "/logo1.png",
   fontFamily = "",
   eyebrow = "Welcome to Pranisha Technologies",
-  description = "At Pranisha, we craft imaginative brand experiences through web design, digital strategy, and innovative marketing — empowering your business to stand out and connect meaningfully in a digital world.",
-  primaryText = "Innovative Solutions to Elevate Your Projects",
+  description = "Praneetha Devireddy, the visionary founder of Pranisha Technologies, brings over 15 years of experience in Digital Marketing and IT Services. With a strong passion for innovation and technology-driven solutions, she established Pranisha Technologies in 2021 with a mission to help businesses grow through creativity, technology, and strategy.",
+    description1 = "What began with a focus on Web Development, Branding, and Digital Marketing soon evolved into a full-fledged agency offering AI Solutions, PR & Media Services, and Event Management.",
+  primaryText = "",
   buttonText = "Get Free Consultation",
-  background = "https://picsum.photos/seed/square1/600/600",
+  background = "",
   color = "#ffffff",
 }) {
   const bgStyleMid = {
@@ -48,6 +49,7 @@ export default function ParticleBanner({
 
           {/* Optional small description */}
           <p className="okai-left-desc">{description}</p>
+          <p className="okai-left-desc">{description1}</p>
 
           <div className="okai-left-ctas">
           <Link to="/contact" className="okai-btn-primary small" role="button">

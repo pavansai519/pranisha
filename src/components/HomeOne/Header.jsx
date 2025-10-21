@@ -70,9 +70,9 @@ function Header() {
             <Link to="/aboutus" onClick={() => setMenuOpen({ main: false })}>
               About Us
             </Link>
-            <Link to="/portfolio" onClick={() => setMenuOpen({ main: false })}>
+            {/* <Link to="/portfolio" onClick={() => setMenuOpen({ main: false })}>
               Portfolio
-            </Link>
+            </Link> */}
 
             {/* Services Dropdown */}
             <div className="nav-item has-submenu">

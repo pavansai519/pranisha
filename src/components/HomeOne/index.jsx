@@ -44,7 +44,7 @@ function HomeOne() {
         <meta property="og:url" content="https://pranishaa.com/" />
       </Helmet>
             <Header action={drawerAction.toggle} />
-          <FireworksEffect/>
+          {/* <FireworksEffect/> */}
             <Banner />
             <Service />
             <PortfolioGrid />
