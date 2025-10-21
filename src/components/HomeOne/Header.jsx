@@ -112,7 +112,7 @@ function Header() {
                     to="/Itdevelopment"
                     onClick={() => setMenuOpen({ main: false })}
                   >
-                    It Development
+                    IT Development
                   </Link>
                 </li>
                 <li>

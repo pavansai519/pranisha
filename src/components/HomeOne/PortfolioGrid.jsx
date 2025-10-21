@@ -20,17 +20,17 @@ import dess from "../../assets/images/Portfolio/dess/dess.webp";
 */
 
 const projects = [
-  { id: 1, image: BSM, title: "BondStreet", url: "/portfolio/bondstreet", area: "tile1", width: "460px", height: "460px", fit: "cover", pos: "center center" },
-  { id: 2, image: pcg,  title: "pcg",       url: "/portfolio/pcg",        area: "tile2", width: "360px", height: "450px", fit: "cover", pos: "center center" },
+  { id: 1, image: BSM, title: "BONDSTREET", url: "/portfolio/bondstreet", area: "tile1", width: "460px", height: "460px", fit: "cover", pos: "center center" },
+  { id: 2, image: pcg,  title: "PCG",       url: "/portfolio/pcg",        area: "tile2", width: "360px", height: "450px", fit: "cover", pos: "center center" },
   { id: 3, image: shr,  title: "SHR",       url: "/portfolio/shr",        area: "tile3", width: "440px", height: "450px", fit: "cover", pos: "center center" },
   
   /* 🔼 ROF moved up (now in tile4 position) */
-  { id: 4, image: poh,  title: "POH",       url: "/portfolio/poh",        area: "tile4", width: "360px", height: "460px", fit: "fill", pos: "center center" },
+  { id: 4, image: poh,  title: "PRIDE OF HYDERABAD",       url: "/portfolio/poh",        area: "tile4", width: "360px", height: "460px", fit: "fill", pos: "center center" },
 
-  { id: 5, image: dess,  title: "dess",   url: "/portfolio/dess",        area: "tile5", width: "460px", height: "520px", fit: "cover", pos: "center center" },
+  { id: 5, image: dess,  title: "DESSERTINO",   url: "/portfolio/dess",        area: "tile5", width: "460px", height: "520px", fit: "cover", pos: "center center" },
   
   /* 🔽 PCG moved down (now in tile6 position) */
-  { id: 6, image: rof,  title: "ROF",       url: "/portfolio/rof",        area: "tile6", width: "360px", height: "460px", fit: "cover", pos: "center center" },
+  { id: 6, image: rof,  title: "ROAMIFI",       url: "/portfolio/rof",        area: "tile6", width: "360px", height: "460px", fit: "cover", pos: "center center" },
 ];
 
 export default function PortfolioShowcase() {

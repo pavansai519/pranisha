@@ -18934,6 +18934,12 @@ select {
   gap: 30px;
   justify-content: center;
 }
+.team-name {
+  text-transform: uppercase;
+}
+ .team-role {
+  text-transform: uppercase;
+ }
 
 /* 📱 Tablet */
 @media (min-width: 768px) {
@@ -18968,6 +18974,7 @@ select {
 
   }
   .team-img{  
+    padding-bottom: 10px;
     width: 350px;
     height: 350px;
     /* max-height: 350px; */

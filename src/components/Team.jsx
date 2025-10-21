@@ -4,39 +4,92 @@ import Header from "./HomeOne/Header.jsx";
 import Footer from "./HomeOne/Footer1.jsx";
 import Circle from "./Circle.jsx";
 import { Helmet } from "react-helmet-async";
-import Sindhu from "../../src/assets/images/Team/Sindhu.png"
+import Sindhu from "../../src/assets/images/Team/Sinduja.png"
+import Praneetha from "../../src/assets/images/Team/Praneetha .png"
+import Akshay from "../../src/assets/images/Team/Akshay.png"
+import Aparna from "../../src/assets/images/Team/Aparna.png"
+import Avinash from "../../src/assets/images/Team/Avinash.png"
+import Fatima from "../../src/assets/images/Team/Fatima.png"
+import Priya from "../../src/assets/images/Team/Priya.png"
+import Ramu from "../../src/assets/images/Team/Ramu.png"
+import Reshma from "../../src/assets/images/Team/Reshma.png"
+import Bindhu from "../../src/assets/images/Team/Bindhu.png"
+import Uttej from "../../src/assets/images/Team/Uttej.png"
+import Vamsi from "../../src/assets/images/Team/Vamsi.png"
 
 
 
 const collaborators = [
   {
-    name: "Jordan Jonson",
-    role: "CEO of Okai",
+    name: "Praneetha Devireddy",
+    role: "founder & ceo ",
+    img: Praneetha,
+    socials: { linkdin: "#", instagram: "#", facebook: "#" },
+  },
+  {
+    name: "Akshay humanan",
+    role: "Graphic Designer & Video Editor",
+    img: Akshay,
+    socials: { linkdin: "#", instagram: "#", facebook: "#" },
+  },
+  {
+    name: "vamsikrishna sirasani",
+    role: "digital marketer",
+    img: Vamsi,
+    socials: { linkdin: "#", instagram: "#", facebook: "#" },
+  },
+  {
+    name: "uttej dega",
+    role: "Graphic Designer & Video Editor",
+    img: Uttej,
+    socials: { linkdin: "#", instagram: "#", facebook: "#" },
+  },
+  {
+    name: "avinash",
+    role: "fullstack developer",
+    img: Avinash,
+    socials: { linkdin: "#", instagram: "#", facebook: "#" },
+  },
+  {
+    name: "sindhuja palamakula",
+    role: " jr digital marketer",
     img: Sindhu,
     socials: { linkdin: "#", instagram: "#", facebook: "#" },
   },
   {
-    name: "Steven Morrison",
-    role: "Full-stack Developer",
-    img: "https://randomuser.me/api/portraits/men/45.jpg",
+    name: "fatima ",
+    role: "fullstack developer(intern)",
+    img: Fatima,
     socials: { linkdin: "#", instagram: "#", facebook: "#" },
   },
   {
-    name: "Melanie Robinson",
-    role: "SEO & Marketing",
-    img: "https://randomuser.me/api/portraits/women/68.jpg",
+    name: "Daripaalli Aprna",
+    role: "fullstack developer(intern)",
+    img: Aparna,
     socials: { linkdin: "#", instagram: "#", facebook: "#" },
   },
   {
-    name: "David White",
-    role: "UI/UX Designer",
-    img: "https://randomuser.me/api/portraits/men/70.jpg",
+    name: "lakshmi priya",
+    role: "fullstack developer(intern)",
+    img: Priya,
     socials: { linkdin: "#", instagram: "#", facebook: "#" },
   },
   {
-    name: "Sophia Lee",
-    role: "Project Manager",
-    img: "https://randomuser.me/api/portraits/women/12.jpg",
+    name: "Bindu Sai Basuthakar ",
+    role: "jr digital marketer",
+    img: Bindhu,
+    socials: { linkdin: "#", instagram: "#", facebook: "#" },
+  },
+  {
+    name: "reshma",
+    role: "fullstack developer(intern)",
+    img: Reshma,
+    socials: { linkdin: "#", instagram: "#", facebook: "#" },
+  },
+  {
+    name: "Ramu kurella",
+    role: "fullstack developer(intern)",
+    img: Ramu,
     socials: { linkdin: "#", instagram: "#", facebook: "#" },
   },
 ];

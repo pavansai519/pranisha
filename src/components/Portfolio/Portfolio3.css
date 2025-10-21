@@ -284,7 +284,15 @@
   }
   
 }
- 
-/* === VIEW ICON POSITION — top-right corner === */
 
- 
+
+@media (min-width: 1586px) and (max-width: 2084px) {
+
+  .pd-gallery {
+    padding: 120px 350px;
+  }
+  .pd-gallery-grid {
+    gap: 50px;
+  }
+
+}
