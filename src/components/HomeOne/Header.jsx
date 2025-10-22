@@ -94,9 +94,19 @@ function Header() {
               </button>
 
               <ul className={`submenu ${isMenuOpen.services ? "active" : ""}`}>
+               
+               <li>
+                  <Link
+                    to="/Itdevelopment"
+                    onClick={() => setMenuOpen({ main: false })}
+                  >
+                    IT Development
+                  </Link>
+                </li>
+               
                 <li>
-                  <Link to="/branding" onClick={() => setMenuOpen({ main: false })}>
-                    Branding
+                  <Link to="/ai" onClick={() => setMenuOpen({ main: false })}>
+                    AI
                   </Link>
                 </li>
                 <li>
@@ -107,19 +117,15 @@ function Header() {
                     Digital Marketing
                   </Link>
                 </li>
+               
                 <li>
-                  <Link
-                    to="/Itdevelopment"
-                    onClick={() => setMenuOpen({ main: false })}
-                  >
-                    IT Development
+                  <Link to="/branding" onClick={() => setMenuOpen({ main: false })}>
+                    Branding
                   </Link>
                 </li>
-                <li>
-                  <Link to="/ai" onClick={() => setMenuOpen({ main: false })}>
-                    AI
-                  </Link>
-                </li>
+               
+                
+               
                 <li>
                   <Link
                     to="/pr-media"

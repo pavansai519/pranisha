@@ -59,7 +59,7 @@ const collaborators = [
   },
   {
     name: "sindhuja palamakula",
-    role: " jr digital marketer",
+    role: " digital marketer(intern)",
     img: Sindhu,
     socials: { linkdin: "#", instagram: "#", facebook: "#" },
   },
@@ -83,7 +83,7 @@ const collaborators = [
   },
   {
     name: "Bindu Sai Basuthakar ",
-    role: "jr digital marketer(intern)",
+    role: "digital marketer(intern)",
     img: Bindhu,
     socials: { linkdin: "#", instagram: "#", facebook: "#" },
   },

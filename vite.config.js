@@ -1,11 +1,12 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
 export default defineConfig({
+  base: './', // ✅ important for S3 or relative hosting
   plugins: [react()],
   build: {
-    sourcemap: false, // Disable sourcemaps
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false
   }
-  
 })

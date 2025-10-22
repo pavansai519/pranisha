@@ -17923,6 +17923,9 @@ Sidebar
   .footer-logo{
     max-width: 70%;
   }
+  .footer-section-six{
+    background-image: none;
+  }
 }
 
 
@@ -18441,6 +18444,8 @@ body > *:not([data-global-particles]) {
   }
   .info-card {
     font-size: 17px;
+        width:350px;  
+
   }
   .nav-content{
     padding-left: 360px;

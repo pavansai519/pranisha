@@ -76,7 +76,7 @@ export default function PortfolioShowcase() {
     <section className="ps-section">
       <div className="ps-inner container">
         <header className="ps-header">
-          <h3 className="ps-eyebrow">Our Precious Best</h3>
+          <h3 className="ps-eyebrow">Our Portfolio Of Sucess</h3>
           <p className="ps-sub">And it only gets better</p>
         </header>
 
