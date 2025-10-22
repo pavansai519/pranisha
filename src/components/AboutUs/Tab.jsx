@@ -94,35 +94,7 @@ function TabHome5({ className }) {
                                 </div>
                             </div>
             
-                            {/* <div className={activeIndex === 3 ? "tab active-tab" : "tab"}>
-                                <div className="row"> */}
-                                    {/* {/ Content Column /} */}
-                                    {/* <div className="content-column col-xl-7 col-lg-6 order-2">
-                                        <div className="inner-column">
-                                            <h3>We Execute Our ideas From The Start to Finish</h3>
-                                            <div className="text">Web designing in a powerful way of just not an only professions, however, in a passion for
-                                                our Company.</div>
-
-                                            <div className="content-box">
-                                                <div className="about-block-two">
-                                                    <h5 className="title"><i className="icon fa fa-angle-right"></i> Cloud Based Services </h5>
-                                                    <p className="text">Web designing in a powerful way of just</p>
-                                                </div>
-
-                                                <div className="about-block-two">
-                                                    <h5 className="title"><i className="icon fa fa-angle-right"></i> End to End Solutions </h5>
-                                                    <p className="text">Web designing in a powerful way of just</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> */}
-
-                                    {/* {/ Image Column /} */}
-                                    {/* <div className="image-column col-xl-5 col-lg-6">
-                                        <figure className="image overlay-anim"><img src={WorkImg} alt=""/></figure>
-                                    </div> */}
-                                {/* </div>
-                            </div> */}
+                           
                         </div>
                     </div>
                 </div>

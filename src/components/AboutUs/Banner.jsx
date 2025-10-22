@@ -79,9 +79,10 @@ export default function ParticleBanner({
             <div
               className="okai-media-card okai-media-card-top"
               style={{
-                backgroundImage: `url(${imagePath})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
+                 '--main-img': `url(${imagePath})`,
+                '--hover-img': `url("/praneetha1.png")`
+
+               
               }}
             />
             <div className="okai-description">

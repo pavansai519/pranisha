@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import AboutMen from "../../../public/about-us.png";
+import "./pranisha-okai.css"
  
 function AboutHomeOne({ className }) {
   const fullText = `Pranisha Technologies stands out as a creative and technology-driven digital solutions company, delivering high-quality services in branding, web development, and digital marketing. Their best work includes crafting professional brand identities through logo design, packaging, and hoarding creatives that leave a lasting impression. On the technology side, they excel in custom websites, WordPress solutions, ReactJS development, and mobile applications, ensuring businesses achieve strong online visibility.

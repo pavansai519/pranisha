@@ -15,7 +15,6 @@
 .okai-banner-root {
   position: relative;
   color: #fff;
-  overflow: hidden;
 }
 
 /* particle canvas */
@@ -127,32 +126,31 @@
   align-items: center;
 }
 .okai-media-stack-right {
-  width: 560px; /* make right visual larger than before to emphasize image */
+  width: 560px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 14px;
 }
 
-/* cards (right) */
 .okai-media-card {
-  border-radius: 16px;
-  overflow: hidden;
   box-shadow: 0 22px 60px rgba(2,6,23,0.6);
-  background-size: cover;
-  background-position: center;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* sizes and transforms tuned for right emphasis */
 .okai-media-card-top {
-  width: 500px;
-  height: 580px;
-  /* transform: translateY(-22px) rotate(-2deg); */
-  border: 1px solid rgba(255,255,255,0.03);
+  background-image: var(--main-img) ;
+  width: 100%;
+  max-width: 520px !important;
+  height: 520px !important; /* ✅ fixed or responsive height */
+  background-size: cover; /* ✅ ensures image covers area */
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
+
 .okai-description {
   transform: translateX(-60%);
   color: #fff;
@@ -167,24 +165,6 @@
   font-size: 12px;
   font-weight: 300;
 
-}
-.okai-media-card-mid {
-  width: 520px;
-  height: 280px;
-  transform: translateY(-8px) rotate(1.4deg);
-  border: 1px solid rgba(255,255,255,0.03);
-  opacity: 0.98;
-}
-.okai-media-card-bottom {
-  width: 420px;
-  height: 180px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding: 12px;
-  transform: translateY(0) rotate(0deg);
-  border: 1px solid rgba(255,255,255,0.02);
-  background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
 }
 
 /* small logo inside bottom card */
@@ -210,6 +190,11 @@
   .okai-media-card-bottom { width: 80%; height: 140px; }
   .okai-left-primary { font-size: 20px; }
   .okai-left-desc { font-size: 14px; max-width: 70ch; }
+}
+@media (min-width:1200px) and (max-width:1560px){
+  .okai-inner {
+gap:0px  }
+
 }
 
 
@@ -662,11 +647,17 @@ body.cursor-accent-active::before {
   }
 }
  
-@media (min-width:1250px) and (max-width:1444px){
+@media (min-width:1250px) and (max-width:1564px){
   .about-sections-six{
-    padding:20px 70px 20px 10px;
+    padding:20px 70px 20px 20px;
   }
 }
+@media (min-width:1650px) and (max-width:2044px){
+    .about-sections-six{
+      margin-top: -120px;
+
+    }
+  }
 .tab.active-tab .content-column {
   animation: fadeSlideUp 1s ease forwards, floaty 6s ease-in-out infinite;
   transform-origin: center bottom;

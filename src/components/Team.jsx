@@ -52,7 +52,7 @@ const collaborators = [
     socials: { linkdin: "#", instagram: "#", facebook: "#" },
   },
   {
-    name: "avinash",
+    name: "avinash reddy",
     role: "fullstack developer",
     img: Avinash,
     socials: { linkdin: "#", instagram: "#", facebook: "#" },
@@ -64,13 +64,13 @@ const collaborators = [
     socials: { linkdin: "#", instagram: "#", facebook: "#" },
   },
   {
-    name: "fatima ",
+    name: "fatima",
     role: "fullstack developer(intern)",
     img: Fatima,
     socials: { linkdin: "#", instagram: "#", facebook: "#" },
   },
   {
-    name: "Daripaalli Aprna",
+    name: "Daripaalli Aparna",
     role: "fullstack developer(intern)",
     img: Aparna,
     socials: { linkdin: "#", instagram: "#", facebook: "#" },
