@@ -28,7 +28,7 @@ const collaborators = [
     socials: { linkdin: "#", instagram: "#", facebook: "#" },
   },
   {
-    name: "Akshay humanan",
+    name: "Akshay hanuman",
     role: "Graphic Designer & Video Editor",
     img: Akshay,
     socials: { linkdin: "#", instagram: "#", facebook: "#" },
@@ -128,7 +128,7 @@ function Team() {
             <img src={member.img} alt={member.name} className="team-img" />
             <h3 className="team-name">{member.name}</h3>
             <p className="team-role">{member.role}</p>
-            <div className="socials">
+            {/* <div className="socials">
               <a href={member.socials.linkdin} aria-label="linkdin">
                 <FaLinkedin/>
               </a>
@@ -138,7 +138,7 @@ function Team() {
               <a href={member.socials.facebook} aria-label="Facebook">
                 <FaFacebook />
               </a>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>

@@ -4,7 +4,6 @@ import Loader from "./components/Helper/Loader.jsx";
 import CustomCursor from "./components/HomeOne/CustomCursor.jsx";
 import GlobalParticles from "./components/GlobalParticles.jsx";
 import Socials from "./components/Socialicons.jsx";
-import Preloader from "./components/Preloader.jsx";
 
 
 function App() {

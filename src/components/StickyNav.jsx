@@ -18,7 +18,7 @@ const projects = [
   { title: "Next Rof", link: "/portfolio/rof", thumbnail: rof },
   { title: "Next Dress", link: "/portfolio/dess", thumbnail: dess },
 
-  { title: "BondStreet", link: "/portfolio/bondstreet", thumbnail: BSM },
+  { title: "Next BondStreet", link: "/portfolio/bondstreet", thumbnail: BSM },
 
 ];
 

@@ -11,7 +11,6 @@ import Testimonial from './Testimonial.jsx';
 import Header from './Header.jsx';
 import ClientsHomeOne from './Clients.jsx';
 import PortfolioGrid from './PortfolioGrid.jsx';
-import FireworksEffect from './FireworksEffect.jsx';
 
 function HomeOne() {
     const [drawer, drawerAction] = useToggle(false);
@@ -44,7 +43,6 @@ function HomeOne() {
         <meta property="og:url" content="https://pranishaa.com/" />
       </Helmet>
             <Header action={drawerAction.toggle} />
-          {/* <FireworksEffect/> */}
             <Banner />
             <Service />
             <PortfolioGrid />
