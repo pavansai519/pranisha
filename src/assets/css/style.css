@@ -18940,9 +18940,11 @@ select {
   justify-content: center;
 }
 .team-name {
+  margin-top: 40px;
   text-transform: uppercase;
 }
  .team-role {
+  margin-bottom: 5px;
   text-transform: uppercase;
  }
 
@@ -19003,6 +19005,7 @@ select {
 
   .team-name {
     font-size: 16px;
+    margin-top: 15px;
   }
 
   .team-role {

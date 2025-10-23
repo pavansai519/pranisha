@@ -15,7 +15,6 @@ import PortfolioGrid from './PortfolioGrid.jsx';
 function HomeOne() {
     const [drawer, drawerAction] = useToggle(false);
 
-    // Initialize AOS
     useEffect(() => {
         AOS.init({
             duration: 3000,  // animation duration

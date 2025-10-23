@@ -86,8 +86,9 @@ export default function ParticleBanner({
               }}
             />
             <div className="okai-description">
-              <span>CEO - Founder</span>
+            
               <h4>Praneetha Devireddy</h4>
+                <span>Founder and CEO </span>
             </div>
           </div>
         </div>
