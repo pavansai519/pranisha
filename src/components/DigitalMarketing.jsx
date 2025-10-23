@@ -64,7 +64,7 @@ const DigitalMarketing = () => {
             <nav className="services-nav">
               <ul>
 
-{/*SEO */}
+              {/*SEO */}
                 <li>
                   <button
                     className={`nav-items ${activeSection === 'SEO' ? 'active' : ''}`}

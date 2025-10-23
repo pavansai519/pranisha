@@ -22,7 +22,8 @@ function TabHome5({ className }) {
                         {/* {/ Tabs Box /} */}
                         <ul className="tab-btns tab-buttons">
                             <li className={activeIndex === 1 ? "tab-btn active-btn" : "tab-btn"} onClick={() => handleOnClick(1)} data-tab="#tab1">Our Vision</li>
-                            <li className={activeIndex === 2 ? "tab-btn active-btn" : "tab-btn"} onClick={() => handleOnClick(2)} data-tab="#tab2">Our Mission</li>                        </ul>
+                            <li className={activeIndex === 2 ? "tab-btn active-btn" : "tab-btn"} onClick={() => handleOnClick(2)} data-tab="#tab2">Our Mission</li>                        
+                        </ul>
                 
                         <div className="tabs-content">
                             <div className={activeIndex === 1 ? "tab active-tab" : "tab"}>

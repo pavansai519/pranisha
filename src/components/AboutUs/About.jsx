@@ -39,8 +39,8 @@ Their digital marketing expertise covers SEO, social media, and performance mark
             <div className="content-box">
               <span className="sub-title"></span>
               <h2>
-                All our experience <br />
-                started <span>7 years ago</span>
+                 Our Experience <br />
+                 <span>That Inspires</span>
               </h2>
               <p className="typewriter">{displayText}</p>
  

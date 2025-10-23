@@ -22,12 +22,12 @@ import dess from "../../assets/images/Portfolio/dess/dess.webp";
 const projects = [
   { id: 1, image: BSM, title: "BONDSTREET", url: "/portfolio/bondstreet", area: "tile2", width: "540px", height: "480px", fit: "cover", pos: "center center" },
   { id: 2, image: pcg,  title: "PCG",       url: "/portfolio/pcg",        area: "tile1", width: "540px", height: "620px", fit: "cover", pos: "center center" },
-  { id: 3, image: shr,  title: "SHR",       url: "/portfolio/shr",        area: "tile3", width: "490px", height: "460px", fit: "cover", pos: "center center" },
+  { id: 3, image: shr,  title: "SHR",       url: "/portfolio/shr",        area: "tile3", width: "540px", height: "470px", fit: "cover", pos: "center center" },
   
   /* 🔼 ROF moved up (now in tile4 position) */
   { id: 4, image: poh,  title: "PRIDE OF HYDERABAD",       url: "/portfolio/poh",        area: "tile4", width: "500px", height: "620px", fit: "fill", pos: "center center" },
 
-  { id: 5, image: dess,  title: "DESSERTINO",   url: "/portfolio/dess",        area: "tile6", width: "470px", height: "490px", fit: "cover", pos: "center center" },
+  { id: 5, image: dess,  title: "DESSERTINO",   url: "/portfolio/dess",        area: "tile6", width: "470px", height: "540px", fit: "cover", pos: "center center" },
   
   /* 🔽 PCG moved down (now in tile6 position) */
   { id: 6, image: rof,  title: "ROAMIFI",       url: "/portfolio/rof",        area: "tile5", width: "500px", height: "620px", fit: "cover", pos: "center center" },

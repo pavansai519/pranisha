@@ -184,7 +184,7 @@ body {
   text-align: center;
   font-size: 18px;
   color: #cbd5e1;
-  max-width: 1100px;
+  max-width: 1000px;
   line-height: 1.7;
 }
 
@@ -264,7 +264,7 @@ body {
   }
   
   .services-sidebar {
-    width: 100%;
+    width: 40%;
     position: static;
     top: auto;
     margin-bottom: 30px;
@@ -278,7 +278,11 @@ body {
   }
   
   .content-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr) !important;
+    width:95%;
+  }
+  .section-header p{
+    width:95%
   }
 }
 
@@ -378,7 +382,7 @@ body {
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
   .content-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -395,11 +399,11 @@ body {
   .section-header h2{
     text-align: left;
   }
-}
+} */
 
 
 /* 🌐 Fix overlap between 1024px and 1445px (fully enforced) */
-@media screen and (min-width: 1024px) and (max-width: 1466px) {
+@media screen and (min-width: 1025px) and (max-width: 1466px) {
   .branding-container {
     display: flex !important;
     flex-direction: row !important;
@@ -435,6 +439,7 @@ body {
   .content-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 25px !important;
+
   }
 
   .content-item {
