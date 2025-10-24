@@ -17929,18 +17929,31 @@ Sidebar
     filter: blur(0);
   }
 }
-@media (max-width:576px){
-  .footer-bottom-row{
-    gap:10px
-  }
-  .footer-logo{
-    max-width: 70%;
-  }
-  .footer-section-six{
+
+.footer-logo img{
+  width:100%
+}
+@media (max-width: 576px) {
+  .footer-section-six {
     background-image: none;
   }
- 
+
+  
+
+  .footer-logo {
+    flex: 0 0 auto !important;  /* ✅ prevents flex from shrinking logo */
+    width: 100% !important;     /* ✅ allow image to grow */
+    text-align: left;
+  }
+
+  .footer-logo img {
+    width: 250px !important;    /* ✅ reasonable mobile width */
+    max-width: none !important;
+    height: auto !important;
+    display: inline-block;
+  }
 }
+
 @media (max-width:1100px){
   .footer-logo{
     max-width: 60%;
