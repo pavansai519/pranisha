@@ -19208,52 +19208,12 @@ select {
   padding-top: 15px;
   font-size: 14px;
 }
-.contact-line {
-  text-align: center;
-  margin: 60px 0;
-  font-size: 20px;
-  color: #333;
-  font-weight: 500;
-}
- 
-.contact-btn1 {
-  background-color: transparent;
-  color: #fff;
-  border: 1px solid #ffa324;
-  font-weight: 700;
-  font-size: 20px;
-  text-decoration: none !important;
-  padding: 10px 25px;
-  border-radius: 6px;
-  margin-left: 8px;
-  transition: all 0.3s ease;
-}
- 
-.contact-btn1:hover {
-  color: #ffa324;
- border: 1px solid #fcfcfc;
-  transform: translateY(-2px);
-}
- 
- 
- 
+
 @media (max-width:576px){
   .cracking-footerr p{
     font-size: 18px;
   }
-  .contact-line{
-    font-size: 16px;
-  }
-  .contact-btn1{
-    font-size: 16px;
-    padding: 8px 20px;
-  }
 }
-/* @media (max-width:576px){
-  .cracking-footerr p{
-    font-size: 18px;
-  }
-} */
 @media (min-width:1300px) and (max-width:1563px){
   .cracking-footerr{
     padding: 200px 20px 100px 20px;
@@ -19261,7 +19221,7 @@ select {
 }
 @media (min-width:1564px) and (max-width:2000px){
   .cracking-footerr{
-    padding: 0px 20px 100px 20px
+    padding: 20px 20px 100px 20px
   }
 }
 
@@ -19703,7 +19663,7 @@ select {
   top: -50px;
   text-decoration:#3d3d3d line-through;
 }
- @media (min-width:1024px)and (max-width:1444px){
+ @media (min-width:1024px)and (max-width:1544px){
   #backtoworks{
     left:60px;
     top:500px;
