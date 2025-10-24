@@ -108,37 +108,55 @@ const Branding = () => {
               <p>We deliver end-to-end AI services that transform businesses with intelligent systems, advanced analytics, and machine learning solutions.</p>
             </div>
             <div className="content-grid">
-              <div id="discovery" className={`content-item ${highlightedItem === 'discovery' ? 'highlighted' : ''}`}>
-                <div className="item-icon"><i className="fas fa-search"></i></div>
-                <h3>AI Development</h3>
-                <p>At Pranisha Technologies, we craft intelligent AI solutions that automate processes, enhance decision-making,accuracy, and smarter digital transformation across industries.</p>
-              </div>
-              {/* <div id="concept" className={`content-item ${highlightedItem === 'concept' ? 'highlighted' : ''}`}>
-                <div className="item-icon"><i className="fas fa-lightbulb"></i></div>
-                <h3>Concept Development</h3>
-                <p>Strategic guidance and insights to optimize business processes with AI.</p>
-              </div> */}
-              <div id="refinement" className={`content-item ${highlightedItem === 'refinement' ? 'highlighted' : ''}`}>
-                <div className="item-icon"><i className="fas fa-pen-fancy"></i></div>
-                <h3>Machine Learning</h3>
-                <p>Our Machine Learning solutions enable systems to learn from data, predict outcomes, uncover insights, and achieve smarter, data-driven growth across every operation.</p>
-              </div>
-              <div id="finalization" className={`content-item ${highlightedItem === 'finalization' ? 'highlighted' : ''}`}>
-                <div className="item-icon"><i className="fas fa-check-circle"></i></div>
-                <h3>Generative AI</h3>
-                <p>We build Generative AI solutions that create unique content, designs, and transform creativity through intelligent automation and advanced deep learning models.</p>
-              </div>
-              <div id="ChatGPT Integration" className={`content-item ${highlightedItem === 'ChatGPT Integration' ? 'highlighted' : ''}`}>
-                <div className="item-icon"><i className="fas fa-check-circle"></i></div>
-                <h3>ChatGPT Integration</h3>
-                <p>We integrate ChatGPT seamlessly into your platforms, and personalized user experiences that enhance engagement, and elevate customer interaction through advanced AI communication.</p>
-              </div>
-              {/* <div id="AI Analytics" className={`content-item ${highlightedItem === 'AI Analytics' ? 'highlighted' : ''}`}>
-                <div className="item-icon"><i className="fas fa-check-circle"></i></div>
-                <h3>AI Analytics</h3>
-                <p>Transform data into actionable insights using advanced AI and analytics solutions..</p>
-              </div> */}
-            </div>
+  <div
+    id="discovery"
+    className={`content-item ${highlightedItem === 'discovery' ? 'highlighted' : ''}`}
+  >
+    <div className="item-icon"><i className="fas fa-robot"></i></div>
+    <h3>AI Development</h3>
+    <p>
+      At Pranisha Technologies, we craft intelligent AI solutions that automate processes, enhance decision-making,
+      and enable smarter digital transformation across industries.
+    </p>
+  </div>
+
+  <div
+    id="refinement"
+    className={`content-item ${highlightedItem === 'refinement' ? 'highlighted' : ''}`}
+  >
+    <div className="item-icon"><i className="fas fa-brain"></i></div>
+    <h3>Machine Learning</h3>
+    <p>
+      Our Machine Learning solutions enable systems to learn from data, predict outcomes, uncover insights,
+      and achieve smarter, data-driven growth across every operation.
+    </p>
+  </div>
+
+  <div
+    id="finalization"
+    className={`content-item ${highlightedItem === 'finalization' ? 'highlighted' : ''}`}
+  >
+    <div className="item-icon"><i className="fas fa-network-wired"></i></div>
+    <h3>Generative AI</h3>
+    <p>
+      We build Generative AI solutions that create unique content, designs, and transform creativity through
+      intelligent automation and advanced deep learning models.
+    </p>
+  </div>
+
+  <div
+    id="ChatGPT Integration"
+    className={`content-item ${highlightedItem === 'ChatGPT Integration' ? 'highlighted' : ''}`}
+  >
+    <div className="item-icon"><i className="fas fa-comments"></i></div>
+    <h3>ChatGPT Integration</h3>
+    <p>
+      We integrate ChatGPT seamlessly into your platforms, enabling personalized user experiences that enhance engagement
+      and elevate customer interaction through advanced AI communication.
+    </p>
+  </div>
+</div>
+
           </section>
 
          

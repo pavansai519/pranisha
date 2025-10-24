@@ -108,38 +108,56 @@ const Branding = () => {
               <h2>Elevate Your Brand Impact with StrategicPR & Media Solutions</h2>
               <p>We deliver end-to-end PR and media services designed to amplify brand visibility and foster public trust.  As a driving force and empower organizations to lead with confidence in a rapidly changing world.</p>
             </div>
-            <div className="content-grid">
-              <div id="discovery" className={`content-item ${highlightedItem === 'discovery' ? 'highlighted' : ''}`}>
-                <div className="item-icon"><i className="fas fa-search"></i></div>
-                <h3>Media Relations</h3>
-                <p>Strengthen your public presence with impactful media outreach. We build strategic relationships with journalists and outlets to  coverage that boosts your brand’s credibility and trust.</p>
-              </div>
-              <div id="concept" className={`content-item ${highlightedItem === 'concept' ? 'highlighted' : ''}`}>
-                <div className="item-icon"><i className="fas fa-lightbulb"></i></div>
-                <h3>Press Release Services</h3>
-                <p>Communicate your biggest milestones effectively with professionally crafted press releases. We handle writing,and media follow-up to ensure your news reaches the right audience at the right time.</p>
-              </div>
-              {/* <div id="refinement" className={`content-item ${highlightedItem === 'refinement' ? 'highlighted' : ''}`}>
-                <div className="item-icon"><i className="fas fa-pen-fancy"></i></div>
-                <h3>Reputation Management</h3>
-                <p>Safeguard your brand’s image with proactive and responsive reputation strategies. From crisis communication to online sentiment monitoring, we help maintain public trust and confidence..</p>
-              </div> */}
-              <div id="finalization" className={`content-item ${highlightedItem === 'finalization' ? 'highlighted' : ''}`}>
-                <div className="item-icon"><i className="fas fa-check-circle"></i></div>
-                <h3>Thought Leadership</h3>
-                <p>Position your executives as industry influencers through strategic storytelling. We curate speaking opportunities, guest articles, and interviews to elevate your leadership’s voice in key conversations.</p>
-              </div>
-               <div id="Event Promotion & Coverage" className={`content-item ${highlightedItem === 'Event Promotion & Coverage' ? 'highlighted' : ''}`}>
-                <div className="item-icon"><i className="fas fa-check-circle"></i></div>
-                <h3>Event Promotion & Coverage</h3>
-                <p>Maximize exposure for your events with targeted PR campaigns. Whether it’s a product launch, webinar, or CSR initiative, we ensure media presence, buzz, and audience engagement.</p>
-              </div>
-               {/* <div id="Thought Leadership" className={`content-item ${highlightedItem === 'Thought Leadership' ? 'highlighted' : ''}`}>
-                <div className="item-icon"><i className="fas fa-check-circle"></i></div>
-                <h3>Thought Leadership</h3>
-                <p>Expand your reach through powerful digital PR and influencer collaboration. We identify relevant voices in your industry to amplify your message across social platforms and digital media.</p>
-              </div> */}
-            </div>
+           <div className="content-grid">
+  <div
+    id="discovery"
+    className={`content-item ${highlightedItem === 'discovery' ? 'highlighted' : ''}`}
+  >
+    <div className="item-icon"><i className="fas fa-newspaper"></i></div>
+    <h3>Media Relations</h3>
+    <p>
+      Strengthen your public presence with impactful media outreach. We build strategic relationships with journalists and outlets to
+      secure coverage that boosts your brand’s credibility and trust.
+    </p>
+  </div>
+
+  <div
+    id="concept"
+    className={`content-item ${highlightedItem === 'concept' ? 'highlighted' : ''}`}
+  >
+    <div className="item-icon"><i className="fas fa-bullhorn"></i></div>
+    <h3>Press Release Services</h3>
+    <p>
+      Communicate your biggest milestones effectively with professionally crafted press releases. We handle writing, distribution,
+      and media follow-up to ensure your news reaches the right audience at the right time.
+    </p>
+  </div>
+
+  <div
+    id="finalization"
+    className={`content-item ${highlightedItem === 'finalization' ? 'highlighted' : ''}`}
+  >
+    <div className="item-icon"><i className="fas fa-user-tie"></i></div>
+    <h3>Thought Leadership</h3>
+    <p>
+      Position your executives as industry influencers through strategic storytelling. We curate speaking opportunities, guest
+      articles, and interviews to elevate your leadership’s voice in key conversations.
+    </p>
+  </div>
+
+  <div
+    id="Event Promotion & Coverage"
+    className={`content-item ${highlightedItem === 'Event Promotion & Coverage' ? 'highlighted' : ''}`}
+  >
+    <div className="item-icon"><i className="fas fa-calendar-check"></i></div>
+    <h3>Event Promotion & Coverage</h3>
+    <p>
+      Maximize exposure for your events with targeted PR campaigns. Whether it’s a product launch, webinar, or CSR initiative, we
+      ensure media presence, buzz, and audience engagement.
+    </p>
+  </div>
+</div>
+
           </section>
 
          

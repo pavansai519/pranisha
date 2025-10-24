@@ -79,7 +79,6 @@ export default function PortfolioShowcase() {
       <div className="ps-inner container">
         <header className="ps-header">
           <h3 className="ps-eyebrow">Our Portfolio Of Sucess</h3>
-          <p className="ps-sub">And it only gets better</p>
         </header>
 
         {/* Grid uses explicit template areas on large screens */}

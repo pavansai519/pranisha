@@ -18724,7 +18724,7 @@ select {
 }
  
  
-.clients-section .sec-title h2::after {
+/* .clients-section .sec-title h2::after {
   content: "";
   position: absolute;
   left: 0;
@@ -18735,17 +18735,17 @@ select {
   transform: translateY(-50%);
   transition: width 0.4s ease;
 }
+  */
  
- 
-.clients-section .sec-title h2:hover {
+/* .clients-section .sec-title h2:hover {
   color: #fcfcfc;
   letter-spacing: 5px;
-}
+} */
  
-.clients-section .sec-title h2:hover::after {
+/* .clients-section .sec-title h2:hover::after {
   width: 100%;
 }
- 
+  */
 /* === Grid Layout (Desktop/Laptop) === */
 .clients-grid {
   display: grid;
@@ -18819,11 +18819,11 @@ select {
     transform: translate(-50%, -50%);
   }
 
-  .clients-section .sec-title h2:hover {
+  /* .clients-section .sec-title h2:hover {
     color: #fff;
     letter-spacing: 6px;
     text-shadow: 0 0 12px rgba(255, 163, 36, 0.5);
-  }
+  } */
   .clients-grid {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 160px);
@@ -18849,16 +18849,16 @@ select {
     color: #ffa324;
   }
 
-  .clients-section .sec-title h2::after {
+  /* .clients-section .sec-title h2::after {
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+  } */
 
-  .clients-section .sec-title h2:hover {
+  /* .clients-section .sec-title h2:hover {
     color: #fff;
     letter-spacing: 6px;
     text-shadow: 0 0 12px rgba(255, 163, 36, 0.5);
-  }
+  } */
   .clients-grid {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 180px);
@@ -18969,11 +18969,11 @@ select {
   justify-content: center;
 }
 .team-name {
-  margin-top: 40px;
+  padding-top: 15px;
   text-transform: uppercase;
 }
  .team-role {
-  margin-bottom: 5px;
+  margin-top: -18px;
   text-transform: uppercase;
  }
 

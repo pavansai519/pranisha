@@ -3,7 +3,7 @@ import "./pranisha-okai.css";
 import { Link } from "react-router-dom";
 import { FaLaptopCode, FaMicrophone, FaChartLine, FaBirthdayCake } from "react-icons/fa";
 import { GiBrain } from "react-icons/gi";
-import { MdOutlineBrush } from "react-icons/md";
+import { MdOutlineBrush, MdEvent } from "react-icons/md";
  
 const services = [
   {
@@ -42,7 +42,7 @@ const services = [
     color: "#ffa324",
   },
   {
-    icon: <FaBirthdayCake />,
+    icon: <MdEvent />,
     title: "Events",
     desc: "Plan and execute successful events with our comprehensive event management services.",
     link: "/events",

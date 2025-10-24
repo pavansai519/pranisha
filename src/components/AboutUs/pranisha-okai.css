@@ -34,7 +34,6 @@
 .okai-banner-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
   z-index: 1;
 }
 
@@ -214,6 +213,9 @@
 @media (min-width:1550px) and (max-width:2044px){
   .okai-container{
     padding: 0px 0px 0px 70px;
+  }
+  .about-sections-six{
+    margin-top:-250px;
   }
 }
 @media  (max-width:576px){
@@ -779,7 +781,7 @@ body > *:not([data-global-particles]) {
     height:300px
   }
  }
- @media (min-width:1250px) and (max-width:1444px){
+ @media (min-width:1250px) and (max-width:1544px){
   .about-sections-six{
     padding:20px 70px 20px 10px;
   }
