@@ -17939,6 +17939,7 @@ Sidebar
   .footer-section-six{
     background-image: none;
   }
+ 
 }
 @media (max-width:1100px){
   .footer-logo{
@@ -18557,7 +18558,7 @@ body > *:not([data-global-particles]) {
 }
 
 .about-contact-section {
-  padding: 80px 0;
+  padding: 60px 100px 10px 100px;
   color: #fff;
 }
 
@@ -18572,7 +18573,7 @@ body > *:not([data-global-particles]) {
   flex: 1;
   padding: 30px;
   border-radius: 10px;
-  min-width: 320px;
+  min-width: 200px;
 }
 
 .contact-box h3 {
@@ -18599,6 +18600,7 @@ body > *:not([data-global-particles]) {
 .form-options {
   display: flex;
   gap: 15px;
+  text-align: center;
   margin-bottom: 15px;
 }
 
@@ -18649,7 +18651,7 @@ select {
 }
 @media (max-width: 576px) {
   .about-contact-section {
-    padding: 0px 10px 30px 10px;
+    padding: 40px 10px 0px 10px;
   }
 
   .contact-row {
@@ -18707,6 +18709,26 @@ select {
   .contact-info li {
     margin-bottom: 10px;
   }
+}
+@media (min-width:567px) and (max-width:1100px){
+  .about-contact-section {
+  padding: 60px 100px 10px 100px;
+  color: #fff;
+  }
+}
+
+@media (min-width:1200px) and (max-width:1550px){
+  .about-contact-section {
+  padding: 60px 400px 10px 400px;
+  color: #fff;
+  }
+}
+
+@media (min-width:1560px) and (max-width:2500px){
+  .about-contact-section {
+  padding: 60px 600px 10px 600px;
+  color: #fff;
+}
 }
 
 /*************************clents css and social icons*******************/
@@ -19372,7 +19394,7 @@ select {
   }
 }
 @media (min-width:1301px) and (max-width:1560px){
-  .banner-section { height: 520px;}
+  .banner-section { height: 520px; margin-top: 5px;}
 }
 /* Responsive breakpoints (single source of truth) */
 @media (max-width: 1300px) {

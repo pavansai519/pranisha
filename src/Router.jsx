@@ -18,6 +18,7 @@ import Poh from "./components/Portfolio/Poh.jsx";
 import Rof from "./components/Portfolio/rof.jsx";
 import Dess from "./components/Portfolio/dess.jsx" 
 import TermsAndConditions from "./components/Policy.jsx";
+import Career from "./components/Carrier.jsx"
 
 
 
@@ -35,7 +36,10 @@ const router = createBrowserRouter([
         index:true,
         element: <HomeOne />
       },     
-      
+      {
+        path:"/career",
+        element:<Career/>
+      },
       {
         path: "/about",
         element: <AboutUs />

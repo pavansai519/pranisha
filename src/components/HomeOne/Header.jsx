@@ -106,7 +106,7 @@ function Header() {
                
                 <li>
                   <Link to="/ai" onClick={() => setMenuOpen({ main: false })}>
-                    AI
+                    AI Consulting
                   </Link>
                 </li>
                 <li>
@@ -147,6 +147,9 @@ function Header() {
 
             <Link to="/team" onClick={() => setMenuOpen({ main: false })}>
               Team
+            </Link>
+            <Link to="/career" onClick={() => setMenuOpen({ main: false })}>
+              Career
             </Link>
             <Link to="/contact" onClick={() => setMenuOpen({ main: false })}>
               Contact Us

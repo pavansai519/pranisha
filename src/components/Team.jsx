@@ -17,6 +17,9 @@ import Bindhu from "../../src/assets/images/Team/Bindhu.webp"
 import Uttej from "../../src/assets/images/Team/Uttej.webp"
 import Vamsi from "../../src/assets/images/Team/Vamsi.webp"
 import Pavan from "../../src/assets/images/Team/Pavan.webp"
+import Shasi from "../../src/assets/images/Team/Shasi.webp"
+import Gopi from "../../src/assets/images/Team/Gopi.webp"
+import Anji from "../../src/assets/images/Team/Anji.webp"
 
 
 
@@ -28,14 +31,26 @@ const collaborators = [
     socials: { linkdin: "#", instagram: "#", facebook: "#" },
   },
   {
-    name: "Akshay hanuman",
-    role: "sr. motion Graphic Designer",
-    img: Akshay,
+    name: "Anjaneyulu",
+    role: "Charterted accountant",
+    img: Anji,
+    socials: { linkdin: "#", instagram: "#", facebook: "#" },
+  },
+   {
+    name: "gopi raju",
+    role: "business developmet manager / digital marketing manager",
+    img: Gopi,
+    socials: { linkdin: "#", instagram: "#", facebook: "#" },
+  },
+ {
+    name: "shashi",
+    role: "webdeveloper manager",
+    img: Shasi,
     socials: { linkdin: "#", instagram: "#", facebook: "#" },
   },
   {
     name: "vamsikrishna sirasani",
-    role: "lead digital marketer",
+    role: "digital marketing manager",
     img: Vamsi,
     socials: { linkdin: "#", instagram: "#", facebook: "#" },
   },
@@ -46,6 +61,14 @@ const collaborators = [
     socials: { linkdin: "#", instagram: "#", facebook: "#" },
   },
   {
+    name: "Akshay hanuman",
+    role: "sr. motion Graphic Designer",
+    img: Akshay,
+    socials: { linkdin: "#", instagram: "#", facebook: "#" },
+  },
+ 
+  
+  {
     name: "Pavansai prathi",
     role: "fullstack developer",
     img: Pavan,
@@ -53,8 +76,14 @@ const collaborators = [
   },
   {
     name: "avinash reddy",
-    role: "fullstack developer",
+    role: "java developer",
     img: Avinash,
+    socials: { linkdin: "#", instagram: "#", facebook: "#" },
+  },
+   {
+    name: "Ramu kurella",
+    role: "data analyst ",
+    img: Ramu,
     socials: { linkdin: "#", instagram: "#", facebook: "#" },
   },
   {
@@ -63,42 +92,38 @@ const collaborators = [
     img: Sindhu,
     socials: { linkdin: "#", instagram: "#", facebook: "#" },
   },
+   {
+    name: "Bindu Sai Basuthakar ",
+    role: "digital marketing analyst ",
+    img: Bindhu,
+    socials: { linkdin: "#", instagram: "#", facebook: "#" },
+  },
   {
     name: "fatima",
-    role: "fullstack developer (intern)",
+    role: "ai developer ",
     img: Fatima,
     socials: { linkdin: "#", instagram: "#", facebook: "#" },
   },
   {
     name: "Daripaalli Aparna",
-    role: " developer (intern)",
+    role: " web developer ",
     img: Aparna,
     socials: { linkdin: "#", instagram: "#", facebook: "#" },
   },
   {
     name: "lakshmi priya",
-    role: "developer (intern)",
+    role: "web developer",
     img: Priya,
     socials: { linkdin: "#", instagram: "#", facebook: "#" },
   },
-  {
-    name: "Bindu Sai Basuthakar ",
-    role: "digital marketer (intern)",
-    img: Bindhu,
-    socials: { linkdin: "#", instagram: "#", facebook: "#" },
-  },
+ 
   {
     name: "reshma",
-    role: "developer (intern)",
+    role: "web developer ",
     img: Reshma,
     socials: { linkdin: "#", instagram: "#", facebook: "#" },
   },
-  {
-    name: "Ramu kurella",
-    role: "data analyst (intern)",
-    img: Ramu,
-    socials: { linkdin: "#", instagram: "#", facebook: "#" },
-  },
+ 
 ];
 
 function Team() {
