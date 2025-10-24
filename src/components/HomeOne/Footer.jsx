@@ -20,6 +20,11 @@ function FooterHomeOne({ className }) {
                     Pranisha Technologies delivers creative branding, web development, and digital marketing solutions that build strong brand identities and drive business growth.
                   </div>
                   <ul className="social-icon-two">
+                     <li>
+                      <a href="https://wa.me/919963326393" target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-whatsapp"></i>
+                      </a>
+                    </li>
                     <li>
                       <a href="https://in.linkedin.com/company/pranishatechnologies" target="_blank" rel="noopener noreferrer">
                         <i className="fab fa-linkedin"></i>

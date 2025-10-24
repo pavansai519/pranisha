@@ -20,6 +20,15 @@ function Socials() {
       <ul className="socials-text">
         <li>
           <a
+            href="https://wa.me/919963326393"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+           Whatsapp
+          </a>
+        </li>
+        <li>
+          <a
             href="https://www.facebook.com/pranishatechnologies"
             target="_blank"
             rel="noopener noreferrer"
