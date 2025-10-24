@@ -10,7 +10,7 @@ const services = [
     icon: <FaLaptopCode />,
     title: "IT Solutions",
     desc: "Transform your business with IT solutions like chatbots, automation, and data-driven decision-making tools.",
-    link: "/webdevelopment",
+    link: "/itdevelopment",
     color: "#ffa324",
   },
   {
