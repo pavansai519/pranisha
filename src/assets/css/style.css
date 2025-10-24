@@ -19366,6 +19366,11 @@ select {
     animation: none;
   }
 }
+@media (min-width:1561px) and (max-width:2600px) {
+  .banner-section{
+    margin-top: 15px;
+  }
+}
 @media (min-width:1301px) and (max-width:1560px){
   .banner-section { height: 520px;}
 }
