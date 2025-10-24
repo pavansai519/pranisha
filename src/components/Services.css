@@ -381,25 +381,113 @@ body {
   transform: translateY(30px);
 }
 
-/* ===== Responsive ===== */
-/* @media (max-width: 992px) {
+
+
+/* 📱 Optimized Responsive Layout for Small Devices (max-width: 576px) */
+@media (max-width: 576px) {
+  body {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .branding-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 15px;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  /* Sidebar stacks above content */
+  .services-sidebar {
+    width: 100%;
+    position: static;
+    top: auto;
+    box-shadow: none;
+    padding: 20px 15px;
+    margin-bottom: 20px;
+  }
+
+  .services-sidebar h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+
+  .nav-items {
+    padding: 10px 12px;
+    font-size: 15px;
+    gap: 8px;
+  }
+
+  .sub-nav {
+    margin-left: 20px;
+    padding-left: 10px;
+  }
+
+  /* Content section */
+  .services-content {
+    height: auto;
+    overflow: visible;
+    padding: 0 5px;
+  }
+
+  .section-header h2 {
+    font-size: 22px;
+    text-align: left;
+  }
+
+  .section-header p {
+    font-size: 15px;
+    color: #cbd5e1;
+    text-align: left;
+    line-height: 1.6;
+  }
+
+  /* Grid → single column */
   .content-grid {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .content-item {
+    padding: 18px;
+    border-radius: 10px;
+    text-align: left;
+  }
+
+  .item-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .content-item h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .content-item p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  /* Make sure no horizontal scroll */
+  .container,
+  .branding-container,
+  .services-content {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Adjust spacing before footer if needed */
+  .cracking-footerr {
+    margin-top: 100px;
   }
 }
-
-@media (max-width: 500px) {
-  .content-grid {
-    grid-template-columns: 1fr;
-  }
-  .section-header p {
-    font-size: 16px;
-    text-align: left;
-  }
-  .section-header h2{
-    text-align: left;
-  }
-} */
 
 
 /* 🌐 Fix overlap between 1024px and 1445px (fully enforced) */
@@ -459,7 +547,7 @@ body {
   
 }
 
-@media screen and (min-width: 1445px) and (max-width: 2045px) {
+@media screen and (min-width: 1468px) and (max-width: 2045px) {
 
 .content-grid {
     grid-template-columns: repeat(2, 1fr) !important;

@@ -216,7 +216,7 @@
   /* === HERO SECTION (mobile) === */
     .project-hero {
     height: auto;               /* allow natural image height */
-    margin-top: 10px;
+    margin-top: 45px;
     background-color: #000;     /* fallback background to fill gaps */
   }
 

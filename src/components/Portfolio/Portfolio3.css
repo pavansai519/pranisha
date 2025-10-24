@@ -220,7 +220,7 @@
 @media (max-width: 576px) {
     .pd-hero {
     height: auto;               /* allow natural image height */
-    margin-top: 10px;
+    margin-top: 35px;
     background-color: #000;     /* fallback background to fill gaps */
   }
     .pd-hero-img {

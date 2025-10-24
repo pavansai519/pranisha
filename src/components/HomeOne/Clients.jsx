@@ -54,12 +54,16 @@ import ClientImg48 from "../../assets/images/logos/49.png";
 import ClientImg49 from "../../assets/images/logos/50.png";
  
 const clientLogos = [
-ClientImg1, ClientImg2,ClientImg8,ClientImg45, ClientImg26,ClientImg22,ClientImg23,ClientImg9,ClientImg29,
-ClientImg31,ClientImg35,  ClientImg38,ClientImg41,ClientImg42,ClientImg43,ClientImg44,ClientImg21,ClientImg40,
-ClientImg39, ClientImg37,ClientImg34, ClientImg32,ClientImg30,ClientImg28,ClientImg27,ClientImg25, ClientImg24,
-ClientImg20,ClientImg19, ClientImg18,ClientImg17,ClientImg16,  ClientImg15,ClientImg14,ClientImg13,ClientImg12,
-ClientImg10,ClientImg7,ClientImg6,ClientImg5,ClientImg4, ClientImg3,ClientImg, ClientImg33, ClientImg36, ClientImg11,
-ClientImg46,ClientImg47,ClientImg48,ClientImg49
+ClientImg1, ClientImg2,ClientImg8,ClientImg45, ClientImg26,
+ClientImg46,ClientImg23,ClientImg9,ClientImg29,ClientImg22,
+ClientImg31,ClientImg47,ClientImg35,ClientImg38,ClientImg41,ClientImg42,
+ClientImg43,ClientImg44,ClientImg21,ClientImg40,ClientImg39,
+ClientImg34,ClientImg32,ClientImg30,ClientImg28,
+ClientImg27,ClientImg25,ClientImg24,ClientImg20,ClientImg19,
+ClientImg18,ClientImg17,ClientImg16,ClientImg15,ClientImg14,
+ClientImg13,ClientImg12,ClientImg10,ClientImg7,ClientImg6,
+ClientImg5,ClientImg4, ClientImg3,ClientImg, ClientImg33,
+ ClientImg36,ClientImg11,ClientImg37,ClientImg48,ClientImg49
 ];
  
 function ClientsHomeOne({ className }) {
