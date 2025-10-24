@@ -244,9 +244,16 @@
   }
   .project-popup-content,
   .project-video-popup-content {
-    max-width: 95%;
-    max-height: 95%;
+    max-width: 85%;
+    max-height: 85%;
   }
+  .project-close-popup {
+    top: 140px;
+    right: 12px;
+    font-size: 18px;
+    padding: 8px;
+  }
+  
 }
 
 @media (min-width: 1200px) and (max-width: 1585px) {
