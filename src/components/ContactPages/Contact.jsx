@@ -68,7 +68,7 @@ function AboutWithContact() {
               1st Floor, Sri Sri Dwarkamai, Gokul plots Venkata Ramana Colony Kukatpally,<br/> Hyderabad, Telangana 500085
             </li>
             <li>
-               info@pranisha.com
+               info@pranisha.in
             </li>
             <li>
                tel:+919963326393

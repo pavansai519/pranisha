@@ -66,7 +66,7 @@ function FooterHomeOne({ className }) {
                 <div className="footer-widget">
                   <p className="widget-title">Contact Us</p>
                   <ul className="user-links">
-                    <li><a href="mailto:info@pranisha.com">Email: info@pranisha.com</a></li>
+                    <li><a href="mailto:info@pranisha.in">Email: info@pranisha.in</a></li>
                     <li><a href="tel:+919963326393">Phone: +91 9963326393</a></li>
                     <li>
                       <span style={{ color: '#fcfcfc' }}>
