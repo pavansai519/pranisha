@@ -11,7 +11,7 @@ import Coelate from "../../src/assets/images/service-clients/Coelate.png";
 import Mld from "../../src/assets/images/service-clients/Mld.png";
 import Acroplans from "../../src/assets/images/service-clients/Acroplans.png";
 import Catalyst from "../../src/assets/images/service-clients/Catalyst.jpg";
-import Delacacy from "../../src/assets/images/service-clients/Delicacy.png"
+import Delacacy from "../../src/assets/images/service-clients/Delicacy.png";
 
 
 const DigitalMarketing = () => {
@@ -19,6 +19,7 @@ const DigitalMarketing = () => {
   const [highlightedItem, setHighlightedItem] = useState(null);
   const [openSection, setOpenSection] = useState('WordPress Website');
            
+  
   /***********wordpress***************/
 
   const clients = [
@@ -383,7 +384,6 @@ const DigitalMarketing = () => {
                       <h2 className="clients-title">Clients That We Work With</h2>
 
                       {/* Prev arrow ABOVE card */}
-                      <button className="arrow prev" onClick={prevClient}>❮</button>
 
                       <div className="clients-slider-wrapper">
                         <div className="clients-slider" style={{ transform: `translateX(-${current * 100}%)` }}>
@@ -406,6 +406,8 @@ const DigitalMarketing = () => {
 
                         </div>
                       </div>
+
+                      <button className="arrow prev" onClick={prevClient}>❮</button>
 
                       {/* Next arrow BELOW card */}
                       <button className="arrow next" onClick={nextClient}>❯</button>
@@ -436,7 +438,6 @@ const DigitalMarketing = () => {
                       <h2 className="clients-title">Clients That We Work With</h2>
 
                       {/* Prev arrow ABOVE card */}
-                      <button className="arrow prev" onClick={prevClient}>❮</button>
 
                       <div className="clients-slider-wrapper">
                         <div className="clients-slider" style={{ transform: `translateX(-${current * 100}%)` }}>
@@ -459,6 +460,8 @@ const DigitalMarketing = () => {
 
                         </div>
                       </div>
+
+                      <button className="arrow prev" onClick={prevClient}>❮</button>
 
                       {/* Next arrow BELOW card */}
                       <button className="arrow next" onClick={nextClient}>❯</button>
@@ -487,7 +490,6 @@ const DigitalMarketing = () => {
                       <h2 className="clients-title">Clients That We Work With</h2>
 
                       {/* Prev arrow ABOVE card */}
-                      <button className="arrow prev" onClick={prevClient}>❮</button>
 
                       <div className="clients-slider-wrapper">
                         <div className="clients-slider" style={{ transform: `translateX(-${current * 100}%)` }}>
@@ -535,7 +537,6 @@ const DigitalMarketing = () => {
                       <h2 className="clients-title">Clients That We Work With</h2>
 
                       {/* Prev arrow ABOVE card */}
-                      <button className="arrow prev" onClick={prevClient}>❮</button>
 
                       <div className="clients-slider-wrapper">
                         <div className="clients-slider" style={{ transform: `translateX(-${current * 100}%)` }}>
@@ -558,6 +559,7 @@ const DigitalMarketing = () => {
 
                         </div>
                       </div>
+                      <button className="arrow prev" onClick={prevClient}>❮</button>
 
                       {/* Next arrow BELOW card */}
                       <button className="arrow next" onClick={nextClient}>❯</button>
@@ -583,7 +585,6 @@ const DigitalMarketing = () => {
                       <h2 className="clients-title">Clients That We Work With</h2>
 
                       {/* Prev arrow ABOVE card */}
-                      <button className="arrow prev" onClick={prevClient}>❮</button>
 
                       <div className="clients-slider-wrapper">
                         <div className="clients-slider" style={{ transform: `translateX(-${current * 100}%)` }}>
@@ -606,6 +607,7 @@ const DigitalMarketing = () => {
 
                         </div>
                       </div>
+                      <button className="arrow prev" onClick={prevClient}>❮</button>
 
                       {/* Next arrow BELOW card */}
                       <button className="arrow next" onClick={nextClient}>❯</button>
@@ -632,7 +634,6 @@ const DigitalMarketing = () => {
                       <h2 className="clients-title">Clients That We Work With</h2>
 
                       {/* Prev arrow ABOVE card */}
-                      <button className="arrow prev" onClick={prevClient}>❮</button>
 
                       <div className="clients-slider-wrapper">
                         <div className="clients-slider" style={{ transform: `translateX(-${current * 100}%)` }}>
